@@ -29,10 +29,8 @@ source:
   repo_url: https://github.com/omerizm47/fabric-jumpstart-fabriciq-ontology.git
   repo_ref: v0.1.0
   workspace_path: fabriciq-ontology/
-  # Ship the ontology accelerator wheel + the industry .iq package to the lakehouse
-  # Files area (self-contained data). Both are small (<1 MB).
-  files_source_path: fabriciq-ontology/data/
-  files_destination_lakehouse: fabriciq_lakehouse
+# The notebooks self-fetch the accelerator wheel + ontology .iq from this repo's
+# data/ folder at runtime, so no files_source_path upload is needed.
 # fabric-cicd deploys ONLY the Lakehouse, Eventhouse, and the notebooks. The
 # Ontology item + the two Data Agents are CREATED AT RUNTIME by 02_create_ontology,
 # so they are intentionally NOT listed here (items_in_scope = deployed types only).

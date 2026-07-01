@@ -39,10 +39,23 @@ from sempy.fabric import FabricRestClient as _FRC
 LAKEHOUSE_NAME = "fabriciq_lakehouse"
 EVENTHOUSE_NAME = "fabriciq_eventhouse"
 
-_JS_WHL = (sorted(glob.glob('/lakehouse/default/Files/**/*.whl', recursive=True)) or [None])[0]
-_JS_IQ = (sorted(glob.glob('/lakehouse/default/Files/**/*.iq', recursive=True)) or [None])[0]
-assert _JS_WHL, 'Accelerator .whl not found under Files/ - was files_source_path uploaded?'
-assert _JS_IQ, 'Ontology .iq not found under Files/ - was files_source_path uploaded?'
+# Ensure the accelerator wheel + ontology package are in the lakehouse Files area.
+# On a clean install they are not uploaded, so fetch them from the pinned repo.
+_RAW = "https://raw.githubusercontent.com/omerizm47/fabric-jumpstart-fabriciq-ontology/v0.1.1/fabriciq-ontology/data"
+
+def _ensure(_pattern, _fname):
+    _hits = sorted(glob.glob(f'/lakehouse/default/Files/**/{_pattern}', recursive=True))
+    if _hits:
+        return _hits[0]
+    import os, urllib.request
+    os.makedirs('/lakehouse/default/Files', exist_ok=True)
+    _dest = f'/lakehouse/default/Files/{_fname}'
+    urllib.request.urlretrieve(f'{_RAW}/{_fname}', _dest)
+    print(f'Downloaded {_fname} from the jumpstart repo')
+    return _dest
+
+_JS_WHL = _ensure('*.whl', 'fabriciq_ontology_accelerator-0.1.0-py3-none-any.whl')
+_JS_IQ = _ensure('*.iq', 'retail_ontology_package.iq')
 
 _ws = _fab.get_workspace_id()
 _items = _fab.list_items()
