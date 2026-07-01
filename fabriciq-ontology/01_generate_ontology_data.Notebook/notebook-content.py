@@ -1,5 +1,24 @@
 # Fabric notebook source
 
+# METADATA ********************
+
+# META {
+# META   "kernel_info": {
+# META     "name": "synapse_pyspark"
+# META   },
+# META   "dependencies": {
+# META     "lakehouse": {
+# META       "default_lakehouse": "b5ae6e8b-5726-489e-9cf1-17c3416393d6",
+# META       "default_lakehouse_name": "fabriciq_lakehouse",
+# META       "default_lakehouse_workspace_id": "a537bf46-7b26-4ed7-b48d-dbccd64a29cc",
+# META       "known_lakehouses": [
+# META         {
+# META           "id": "b5ae6e8b-5726-489e-9cf1-17c3416393d6"
+# META         }
+# META       ]
+# META     }
+# META   }
+# META }
 
 # MARKDOWN ********************
 
@@ -36,6 +55,13 @@ print('  iq :', _JS_IQ)
 print('  eh :', _JS_EH_URI)
 
 
+# METADATA ********************
+
+# META {
+# META   "language": "python",
+# META   "language_group": "synapse_pyspark"
+# META }
+
 # CELL ********************
 
 # Install the Fabric IQ Ontology Accelerator package (uploaded to the lakehouse Files/).
@@ -55,6 +81,13 @@ if _p.returncode != 0:
 print("Accelerator library installed.")
 
 
+# METADATA ********************
+
+# META {
+# META   "language": "python",
+# META   "language_group": "synapse_pyspark"
+# META }
+
 # CELL ********************
 
 from fabricontology.generate_data import generate_instance_data, generate_events_data
@@ -69,6 +102,13 @@ print(f"Package : {ONTOLOGY_PACKAGE_PATH}")
 print(f"Lakehouse schema : {LAKEHOUSE_SCHEMA}")
 print(f"Eventhouse : {EVENTHOUSE_CLUSTER_URI} / {EVENTHOUSE_DATABASE}")
 
+# METADATA ********************
+
+# META {
+# META   "language": "python",
+# META   "language_group": "synapse_pyspark"
+# META }
+
 # CELL ********************
 
 # Create the instance (static) Delta tables in the default lakehouse.
@@ -81,6 +121,13 @@ instance_result = generate_instance_data(
 print("Lakehouse tables created:")
 for k, v in (instance_result or {}).items():
     print(f"  {k} -> {v}")
+
+# METADATA ********************
+
+# META {
+# META   "language": "python",
+# META   "language_group": "synapse_pyspark"
+# META }
 
 # CELL ********************
 
@@ -130,3 +177,10 @@ except Exception as _fe:  # noqa: BLE001
 print("\nData load complete (lakehouse always; eventhouse best-effort).")
 print(_json.dumps(_summary, indent=2))
 
+
+# METADATA ********************
+
+# META {
+# META   "language": "python",
+# META   "language_group": "synapse_pyspark"
+# META }

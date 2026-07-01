@@ -1,5 +1,24 @@
 # Fabric notebook source
 
+# METADATA ********************
+
+# META {
+# META   "kernel_info": {
+# META     "name": "synapse_pyspark"
+# META   },
+# META   "dependencies": {
+# META     "lakehouse": {
+# META       "default_lakehouse": "b5ae6e8b-5726-489e-9cf1-17c3416393d6",
+# META       "default_lakehouse_name": "fabriciq_lakehouse",
+# META       "default_lakehouse_workspace_id": "a537bf46-7b26-4ed7-b48d-dbccd64a29cc",
+# META       "known_lakehouses": [
+# META         {
+# META           "id": "b5ae6e8b-5726-489e-9cf1-17c3416393d6"
+# META         }
+# META       ]
+# META     }
+# META   }
+# META }
 
 # MARKDOWN ********************
 
@@ -36,6 +55,13 @@ print('  iq :', _JS_IQ)
 print('  eh :', _JS_EH_URI)
 
 
+# METADATA ********************
+
+# META {
+# META   "language": "python",
+# META   "language_group": "synapse_pyspark"
+# META }
+
 # CELL ********************
 
 # Install the Fabric IQ Ontology Accelerator package (uploaded to the lakehouse Files/).
@@ -55,6 +81,13 @@ if _p.returncode != 0:
 print("Accelerator library installed.")
 
 
+# METADATA ********************
+
+# META {
+# META   "language": "python",
+# META   "language_group": "synapse_pyspark"
+# META }
+
 # CELL ********************
 
 import sempy.fabric as fabric
@@ -73,6 +106,13 @@ workspace_id = fabric.get_workspace_id()
 access_token = notebookutils.credentials.getToken('pbi')
 print(f"Workspace: {workspace_id}")
 
+# METADATA ********************
+
+# META {
+# META   "language": "python",
+# META   "language_group": "synapse_pyspark"
+# META }
+
 # CELL ********************
 
 # Resolve the lakehouse + eventhouse item ids the ontology binds to.
@@ -85,6 +125,13 @@ binding_eventhouse_item_id = str(
 )
 print(f"Lakehouse item id : {binding_lakehouse_item_id}")
 print(f"Eventhouse item id: {binding_eventhouse_item_id}")
+
+# METADATA ********************
+
+# META {
+# META   "language": "python",
+# META   "language_group": "synapse_pyspark"
+# META }
 
 # CELL ********************
 
@@ -103,6 +150,13 @@ print(f"Entity types        : {len(entity_types)}")
 print(f"Relationship types  : {len(relationship_types)}")
 print(f"Data bindings       : {len(data_bindings)}")
 print(f"Contextualizations  : {len(contextualizations)}")
+
+# METADATA ********************
+
+# META {
+# META   "language": "python",
+# META   "language_group": "synapse_pyspark"
+# META }
 
 # CELL ********************
 
@@ -149,6 +203,13 @@ print(f"Ontology item id: {ontology_item_id}")
 if not ontology_item_id:
     print("WARNING: could not resolve the Ontology item id — the data agent step will be skipped.")
 
+
+# METADATA ********************
+
+# META {
+# META   "language": "python",
+# META   "language_group": "synapse_pyspark"
+# META }
 
 # MARKDOWN ********************
 
@@ -331,6 +392,13 @@ def build_and_publish_agent(da_name, sources, instructions):
     return res
 
 
+# METADATA ********************
+
+# META {
+# META   "language": "python",
+# META   "language_group": "synapse_pyspark"
+# META }
+
 # CELL ********************
 
 # ── Agent A: grounded on the ontology ────────────────────────────────────────
@@ -377,3 +445,10 @@ except Exception as fe:  # noqa: BLE001
 print(json.dumps(result, indent=2))
 notebookutils.notebook.exit(json.dumps(result))
 
+
+# METADATA ********************
+
+# META {
+# META   "language": "python",
+# META   "language_group": "synapse_pyspark"
+# META }
