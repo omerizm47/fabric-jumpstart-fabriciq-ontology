@@ -1,5 +1,24 @@
 # Fabric notebook source
 
+# METADATA ********************
+
+# META {
+# META   "kernel_info": {
+# META     "name": "synapse_pyspark"
+# META   },
+# META   "dependencies": {
+# META     "lakehouse": {
+# META       "default_lakehouse": "b5ae6e8b-5726-489e-9cf1-17c3416393d6",
+# META       "default_lakehouse_name": "fabriciq_lakehouse",
+# META       "default_lakehouse_workspace_id": "a537bf46-7b26-4ed7-b48d-dbccd64a29cc",
+# META       "known_lakehouses": [
+# META         {
+# META           "id": "b5ae6e8b-5726-489e-9cf1-17c3416393d6"
+# META         }
+# META       ]
+# META     }
+# META   }
+# META }
 
 # MARKDOWN ********************
 
@@ -7,13 +26,13 @@
 # 
 # This jumpstart builds a semantic **ontology** over a **Lakehouse** (business entities) and an **Eventhouse** (time-series), binds it to real tables, and exposes it through a **Fabric Data Agent** for natural-language, context-aware analytics.
 # 
-# Follow the three steps below in order.
+# **Just press `Run all`** — this notebook runs every step for you.
 
 # MARKDOWN ********************
 
 # ## Prerequisite
 # 
-# This jumpstart uses **Fabric IQ / Ontology (preview)**. Make sure the preview is **enabled in your tenant** before you begin, otherwise Step 2 (building the ontology) will fail.
+# This jumpstart uses **Fabric IQ / Ontology (preview)**. Make sure the preview is **enabled in your tenant** before you run this, otherwise building the ontology will fail.
 
 # MARKDOWN ********************
 
@@ -26,52 +45,60 @@
 # | `01_generate_ontology_data` | Notebook | Loads sample data into the Lakehouse + Eventhouse |
 # | `02_create_ontology` | Notebook | Builds the ontology, binds it, and creates two Data Agents |
 # 
-# The **Ontology** item and the two **Data Agents** are created for you when you run `02_create_ontology` (Step 2).
+# When you press **Run all**, this notebook runs `01_generate_ontology_data` then `02_create_ontology` for you, and the **Ontology** + the two **Data Agents** are created automatically.
 
 # CELL ********************
 
-# Resolve dynamic links to the two notebooks you run in this jumpstart.
+# Runs the whole jumpstart for you: loads the data (01), then builds the ontology
+# and publishes the two Data Agents (02). Each step is a reference run via
+# notebookutils.notebook.run; a large timeout is passed because the default is 90s.
+import time
+import notebookutils
+
+def _run_step(_name, _timeout=1800):
+    print(f"=== Running {_name} ===", flush=True)
+    _t0 = time.time()
+    _rv = notebookutils.notebook.run(_name, _timeout)
+    print(f"--- {_name} finished in {int(time.time() - _t0)}s ---\n", flush=True)
+    return _rv
+
+_run_step("01_generate_ontology_data")
+_run_step("02_create_ontology")
+print("All steps complete — the ontology and the two Data Agents are ready.")
+
+# METADATA ********************
+
+# META {
+# META   "language": "python",
+# META   "language_group": "synapse_pyspark"
+# META }
+
+# CELL ********************
+
+# Show the items this jumpstart created so you can open them from your workspace.
 try:
     import sempy.fabric as fabric
     from IPython.display import display, Markdown
     ws = fabric.get_workspace_id()
     items = fabric.list_items()
-
-    def _link(name):
-        m = items[(items['Type'] == 'Notebook') & (items['Display Name'] == name)]
-        if len(m) == 0:
-            return f'**{name}** (not found yet - deploy may still be finishing)'
-        nid = str(m.iloc[0].Id)
-        return f'[{name}](https://app.fabric.microsoft.com/groups/{ws}/synapsenotebooks/{nid})'
-
+    wanted = ["FabricIqOntology", "FabricIqOntologyAgent", "FabricIqDirectAgent"]
+    rows = []
+    for _n in wanted:
+        m = items[items['Display Name'] == _n]
+        _t = str(m.iloc[0].Type) if len(m) else "(not found yet)"
+        rows.append(f"| `{_n}` | {_t} |")
     display(Markdown(
-        '**Run these two notebooks in order:**\n\n'
-        f'1. {_link("01_generate_ontology_data")} - load the data\n\n'
-        f'2. {_link("02_create_ontology")} - build the ontology + two data agents'
+        "**Created items** — open the two agents and ask each the same question:\n\n"
+        "| Item | Type |\n|---|---|\n" + "\n".join(rows) +
+        f"\n\n[Open workspace](https://app.fabric.microsoft.com/groups/{ws}/list)"
     ))
 except Exception as e:
-    print('Open this notebook inside your Fabric workspace to get clickable links.')
-    print('Then run 01_generate_ontology_data, followed by 02_create_ontology.')
-    print('Context unavailable:', e)
+    print("Open your workspace to find FabricIqOntologyAgent and FabricIqDirectAgent.")
+    print("Context unavailable:", e)
 
 # MARKDOWN ********************
 
-# ## Step 1 - Load the data
-# 
-# Open **`01_generate_ontology_data`** (link above) and **Run all**. It loads the industry sample data into `fabriciq_lakehouse` (Delta tables) and `fabriciq_eventhouse` (KQL tables).
-
-# MARKDOWN ********************
-
-# ## Step 2 - Build the ontology + agents
-# 
-# Open **`02_create_ontology`** and **Run all**. It builds the semantic ontology, binds it to the Lakehouse + Eventhouse tables, creates the **`FabricIqOntology`** item, and publishes **two Data Agents**:
-# 
-# - **Ontology Agent** - grounded on the ontology; understands the Lakehouse/Eventhouse relationships.
-# - **Direct Agent** - queries the raw tables with no ontology (for comparison).
-
-# MARKDOWN ********************
-
-# ## Step 3 - Ask questions & compare
+# ## Ask questions & compare
 # 
 # Open each Data Agent and ask the **same** question. The Ontology Agent understands entity relationships and time-series context and answers correctly; the Direct Agent typically cannot join the two sources.
 # 

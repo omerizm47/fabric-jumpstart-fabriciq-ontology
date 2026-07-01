@@ -25,7 +25,7 @@
 # # Fabric IQ — Generate Ontology Data
 # Loads the ontology package's instance data into the **lakehouse** (Delta tables) and its
 # time-series data into the **eventhouse** (Kusto tables), using the Fabric IQ accelerator library.
-# The `.whl` and `.iq` files were uploaded to `Files/` by the deployer.
+# The `.whl` and `.iq` files are fetched into `Files/` at runtime from the jumpstart repo (see the config cell).
 
 # CELL ********************
 
@@ -41,7 +41,7 @@ EVENTHOUSE_NAME = "fabriciq_eventhouse"
 
 # Ensure the accelerator wheel + ontology package are in the lakehouse Files area.
 # On a clean install they are not uploaded, so fetch them from the pinned repo.
-_RAW = "https://raw.githubusercontent.com/omerizm47/fabric-jumpstart-fabriciq-ontology/v0.1.1/fabriciq-ontology/data"
+_RAW = "https://raw.githubusercontent.com/omerizm47/fabric-jumpstart-fabriciq-ontology/v0.1.2/fabriciq-ontology/data"
 
 def _ensure(_pattern, _fname):
     _hits = sorted(glob.glob(f'/lakehouse/default/Files/**/{_pattern}', recursive=True))

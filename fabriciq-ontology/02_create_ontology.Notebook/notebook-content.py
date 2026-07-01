@@ -23,9 +23,9 @@
 # MARKDOWN ********************
 
 # # Fabric IQ — Create Ontology from Package
-# Builds the ontology definition from the uploaded `.iq` package, binds its entities to the
-# lakehouse (static) and eventhouse (time-series) tables created by the previous notebook, and
-# creates the **Ontology** item in this workspace.
+# Builds the ontology definition from the `.iq` package in the lakehouse `Files/`, binds its
+# entities to the lakehouse (static) and eventhouse (time-series) tables created by the previous
+# notebook, and creates the **Ontology** item in this workspace.
 
 # CELL ********************
 
@@ -41,7 +41,7 @@ EVENTHOUSE_NAME = "fabriciq_eventhouse"
 
 # Ensure the accelerator wheel + ontology package are in the lakehouse Files area.
 # On a clean install they are not uploaded, so fetch them from the pinned repo.
-_RAW = "https://raw.githubusercontent.com/omerizm47/fabric-jumpstart-fabriciq-ontology/v0.1.1/fabriciq-ontology/data"
+_RAW = "https://raw.githubusercontent.com/omerizm47/fabric-jumpstart-fabriciq-ontology/v0.1.2/fabriciq-ontology/data"
 
 def _ensure(_pattern, _fname):
     _hits = sorted(glob.glob(f'/lakehouse/default/Files/**/{_pattern}', recursive=True))
