@@ -37,6 +37,7 @@ source:
 items_in_scope:
   - Lakehouse
   - Eventhouse
+  - KQLDatabase
   - Notebook
 entry_point: GettingStarted.Notebook
 # DECISION: for a CORE jumpstart this must be a mail-enabled SECURITY GROUP with
