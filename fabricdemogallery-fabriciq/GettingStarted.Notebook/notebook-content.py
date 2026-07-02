@@ -68,7 +68,7 @@ from IPython.display import display
 _INDUSTRIES = ["construction", "education", "energy-grid", "financial-services", "healthcare",
                "hospitality", "manufacturing-qc", "media", "professional-services",
                "retail-sales", "technology", "transportation"]
-_RAW = "https://raw.githubusercontent.com/omerizm47/fabric-jumpstart-fabriciq-ontology/v0.1.14/fabricdemogallery-fabriciq/data"
+_RAW = "https://raw.githubusercontent.com/omerizm47/fabric-jumpstart-fabriciq-ontology/v0.1.15/fabricdemogallery-fabriciq/data"
 
 _dd = widgets.Dropdown(options=_INDUSTRIES, value="retail-sales", description="Industry:",
                        layout=widgets.Layout(width="320px"))
@@ -82,11 +82,27 @@ def _run_step(_name, _timeout=1800):
     print(f"--- {_name} finished in {int(time.time() - _t0)}s ---\n", flush=True)
 
 def _list_created():
+    # Dynamic links to the created items (per jumpstart standards): resolve item
+    # ids from THIS workspace at runtime and render clickable Fabric URLs.
     import sempy.fabric as fabric
+    from IPython.display import Markdown, display
+    _routes = {"Ontology": "ontologies", "DataAgent": "aiskills"}
+    _ws = fabric.get_workspace_id()
     items = fabric.list_items()
+    _lines = []
     for _n in ["FabricIqOntology", "FabricIqOntologyAgent", "FabricIqDirectAgent"]:
         m = items[items["Display Name"] == _n]
-        print(f"  {_n}: {str(m.iloc[0].Type) if len(m) else '(not found)'}")
+        if len(m):
+            _t = str(m.iloc[0].Type)
+            _route = _routes.get(_t)
+            if _route:
+                _url = f"https://app.fabric.microsoft.com/groups/{_ws}/{_route}/{str(m.iloc[0].Id)}"
+                _lines.append(f"- [{_n}]({_url}) ({_t})")
+            else:
+                _lines.append(f"- {_n} ({_t})")
+        else:
+            _lines.append(f"- {_n} (not found)")
+    display(Markdown("**Created items** — open the two Data Agents and ask each the same question:\n\n" + "\n".join(_lines)))
 
 def _go(_):
     _btn.disabled = True
@@ -100,9 +116,8 @@ def _go(_):
             print("Ontology package ready.\n")
             _run_step("01_generate_ontology_data")
             _run_step("02_create_ontology")
-            print("All steps complete — created items:")
+            print("All steps complete.")
             _list_created()
-            print("\nOpen the two Data Agents from your workspace and ask each the same question.")
         except Exception as _e:  # noqa: BLE001
             print(f"FAILED: {_e}")
             _btn.disabled = False

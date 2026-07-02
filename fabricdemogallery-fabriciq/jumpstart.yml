@@ -43,7 +43,7 @@ entry_point: GettingStarted.Notebook
 # DECISION: for a CORE jumpstart this must be a mail-enabled SECURITY GROUP with
 # >=2 owners (e.g. fabricjumpstart.fabricdemogallery-fabriciq@microsoft.com), not a personal
 # email. Finalize once core-vs-community + the Microsoft sponsor are confirmed.
-owner_email: fabricjumpstart.fabricdemogallery-fabriciq@example.com
+owner_email: omerguzel@microsoft.com
 difficulty: Advanced
 minutes_to_deploy: 5
 minutes_to_complete_jumpstart: 25
