@@ -41,7 +41,7 @@ EVENTHOUSE_NAME = "fabriciq_eventhouse"
 
 # Ensure the accelerator wheel + ontology package are in the lakehouse Files area.
 # On a clean install they are not uploaded, so fetch them from the pinned repo.
-_RAW = "https://raw.githubusercontent.com/omerizm47/fabric-jumpstart-fabriciq-ontology/v0.1.13/fabricdemogallery-fabriciq/data"
+_RAW = "https://raw.githubusercontent.com/omerizm47/fabric-jumpstart-fabriciq-ontology/v0.1.14/fabricdemogallery-fabriciq/data"
 
 # Industry package. In the normal flow GettingStarted pre-places the chosen package as
 # Files/ontology_package.iq; set INDUSTRY here only if you run this notebook standalone.
@@ -133,6 +133,82 @@ if _p.returncode != 0:
     raise RuntimeError(f"pip install failed (exit {_p.returncode}) — see stderr above")
 print("Accelerator library installed.")
 
+
+# METADATA ********************
+
+# META {
+# META   "language": "python",
+# META   "language_group": "synapse_pyspark"
+# META }
+
+# CELL ********************
+
+# Shift the packaged time-series so the newest event lands ~yesterday.
+# The sample events in the .iq were generated at package-build time; without a
+# shift, questions about recent periods find no rows in range. A single global
+# day-offset is applied to every events_data member, preserving relative order
+# and time-of-day. Idempotent: re-running shifts by ~0 days.
+import csv as _csv
+import io as _iocsv
+import os as _os
+import zipfile as _zipf
+from datetime import datetime as _dt, timedelta as _td
+
+_TS_FORMATS = ("%Y-%m-%d %H:%M:%S", "%Y-%m-%dT%H:%M:%S", "%Y-%m-%d")
+
+def _parse_ts(_v):
+    for _f in _TS_FORMATS:
+        try:
+            return _dt.strptime(_v, _f), _f
+        except ValueError:
+            continue
+    return None, None
+
+_zin = _zipf.ZipFile(_JS_IQ)
+_members = {n: _zin.read(n) for n in _zin.namelist()}
+_zin.close()
+
+# Find the global max timestamp across all events members.
+_gmax = None
+for _n, _data in _members.items():
+    if not (_n.startswith("events_data/") and _n.lower().endswith(".csv")):
+        continue
+    _rd = _csv.DictReader(_iocsv.StringIO(_data.decode("utf-8")))
+    for _row in _rd:
+        for _col, _val in _row.items():
+            if "timestamp" in _col.lower() and _val:
+                _t, _ = _parse_ts(_val)
+                if _t and (_gmax is None or _t > _gmax):
+                    _gmax = _t
+
+if _gmax is None:
+    print("No timestamp columns found in events_data - skipping shift.")
+else:
+    _delta = _td(days=(_dt.utcnow() - _td(days=1) - _gmax).days)
+    if _delta.days <= 0:
+        print(f"Events already current (max {_gmax:%Y-%m-%d}) - no shift needed.")
+    else:
+        for _n in list(_members):
+            if not (_n.startswith("events_data/") and _n.lower().endswith(".csv")):
+                continue
+            _rd = _csv.DictReader(_iocsv.StringIO(_members[_n].decode("utf-8")))
+            _out = _iocsv.StringIO()
+            _wr = _csv.DictWriter(_out, fieldnames=_rd.fieldnames, lineterminator="\n")
+            _wr.writeheader()
+            for _row in _rd:
+                for _col in _rd.fieldnames:
+                    if "timestamp" in _col.lower() and _row[_col]:
+                        _t, _f = _parse_ts(_row[_col])
+                        if _t:
+                            _row[_col] = (_t + _delta).strftime(_f)
+                _wr.writerow(_row)
+            _members[_n] = _out.getvalue().encode("utf-8")
+        _tmp = _JS_IQ + ".shifted"
+        with _zipf.ZipFile(_tmp, "w", _zipf.ZIP_DEFLATED) as _zout:
+            for _n, _data in _members.items():
+                _zout.writestr(_n, _data)
+        _os.replace(_tmp, _JS_IQ)
+        print(f"Shifted events_data timestamps forward by {_delta.days} days (was max {_gmax:%Y-%m-%d}).")
 
 # METADATA ********************
 
