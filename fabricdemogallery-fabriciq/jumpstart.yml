@@ -1,12 +1,5 @@
-# Production Jumpstart registry entry (DRAFT) for the FabricIQ Ontology pilot.
-# This is the file that will go in fabric-jumpstart/.../jumpstarts/core|community/fabricdemogallery-fabriciq.yml
-# once the content repo below is built, tagged, and the SVGs are generated.
-#
-# NOTE: `source.repo_url`/`repo_ref` are placeholders until we create + tag the
-# real content repo. `mermaid_diagram` is included to lock the shape, but the
-# validator (test_registry) requires committed light/dark SVGs in
-# assets/images/diagrams/ before this can be added to the live registry — generate
-# them via the web app's /tools/diagram-generator page.
+# Mirror of this jumpstart's registry entry in microsoft/fabric-jumpstart
+# (src/fabric_jumpstart/fabric_jumpstart/jumpstarts/community/fabricdemogallery-fabriciq.yml).
 id: 27
 logical_id: fabricdemogallery-fabriciq
 name: FabricIQ Ontology and Data Agent
@@ -23,26 +16,19 @@ scenario_tags:
   - Modeling
 type: Demo
 source:
-  # DECISION: real content repo URL + tag (created + tagged during the live build).
-  # STANDARD: complex jumpstarts should live in an ISOLATED repo, hence a dedicated
-  # repo name here rather than the shared gallery repo.
   repo_url: https://github.com/omerizm47/fabric-jumpstart-fabriciq-ontology.git
   repo_ref: v0.1.15
   workspace_path: fabricdemogallery-fabriciq/
-# The notebooks self-fetch the accelerator wheel + ontology .iq from this repo's
-# data/ folder at runtime, so no files_source_path upload is needed.
-# fabric-cicd deploys ONLY the Lakehouse, Eventhouse, and the notebooks. The
-# Ontology item + the two Data Agents are CREATED AT RUNTIME by 02_create_ontology,
-# so they are intentionally NOT listed here (items_in_scope = deployed types only).
+# fabric-cicd deploys the Lakehouse, Eventhouse (with its KQL database), and the
+# Notebooks. The Ontology item and the two Data Agents are created at runtime by
+# GettingStarted.Notebook (which orchestrates 01 then 02), so items_in_scope
+# lists deployed types only.
 items_in_scope:
   - Lakehouse
   - Eventhouse
   - KQLDatabase
   - Notebook
 entry_point: GettingStarted.Notebook
-# DECISION: for a CORE jumpstart this must be a mail-enabled SECURITY GROUP with
-# >=2 owners (e.g. fabricjumpstart.fabricdemogallery-fabriciq@microsoft.com), not a personal
-# email. Finalize once core-vs-community + the Microsoft sponsor are confirmed.
 owner_email: omerguzel@microsoft.com
 difficulty: Advanced
 minutes_to_deploy: 5
