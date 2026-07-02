@@ -41,7 +41,7 @@ EVENTHOUSE_NAME = "fabriciq_eventhouse"
 
 # Ensure the accelerator wheel + ontology package are in the lakehouse Files area.
 # On a clean install they are not uploaded, so fetch them from the pinned repo.
-_RAW = "https://raw.githubusercontent.com/omerizm47/fabric-jumpstart-fabriciq-ontology/v0.1.10/fabricdemogallery-fabriciq/data"
+_RAW = "https://raw.githubusercontent.com/omerizm47/fabric-jumpstart-fabriciq-ontology/v0.1.11/fabricdemogallery-fabriciq/data"
 
 # Industry package. In the normal flow GettingStarted pre-places the chosen package as
 # Files/ontology_package.iq; set INDUSTRY here only if you run this notebook standalone.
@@ -211,56 +211,6 @@ if not _JS_EH_DB:
         f"Eventhouse database {EVENTHOUSE_DATABASE!r} was not provisioned within 10 minutes - "
         "rerun this notebook once the Eventhouse is ready."
     )
-
-# Pre-create the Kusto tables with BRACKET-QUOTED names. The Spark Kusto
-# connector's own tableCreate emits the table name unquoted, which fails with
-# "Syntax error: A recognition error occurred" for reserved-word names such as
-# 'transactions'. Mirrors the accelerator's naming + type inference exactly so
-# the subsequent Append ingestion matches the schema.
-import io as _io
-import re as _re
-import urllib.request as _ur
-from zipfile import ZipFile as _Zip
-
-import pandas as _pd
-
-def _kusto_mgmt(_csl):
-    _tok = mssparkutils.credentials.getToken(EVENTHOUSE_CLUSTER_URI)
-    _req = _ur.Request(
-        f"{EVENTHOUSE_CLUSTER_URI}/v1/rest/mgmt",
-        data=_json.dumps({"db": EVENTHOUSE_DATABASE, "csl": _csl}).encode(),
-        headers={"Authorization": f"Bearer {_tok}", "Content-Type": "application/json"},
-    )
-    return _json.loads(_ur.urlopen(_req, timeout=60).read())
-
-def _sanitize_tbl(_n):
-    _b = _n.split("/")[-1].split("\\")[-1]
-    _b = _re.sub(r"\.csv$", "", _b, flags=_re.IGNORECASE)
-    _b = _re.sub(r"[^0-9a-zA-Z]+", "_", _b).strip("_").lower()
-    return f"t_{_b}" if (not _b or _b[0].isdigit()) else _b
-
-_zf = _Zip(ONTOLOGY_PACKAGE_PATH)
-for _m in [n for n in _zf.namelist() if n.startswith("events_data/") and n.lower().endswith(".csv")]:
-    _df = _pd.read_csv(_io.BytesIO(_zf.read(_m)))
-    _cols = []
-    for _c in _df.columns:
-        _s = _df[_c].dropna().astype(str).str.strip()
-        _s = _s[_s != ""].head(100)
-        _is_dt = (len(_s) > 0) and (_pd.to_datetime(_s, errors="coerce", format="mixed").notna().mean() >= 0.9)
-        if _is_dt:
-            _kt = "datetime"
-        elif _pd.api.types.is_float_dtype(_df[_c]):
-            _kt = "real"
-        elif _pd.api.types.is_integer_dtype(_df[_c]):
-            _kt = "long"
-        elif _pd.api.types.is_bool_dtype(_df[_c]):
-            _kt = "bool"
-        else:
-            _kt = "string"
-        _cols.append(f"['{_c}']: {_kt}")
-    _tbl = _sanitize_tbl(_m)
-    _kusto_mgmt(f".create-merge table ['{_tbl}'] ({', '.join(_cols)})")
-    print(f"Pre-created Kusto table ['{_tbl}']")
 
 events_result = {}
 events_error = ""
