@@ -5,7 +5,7 @@ Content repository for the **FabricIQ Ontology** Fabric Jumpstart, installed via
 
 ```python
 import fabric_jumpstart as jumpstart
-jumpstart.install("fabriciq-ontology")
+jumpstart.install("fabricdemogallery-fabriciq")
 ```
 
 ## What it deploys
@@ -20,10 +20,10 @@ Start at the **`GettingStarted`** notebook.
 > **Prerequisite:** Fabric IQ / Ontology (preview) enabled in your tenant.
 
 ## Layout
-- `fabriciq-ontology/` — the jumpstart (`workspace_path`); Fabric items sync here.
-- `fabriciq-ontology/data/` — accelerator wheel + ontology `.iq` (`files_source_path`,
+- `fabricdemogallery-fabriciq/` — the jumpstart (`workspace_path`); Fabric items sync here.
+- `fabricdemogallery-fabriciq/data/` — accelerator wheel + ontology `.iq` (`files_source_path`,
   auto-uploaded to the lakehouse `Files/` after deployment).
-- `fabriciq-ontology/jumpstart.yml` — the registry-entry draft (the live entry is
+- `fabricdemogallery-fabriciq/jumpstart.yml` — the registry-entry draft (the live entry is
   contributed to the `microsoft/fabric-jumpstart` registry).
 
 The notebooks are self-configuring: they resolve the wheel/`.iq` paths and the

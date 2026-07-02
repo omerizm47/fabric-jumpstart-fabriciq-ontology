@@ -66,7 +66,7 @@ _INDUSTRIES = ["construction", "education", "energy-grid", "financial-services",
                "hospitality", "manufacturing-qc", "media", "professional-services",
                "retail-sales", "technology", "transportation"]
 assert INDUSTRY in _INDUSTRIES, f"INDUSTRY must be one of: {', '.join(_INDUSTRIES)}"
-_RAW = "https://raw.githubusercontent.com/omerizm47/fabric-jumpstart-fabriciq-ontology/v0.1.3/fabriciq-ontology/data"
+_RAW = "https://raw.githubusercontent.com/omerizm47/fabric-jumpstart-fabriciq-ontology/v0.1.4/fabricdemogallery-fabriciq/data"
 os.makedirs('/lakehouse/default/Files', exist_ok=True)
 _iq_dest = '/lakehouse/default/Files/ontology_package.iq'
 urllib.request.urlretrieve(f'{_RAW}/{INDUSTRY}_ontology_package.iq', _iq_dest)

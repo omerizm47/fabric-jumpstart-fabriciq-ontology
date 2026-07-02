@@ -1,5 +1,5 @@
 # Production Jumpstart registry entry (DRAFT) for the FabricIQ Ontology pilot.
-# This is the file that will go in fabric-jumpstart/.../jumpstarts/core|community/fabriciq-ontology.yml
+# This is the file that will go in fabric-jumpstart/.../jumpstarts/core|community/fabricdemogallery-fabriciq.yml
 # once the content repo below is built, tagged, and the SVGs are generated.
 #
 # NOTE: `source.repo_url`/`repo_ref` are placeholders until we create + tag the
@@ -8,7 +8,7 @@
 # assets/images/diagrams/ before this can be added to the live registry — generate
 # them via the web app's /tools/diagram-generator page.
 id: 27
-logical_id: fabriciq-ontology
+logical_id: fabricdemogallery-fabriciq
 name: FabricIQ Ontology and Data Agent
 description: >-
   Build a semantic ontology over a Lakehouse (business entities) and an
@@ -27,8 +27,8 @@ source:
   # STANDARD: complex jumpstarts should live in an ISOLATED repo, hence a dedicated
   # repo name here rather than the shared gallery repo.
   repo_url: https://github.com/omerizm47/fabric-jumpstart-fabriciq-ontology.git
-  repo_ref: v0.1.2
-  workspace_path: fabriciq-ontology/
+  repo_ref: v0.1.4
+  workspace_path: fabricdemogallery-fabriciq/
 # The notebooks self-fetch the accelerator wheel + ontology .iq from this repo's
 # data/ folder at runtime, so no files_source_path upload is needed.
 # fabric-cicd deploys ONLY the Lakehouse, Eventhouse, and the notebooks. The
@@ -40,9 +40,9 @@ items_in_scope:
   - Notebook
 entry_point: GettingStarted.Notebook
 # DECISION: for a CORE jumpstart this must be a mail-enabled SECURITY GROUP with
-# >=2 owners (e.g. fabricjumpstart.fabriciq-ontology@microsoft.com), not a personal
+# >=2 owners (e.g. fabricjumpstart.fabricdemogallery-fabriciq@microsoft.com), not a personal
 # email. Finalize once core-vs-community + the Microsoft sponsor are confirmed.
-owner_email: fabricjumpstart.fabriciq-ontology@example.com
+owner_email: fabricjumpstart.fabricdemogallery-fabriciq@example.com
 difficulty: Advanced
 minutes_to_deploy: 5
 minutes_to_complete_jumpstart: 25
