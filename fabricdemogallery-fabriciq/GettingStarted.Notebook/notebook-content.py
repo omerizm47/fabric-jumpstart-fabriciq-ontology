@@ -68,7 +68,7 @@ from IPython.display import display
 _INDUSTRIES = ["construction", "education", "energy-grid", "financial-services", "healthcare",
                "hospitality", "manufacturing-qc", "media", "professional-services",
                "retail-sales", "technology", "transportation"]
-_RAW = "https://raw.githubusercontent.com/omerizm47/fabric-jumpstart-fabriciq-ontology/v0.1.6/fabricdemogallery-fabriciq/data"
+_RAW = "https://raw.githubusercontent.com/omerizm47/fabric-jumpstart-fabriciq-ontology/v0.1.7/fabricdemogallery-fabriciq/data"
 
 _dd = widgets.Dropdown(options=_INDUSTRIES, value="retail-sales", description="Industry:",
                        layout=widgets.Layout(width="320px"))

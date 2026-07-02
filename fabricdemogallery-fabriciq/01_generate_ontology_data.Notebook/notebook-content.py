@@ -41,7 +41,7 @@ EVENTHOUSE_NAME = "fabriciq_eventhouse"
 
 # Ensure the accelerator wheel + ontology package are in the lakehouse Files area.
 # On a clean install they are not uploaded, so fetch them from the pinned repo.
-_RAW = "https://raw.githubusercontent.com/omerizm47/fabric-jumpstart-fabriciq-ontology/v0.1.6/fabricdemogallery-fabriciq/data"
+_RAW = "https://raw.githubusercontent.com/omerizm47/fabric-jumpstart-fabriciq-ontology/v0.1.7/fabricdemogallery-fabriciq/data"
 
 # Industry package. In the normal flow GettingStarted pre-places the chosen package as
 # Files/ontology_package.iq; set INDUSTRY here only if you run this notebook standalone.
@@ -160,13 +160,41 @@ for k, v in (instance_result or {}).items():
 
 # CELL ********************
 
-# Create the time-series Kusto tables in the eventhouse (best-effort).
-# A freshly-created Eventhouse can take a short while before its default KQL
-# database accepts writes; retry a few times. A persistent Kusto hiccup must NOT
-# cancel the whole session — the lakehouse tables + ontology can still proceed,
-# so we capture the outcome instead of raising.
+# Create the time-series Kusto tables in the eventhouse.
+# A freshly-created Eventhouse can take several minutes before its default KQL
+# database is provisioned and accepts writes, so wait for the database first,
+# then retry the write. If the eventhouse load ultimately fails we RAISE:
+# an ontology built with a time-series binding to a missing Kusto table ends up
+# with an empty graph, which is far worse than a visible failure here.
 import json as _json, time as _time
 from notebookutils import mssparkutils
+
+def _kusto_db_ready(_uri, _db, _timeout_s=600, _interval_s=15):
+    """Poll the eventhouse until its KQL database exists (or timeout)."""
+    import urllib.request as _ur
+    _deadline = _time.time() + _timeout_s
+    while _time.time() < _deadline:
+        try:
+            _tok = mssparkutils.credentials.getToken(_uri)
+            _req = _ur.Request(
+                f"{_uri}/v1/rest/mgmt",
+                data=_json.dumps({"csl": ".show databases | project DatabaseName"}).encode(),
+                headers={"Authorization": f"Bearer {_tok}", "Content-Type": "application/json"},
+            )
+            _rows = _json.loads(_ur.urlopen(_req, timeout=30).read())["Tables"][0]["Rows"]
+            if any(_r[0] == _db for _r in _rows):
+                print(f"Eventhouse database {_db!r} is ready.")
+                return True
+        except Exception as _pe:  # noqa: BLE001
+            print(f"Waiting for eventhouse database... ({type(_pe).__name__})")
+        _time.sleep(_interval_s)
+    return False
+
+if not _kusto_db_ready(EVENTHOUSE_CLUSTER_URI, EVENTHOUSE_DATABASE):
+    raise RuntimeError(
+        f"Eventhouse database {EVENTHOUSE_DATABASE!r} was not provisioned within 10 minutes - "
+        "rerun this notebook once the Eventhouse is ready."
+    )
 
 events_result = {}
 events_error = ""
@@ -203,7 +231,14 @@ try:
 except Exception as _fe:  # noqa: BLE001
     print(f"Could not write load_data_result.json: {_fe}")
 
-print("\nData load complete (lakehouse always; eventhouse best-effort).")
+if events_error:
+    raise RuntimeError(
+        f"Eventhouse load failed after retries: {events_error[:500]}\n"
+        "Rerun this notebook before running 02_create_ontology - an ontology bound to a "
+        "missing Kusto table produces an EMPTY graph (the data agent finds no data)."
+    )
+
+print("\nData load complete (lakehouse + eventhouse).")
 print(_json.dumps(_summary, indent=2))
 
 
