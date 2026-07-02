@@ -68,7 +68,7 @@ from IPython.display import display
 _INDUSTRIES = ["construction", "education", "energy-grid", "financial-services", "healthcare",
                "hospitality", "manufacturing-qc", "media", "professional-services",
                "retail-sales", "technology", "transportation"]
-_RAW = "https://raw.githubusercontent.com/omerizm47/fabric-jumpstart-fabriciq-ontology/v0.1.11/fabricdemogallery-fabriciq/data"
+_RAW = "https://raw.githubusercontent.com/omerizm47/fabric-jumpstart-fabriciq-ontology/v0.1.12/fabricdemogallery-fabriciq/data"
 
 _dd = widgets.Dropdown(options=_INDUSTRIES, value="retail-sales", description="Industry:",
                        layout=widgets.Layout(width="320px"))
@@ -102,7 +102,9 @@ def _go(_):
             _run_step("02_create_ontology")
             print("All steps complete — created items:")
             _list_created()
-            print("\nOpen the two Data Agents from your workspace and ask each the same question.")
+            print("\nNOTE: the ontology's graph hydrates asynchronously — give it ~10-15 minutes")
+            print("before asking the agents; early answers may be incomplete or empty.")
+            print("Open the two Data Agents from your workspace and ask each the same question.")
         except Exception as _e:  # noqa: BLE001
             print(f"FAILED: {_e}")
             _btn.disabled = False
@@ -116,6 +118,8 @@ print("Pick an industry, then click 'Build the demo'.")
 # MARKDOWN ********************
 
 # ## Ask questions & compare
+# 
+# > **Give the ontology ~10–15 minutes after the build finishes** — its graph model hydrates from the bound tables asynchronously, so the Ontology Agent's first answers may be incomplete until hydration completes.
 # 
 # Open each Data Agent and ask the **same** question. The Ontology Agent understands entity relationships and time-series context and answers correctly; the Direct Agent typically cannot join the two sources.
 # 
