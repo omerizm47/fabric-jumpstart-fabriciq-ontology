@@ -41,7 +41,7 @@ EVENTHOUSE_NAME = "fabriciq_eventhouse"
 
 # Ensure the accelerator wheel + ontology package are in the lakehouse Files area.
 # On a clean install they are not uploaded, so fetch them from the pinned repo.
-_RAW = "https://raw.githubusercontent.com/omerizm47/fabric-jumpstart-fabriciq-ontology/v0.1.7/fabricdemogallery-fabriciq/data"
+_RAW = "https://raw.githubusercontent.com/omerizm47/fabric-jumpstart-fabriciq-ontology/v0.1.8/fabricdemogallery-fabriciq/data"
 
 # Industry package. In the normal flow GettingStarted pre-places the chosen package as
 # Files/ontology_package.iq; set INDUSTRY here only if you run this notebook standalone.
@@ -78,6 +78,30 @@ _items = _fab.list_items()
 _eh = _items[(_items['Type'] == 'Eventhouse') & (_items['Display Name'] == EVENTHOUSE_NAME)]
 assert len(_eh) > 0, f'Eventhouse {EVENTHOUSE_NAME!r} not found in this workspace.'
 _JS_EH_URI = _FRC().get(f"/v1/workspaces/{_ws}/eventhouses/{str(_eh.iloc[0].Id)}").json()['properties']['queryServiceUri']
+
+def _kusto_real_db_name(_uri, _pretty):
+    """Resolve the Kusto-level DatabaseName for a KQL database.
+
+    Fabric KQL databases created via API/deployment get a GUID as their real
+    DatabaseName with the display name only as PrettyName; auto-created default
+    databases use the display name directly. Tools like the Spark Kusto
+    connector require the REAL DatabaseName, so match on either column.
+    """
+    import json as _j
+    import urllib.request as _ur
+    from notebookutils import mssparkutils as _msu
+    _tok = _msu.credentials.getToken(_uri)
+    _req = _ur.Request(
+        f"{_uri}/v1/rest/mgmt",
+        data=_j.dumps({"csl": ".show databases | project DatabaseName, PrettyName"}).encode(),
+        headers={"Authorization": f"Bearer {_tok}", "Content-Type": "application/json"},
+    )
+    _rows = _j.loads(_ur.urlopen(_req, timeout=30).read())["Tables"][0]["Rows"]
+    for _dbn, _pn in _rows:
+        if _pretty in (_dbn, _pn):
+            return _dbn
+    return None
+
 print('Jumpstart config resolved:')
 print('  whl:', _JS_WHL)
 print('  iq :', _JS_IQ)
@@ -161,36 +185,28 @@ for k, v in (instance_result or {}).items():
 # CELL ********************
 
 # Create the time-series Kusto tables in the eventhouse.
-# A freshly-created Eventhouse can take several minutes before its default KQL
-# database is provisioned and accepts writes, so wait for the database first,
-# then retry the write. If the eventhouse load ultimately fails we RAISE:
-# an ontology built with a time-series binding to a missing Kusto table ends up
-# with an empty graph, which is far worse than a visible failure here.
+# A freshly-created Eventhouse can take several minutes before its KQL database
+# is provisioned, so poll for it first (resolving the REAL Kusto DatabaseName -
+# API-created databases get a GUID name with the display name as PrettyName).
+# If the eventhouse load ultimately fails we RAISE: an ontology built with a
+# time-series binding to a missing Kusto table ends up with an empty graph,
+# which is far worse than a visible failure here.
 import json as _json, time as _time
 from notebookutils import mssparkutils
 
-def _kusto_db_ready(_uri, _db, _timeout_s=600, _interval_s=15):
-    """Poll the eventhouse until its KQL database exists (or timeout)."""
-    import urllib.request as _ur
-    _deadline = _time.time() + _timeout_s
-    while _time.time() < _deadline:
-        try:
-            _tok = mssparkutils.credentials.getToken(_uri)
-            _req = _ur.Request(
-                f"{_uri}/v1/rest/mgmt",
-                data=_json.dumps({"csl": ".show databases | project DatabaseName"}).encode(),
-                headers={"Authorization": f"Bearer {_tok}", "Content-Type": "application/json"},
-            )
-            _rows = _json.loads(_ur.urlopen(_req, timeout=30).read())["Tables"][0]["Rows"]
-            if any(_r[0] == _db for _r in _rows):
-                print(f"Eventhouse database {_db!r} is ready.")
-                return True
-        except Exception as _pe:  # noqa: BLE001
-            print(f"Waiting for eventhouse database... ({type(_pe).__name__})")
-        _time.sleep(_interval_s)
-    return False
+_JS_EH_DB = None
+_deadline = _time.time() + 600
+while _time.time() < _deadline:
+    try:
+        _JS_EH_DB = _kusto_real_db_name(EVENTHOUSE_CLUSTER_URI, EVENTHOUSE_DATABASE)
+        if _JS_EH_DB:
+            print(f"Eventhouse database ready: {_JS_EH_DB!r} (display {EVENTHOUSE_DATABASE!r})")
+            break
+    except Exception as _pe:  # noqa: BLE001
+        print(f"Waiting for eventhouse database... ({type(_pe).__name__})")
+    _time.sleep(15)
 
-if not _kusto_db_ready(EVENTHOUSE_CLUSTER_URI, EVENTHOUSE_DATABASE):
+if not _JS_EH_DB:
     raise RuntimeError(
         f"Eventhouse database {EVENTHOUSE_DATABASE!r} was not provisioned within 10 minutes - "
         "rerun this notebook once the Eventhouse is ready."
@@ -205,7 +221,7 @@ for _attempt in range(4):
             spark,
             ontology_package_path=ONTOLOGY_PACKAGE_PATH,
             eventhouse_cluster_uri=EVENTHOUSE_CLUSTER_URI,
-            eventhouse_database=EVENTHOUSE_DATABASE,
+            eventhouse_database=_JS_EH_DB,
             access_token=access_token,
         )
         events_error = ""

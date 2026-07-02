@@ -41,7 +41,7 @@ EVENTHOUSE_NAME = "fabriciq_eventhouse"
 
 # Ensure the accelerator wheel + ontology package are in the lakehouse Files area.
 # On a clean install they are not uploaded, so fetch them from the pinned repo.
-_RAW = "https://raw.githubusercontent.com/omerizm47/fabric-jumpstart-fabriciq-ontology/v0.1.7/fabricdemogallery-fabriciq/data"
+_RAW = "https://raw.githubusercontent.com/omerizm47/fabric-jumpstart-fabriciq-ontology/v0.1.8/fabricdemogallery-fabriciq/data"
 
 # Industry package. In the normal flow GettingStarted pre-places the chosen package as
 # Files/ontology_package.iq; set INDUSTRY here only if you run this notebook standalone.
@@ -78,10 +78,33 @@ _items = _fab.list_items()
 _eh = _items[(_items['Type'] == 'Eventhouse') & (_items['Display Name'] == EVENTHOUSE_NAME)]
 assert len(_eh) > 0, f'Eventhouse {EVENTHOUSE_NAME!r} not found in this workspace.'
 _JS_EH_URI = _FRC().get(f"/v1/workspaces/{_ws}/eventhouses/{str(_eh.iloc[0].Id)}").json()['properties']['queryServiceUri']
+
+def _kusto_real_db_name(_uri, _pretty):
+    """Resolve the Kusto-level DatabaseName (API-created DBs get a GUID name;
+    the display name is only the PrettyName)."""
+    import json as _j
+    import urllib.request as _ur
+    from notebookutils import mssparkutils as _msu
+    _tok = _msu.credentials.getToken(_uri)
+    _req = _ur.Request(
+        f"{_uri}/v1/rest/mgmt",
+        data=_j.dumps({"csl": ".show databases | project DatabaseName, PrettyName"}).encode(),
+        headers={"Authorization": f"Bearer {_tok}", "Content-Type": "application/json"},
+    )
+    _rows = _j.loads(_ur.urlopen(_req, timeout=30).read())["Tables"][0]["Rows"]
+    for _dbn, _pn in _rows:
+        if _pretty in (_dbn, _pn):
+            return _dbn
+    return None
+
+_JS_EH_DB = _kusto_real_db_name(_JS_EH_URI, EVENTHOUSE_NAME)
+assert _JS_EH_DB, f'KQL database for {EVENTHOUSE_NAME!r} not found - run 01_generate_ontology_data first.'
+
 print('Jumpstart config resolved:')
 print('  whl:', _JS_WHL)
 print('  iq :', _JS_IQ)
 print('  eh :', _JS_EH_URI)
+print('  db :', _JS_EH_DB)
 
 
 # METADATA ********************
@@ -129,7 +152,7 @@ BINDING_LAKEHOUSE_NAME        = "fabriciq_lakehouse"
 BINDING_LAKEHOUSE_SCHEMA_NAME = "dbo"
 BINDING_EVENTHOUSE_NAME       = "fabriciq_eventhouse"
 BINDING_EVENTHOUSE_CLUSTER_URI = _JS_EH_URI
-BINDING_EVENTHOUSE_DATABASE_NAME = "fabriciq_eventhouse"
+BINDING_EVENTHOUSE_DATABASE_NAME = _JS_EH_DB
 
 workspace_id = fabric.get_workspace_id()
 access_token = notebookutils.credentials.getToken('pbi')
