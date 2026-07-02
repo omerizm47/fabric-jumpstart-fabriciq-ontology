@@ -41,7 +41,7 @@ EVENTHOUSE_NAME = "fabriciq_eventhouse"
 
 # Ensure the accelerator wheel + ontology package are in the lakehouse Files area.
 # On a clean install they are not uploaded, so fetch them from the pinned repo.
-_RAW = "https://raw.githubusercontent.com/omerizm47/fabric-jumpstart-fabriciq-ontology/v0.1.8/fabricdemogallery-fabriciq/data"
+_RAW = "https://raw.githubusercontent.com/omerizm47/fabric-jumpstart-fabriciq-ontology/v0.1.9/fabricdemogallery-fabriciq/data"
 
 # Industry package. In the normal flow GettingStarted pre-places the chosen package as
 # Files/ontology_package.iq; set INDUSTRY here only if you run this notebook standalone.
@@ -152,7 +152,9 @@ BINDING_LAKEHOUSE_NAME        = "fabriciq_lakehouse"
 BINDING_LAKEHOUSE_SCHEMA_NAME = "dbo"
 BINDING_EVENTHOUSE_NAME       = "fabriciq_eventhouse"
 BINDING_EVENTHOUSE_CLUSTER_URI = _JS_EH_URI
-BINDING_EVENTHOUSE_DATABASE_NAME = _JS_EH_DB
+# Display name, not the GUID DatabaseName: Kusto resolves it, and downstream
+# consumers inline it into KQL where a GUID is an invalid identifier.
+BINDING_EVENTHOUSE_DATABASE_NAME = "fabriciq_eventhouse"
 
 workspace_id = fabric.get_workspace_id()
 access_token = notebookutils.credentials.getToken('pbi')
