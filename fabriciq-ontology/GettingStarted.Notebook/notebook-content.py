@@ -26,7 +26,7 @@
 # 
 # This jumpstart builds a semantic **ontology** over a **Lakehouse** (business entities) and an **Eventhouse** (time-series), binds it to real tables, and exposes it through a **Fabric Data Agent** for natural-language, context-aware analytics.
 # 
-# **Just press `Run all`** — this notebook runs every step for you.
+# **Pick your industry below, then press `Run all`** — this notebook runs every step for you.
 
 # MARKDOWN ********************
 
@@ -46,6 +46,39 @@
 # | `02_create_ontology` | Notebook | Builds the ontology, binds it, and creates two Data Agents |
 # 
 # When you press **Run all**, this notebook runs `01_generate_ontology_data` then `02_create_ontology` for you, and the **Ontology** + the two **Data Agents** are created automatically.
+
+# MARKDOWN ********************
+
+# ## Choose your industry
+# 
+# Edit `INDUSTRY` in the next cell to theme the whole demo (ontology, sample data, and both Data Agents). Pick one of: `construction`, `education`, `energy-grid`, `financial-services`, `healthcare`, `hospitality`, `manufacturing-qc`, `media`, `professional-services`, `retail-sales`, `technology`, `transportation`.
+
+# CELL ********************
+
+# --- Choose your industry ---
+INDUSTRY = "retail-sales"
+# Options: construction, education, energy-grid, financial-services, healthcare, hospitality,
+#          manufacturing-qc, media, professional-services, retail-sales, technology, transportation
+
+# Fetch the selected industry's ontology package into the lakehouse so 01 + 02 both use it.
+import os, urllib.request
+_INDUSTRIES = ["construction", "education", "energy-grid", "financial-services", "healthcare",
+               "hospitality", "manufacturing-qc", "media", "professional-services",
+               "retail-sales", "technology", "transportation"]
+assert INDUSTRY in _INDUSTRIES, f"INDUSTRY must be one of: {', '.join(_INDUSTRIES)}"
+_RAW = "https://raw.githubusercontent.com/omerizm47/fabric-jumpstart-fabriciq-ontology/v0.1.3/fabriciq-ontology/data"
+os.makedirs('/lakehouse/default/Files', exist_ok=True)
+_iq_dest = '/lakehouse/default/Files/ontology_package.iq'
+urllib.request.urlretrieve(f'{_RAW}/{INDUSTRY}_ontology_package.iq', _iq_dest)
+print(f"Selected industry: {INDUSTRY}")
+print(f"Ontology package ready at {_iq_dest}")
+
+# METADATA ********************
+
+# META {
+# META   "language": "python",
+# META   "language_group": "synapse_pyspark"
+# META }
 
 # CELL ********************
 

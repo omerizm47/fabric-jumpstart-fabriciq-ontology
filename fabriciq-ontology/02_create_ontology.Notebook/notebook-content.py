@@ -41,7 +41,13 @@ EVENTHOUSE_NAME = "fabriciq_eventhouse"
 
 # Ensure the accelerator wheel + ontology package are in the lakehouse Files area.
 # On a clean install they are not uploaded, so fetch them from the pinned repo.
-_RAW = "https://raw.githubusercontent.com/omerizm47/fabric-jumpstart-fabriciq-ontology/v0.1.2/fabriciq-ontology/data"
+_RAW = "https://raw.githubusercontent.com/omerizm47/fabric-jumpstart-fabriciq-ontology/v0.1.3/fabriciq-ontology/data"
+
+# Industry package. In the normal flow GettingStarted pre-places the chosen package as
+# Files/ontology_package.iq; set INDUSTRY here only if you run this notebook standalone.
+INDUSTRY = "retail-sales"
+# Options: construction, education, energy-grid, financial-services, healthcare, hospitality,
+#          manufacturing-qc, media, professional-services, retail-sales, technology, transportation
 
 def _ensure(_pattern, _fname):
     _hits = sorted(glob.glob(f'/lakehouse/default/Files/**/{_pattern}', recursive=True))
@@ -54,8 +60,18 @@ def _ensure(_pattern, _fname):
     print(f'Downloaded {_fname} from the jumpstart repo')
     return _dest
 
+def _ensure_iq():
+    import os, urllib.request
+    _fixed = '/lakehouse/default/Files/ontology_package.iq'
+    if os.path.exists(_fixed):
+        return _fixed  # placed by GettingStarted (the chosen industry)
+    os.makedirs('/lakehouse/default/Files', exist_ok=True)
+    urllib.request.urlretrieve(f'{_RAW}/{INDUSTRY}_ontology_package.iq', _fixed)
+    print(f'Downloaded {INDUSTRY} ontology package')
+    return _fixed
+
 _JS_WHL = _ensure('*.whl', 'fabriciq_ontology_accelerator-0.1.0-py3-none-any.whl')
-_JS_IQ = _ensure('*.iq', 'retail_ontology_package.iq')
+_JS_IQ = _ensure_iq()
 
 _ws = _fab.get_workspace_id()
 _items = _fab.list_items()
