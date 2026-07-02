@@ -41,7 +41,7 @@ EVENTHOUSE_NAME = "fabriciq_eventhouse"
 
 # Ensure the accelerator wheel + ontology package are in the lakehouse Files area.
 # On a clean install they are not uploaded, so fetch them from the pinned repo.
-_RAW = "https://raw.githubusercontent.com/omerizm47/fabric-jumpstart-fabriciq-ontology/v0.1.4/fabricdemogallery-fabriciq/data"
+_RAW = "https://raw.githubusercontent.com/omerizm47/fabric-jumpstart-fabriciq-ontology/v0.1.5/fabricdemogallery-fabriciq/data"
 
 # Industry package. In the normal flow GettingStarted pre-places the chosen package as
 # Files/ontology_package.iq; set INDUSTRY here only if you run this notebook standalone.

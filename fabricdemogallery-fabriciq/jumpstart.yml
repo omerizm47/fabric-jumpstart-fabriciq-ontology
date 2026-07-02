@@ -27,7 +27,7 @@ source:
   # STANDARD: complex jumpstarts should live in an ISOLATED repo, hence a dedicated
   # repo name here rather than the shared gallery repo.
   repo_url: https://github.com/omerizm47/fabric-jumpstart-fabriciq-ontology.git
-  repo_ref: v0.1.4
+  repo_ref: v0.1.5
   workspace_path: fabricdemogallery-fabriciq/
 # The notebooks self-fetch the accelerator wheel + ontology .iq from this repo's
 # data/ folder at runtime, so no files_source_path upload is needed.
