@@ -26,7 +26,7 @@
 # 
 # This jumpstart builds a semantic **ontology** over a **Lakehouse** (business entities) and an **Eventhouse** (time-series), binds it to real tables, and exposes it through a **Fabric Data Agent** for natural-language, context-aware analytics.
 # 
-# **Pick your industry below, then press `Run all`** — this notebook runs every step for you.
+# **Press `Run all`, then pick your industry from the dropdown and click `Build the demo`.**
 
 # MARKDOWN ********************
 
@@ -45,89 +45,73 @@
 # | `01_generate_ontology_data` | Notebook | Loads sample data into the Lakehouse + Eventhouse |
 # | `02_create_ontology` | Notebook | Builds the ontology, binds it, and creates two Data Agents |
 # 
-# When you press **Run all**, this notebook runs `01_generate_ontology_data` then `02_create_ontology` for you, and the **Ontology** + the two **Data Agents** are created automatically.
+# Pick an industry below and click **Build the demo** — it runs `01_generate_ontology_data` then `02_create_ontology` for you, and the **Ontology** + the two **Data Agents** are created automatically.
 
 # MARKDOWN ********************
 
-# ## Choose your industry
+# ## Choose your industry & run
 # 
-# Edit `INDUSTRY` in the next cell to theme the whole demo (ontology, sample data, and both Data Agents). Pick one of: `construction`, `education`, `energy-grid`, `financial-services`, `healthcare`, `hospitality`, `manufacturing-qc`, `media`, `professional-services`, `retail-sales`, `technology`, `transportation`.
+# The dropdown themes the whole demo (ontology, sample data, and both Data Agents) to the industry you pick.
 
 # CELL ********************
 
-# --- Choose your industry ---
-INDUSTRY = "retail-sales"
-# Options: construction, education, energy-grid, financial-services, healthcare, hospitality,
-#          manufacturing-qc, media, professional-services, retail-sales, technology, transportation
+# Pick your industry, then click "Build the demo" — it fetches that industry's ontology
+# package and runs 01 (data load) then 02 (ontology + two Data Agents) for you.
+import os
+import time
+import urllib.request
 
-# Fetch the selected industry's ontology package into the lakehouse so 01 + 02 both use it.
-import os, urllib.request
+import ipywidgets as widgets
+import notebookutils
+from IPython.display import display
+
 _INDUSTRIES = ["construction", "education", "energy-grid", "financial-services", "healthcare",
                "hospitality", "manufacturing-qc", "media", "professional-services",
                "retail-sales", "technology", "transportation"]
-assert INDUSTRY in _INDUSTRIES, f"INDUSTRY must be one of: {', '.join(_INDUSTRIES)}"
-_RAW = "https://raw.githubusercontent.com/omerizm47/fabric-jumpstart-fabriciq-ontology/v0.1.5/fabricdemogallery-fabriciq/data"
-os.makedirs('/lakehouse/default/Files', exist_ok=True)
-_iq_dest = '/lakehouse/default/Files/ontology_package.iq'
-urllib.request.urlretrieve(f'{_RAW}/{INDUSTRY}_ontology_package.iq', _iq_dest)
-print(f"Selected industry: {INDUSTRY}")
-print(f"Ontology package ready at {_iq_dest}")
+_RAW = "https://raw.githubusercontent.com/omerizm47/fabric-jumpstart-fabriciq-ontology/v0.1.6/fabricdemogallery-fabriciq/data"
 
-# METADATA ********************
-
-# META {
-# META   "language": "python",
-# META   "language_group": "synapse_pyspark"
-# META }
-
-# CELL ********************
-
-# Runs the whole jumpstart for you: loads the data (01), then builds the ontology
-# and publishes the two Data Agents (02). Each step is a reference run via
-# notebookutils.notebook.run; a large timeout is passed because the default is 90s.
-import time
-import notebookutils
+_dd = widgets.Dropdown(options=_INDUSTRIES, value="retail-sales", description="Industry:",
+                       layout=widgets.Layout(width="320px"))
+_btn = widgets.Button(description="Build the demo", button_style="success", icon="play")
+_out = widgets.Output()
 
 def _run_step(_name, _timeout=1800):
     print(f"=== Running {_name} ===", flush=True)
     _t0 = time.time()
-    _rv = notebookutils.notebook.run(_name, _timeout)
+    notebookutils.notebook.run(_name, _timeout)
     print(f"--- {_name} finished in {int(time.time() - _t0)}s ---\n", flush=True)
-    return _rv
 
-_run_step("01_generate_ontology_data")
-_run_step("02_create_ontology")
-print("All steps complete — the ontology and the two Data Agents are ready.")
-
-# METADATA ********************
-
-# META {
-# META   "language": "python",
-# META   "language_group": "synapse_pyspark"
-# META }
-
-# CELL ********************
-
-# Show the items this jumpstart created so you can open them from your workspace.
-try:
+def _list_created():
     import sempy.fabric as fabric
-    from IPython.display import display, Markdown
-    ws = fabric.get_workspace_id()
     items = fabric.list_items()
-    wanted = ["FabricIqOntology", "FabricIqOntologyAgent", "FabricIqDirectAgent"]
-    rows = []
-    for _n in wanted:
-        m = items[items['Display Name'] == _n]
-        _t = str(m.iloc[0].Type) if len(m) else "(not found yet)"
-        rows.append(f"| `{_n}` | {_t} |")
-    display(Markdown(
-        "**Created items** — open the two agents and ask each the same question:\n\n"
-        "| Item | Type |\n|---|---|\n" + "\n".join(rows) +
-        f"\n\n[Open workspace](https://app.fabric.microsoft.com/groups/{ws}/list)"
-    ))
-except Exception as e:
-    print("Open your workspace to find FabricIqOntologyAgent and FabricIqDirectAgent.")
-    print("Context unavailable:", e)
+    for _n in ["FabricIqOntology", "FabricIqOntologyAgent", "FabricIqDirectAgent"]:
+        m = items[items["Display Name"] == _n]
+        print(f"  {_n}: {str(m.iloc[0].Type) if len(m) else '(not found)'}")
+
+def _go(_):
+    _btn.disabled = True
+    _dd.disabled = True
+    with _out:
+        try:
+            print(f"Selected industry: {_dd.value}")
+            os.makedirs("/lakehouse/default/Files", exist_ok=True)
+            urllib.request.urlretrieve(f"{_RAW}/{_dd.value}_ontology_package.iq",
+                                       "/lakehouse/default/Files/ontology_package.iq")
+            print("Ontology package ready.\n")
+            _run_step("01_generate_ontology_data")
+            _run_step("02_create_ontology")
+            print("All steps complete — created items:")
+            _list_created()
+            print("\nOpen the two Data Agents from your workspace and ask each the same question.")
+        except Exception as _e:  # noqa: BLE001
+            print(f"FAILED: {_e}")
+            _btn.disabled = False
+            _dd.disabled = False
+            raise
+
+_btn.on_click(_go)
+display(widgets.VBox([widgets.HBox([_dd, _btn]), _out]))
+print("Pick an industry, then click 'Build the demo'.")
 
 # MARKDOWN ********************
 
