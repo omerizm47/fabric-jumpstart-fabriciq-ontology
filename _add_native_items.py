@@ -43,7 +43,7 @@ PARAM_BLOCK = """  # --- native Ontology/DataAgent items: rewire authoring-works
       _ALL_: "$items.KQLDatabase.fabriciq_eventhouse.$id"
   - find_value: "https://trd-nmn1sgfqzhg5c7wk0u.z9.kusto.fabric.microsoft.com" # authoring kusto cluster uri
     replace_value:
-      _ALL_: "$items.KQLDatabase.fabriciq_eventhouse.$queryserviceuri"
+      _ALL_: "$items.Eventhouse.fabriciq_eventhouse.$queryserviceuri"
   - find_value: "509e83d5-cdc8-47b9-ba71-7788441dff81" # authoring FabricIqOntology item id
     replace_value:
       _ALL_: "$items.Ontology.FabricIqOntology.$id"
