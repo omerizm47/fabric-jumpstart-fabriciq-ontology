@@ -1,26 +1,20 @@
-# Fabric notebook source
+"""Make healthcare a ONE-STEP install: drop notebook 01, docs-only GettingStarted.
 
-# METADATA ********************
+The installer's data_load block now does everything 01 did (fetch/shift/load/refresh),
+so the option folder keeps only: Lakehouse, Eventhouse(+KQLDB), Ontology, 2 DataAgents,
+and a documentation-only GettingStarted.
+"""
 
-# META {
-# META   "kernel_info": {
-# META     "name": "synapse_pyspark"
-# META   },
-# META   "dependencies": {
-# META     "lakehouse": {
-# META       "default_lakehouse": "b5ae6e8b-5726-489e-9cf1-17c3416393d6",
-# META       "default_lakehouse_name": "fabriciq_lakehouse",
-# META       "default_lakehouse_workspace_id": "a537bf46-7b26-4ed7-b48d-dbccd64a29cc",
-# META       "known_lakehouses": [
-# META         {
-# META           "id": "b5ae6e8b-5726-489e-9cf1-17c3416393d6"
-# META         }
-# META       ]
-# META     }
-# META   }
-# META }
+from __future__ import annotations
 
-# MARKDOWN ********************
+import shutil
+from pathlib import Path
+
+HERE = Path(__file__).parent
+DEST = HERE / "fabricdemogallery-fabriciq" / "healthcare"
+GS = DEST / "GettingStarted.Notebook" / "notebook-content.py"
+
+DOCS_BODY = '''# MARKDOWN ********************
 
 # # FabricIQ Ontology + Data Agent — Getting Started
 # 
@@ -80,7 +74,7 @@ for _n in ["FabricIqOntology", "FabricIqOntologyAgent", "FabricIqDirectAgent"]:
             _lines.append(f"- {_n} ({_t})")
     else:
         _lines.append(f"- {_n} (not found)")
-display(Markdown("**Your items:**\n\n" + "\n".join(_lines)))
+display(Markdown("**Your items:**\\n\\n" + "\\n".join(_lines)))
 
 # METADATA ********************
 
@@ -96,3 +90,23 @@ display(Markdown("**Your items:**\n\n" + "\n".join(_lines)))
 # - Explore the `FabricIqOntology` item and its bindings.
 # - Re-run the install with a different `install_option` (in a new workspace) to see another industry.
 # - Delete the workspace when you're done to clean up.
+'''
+
+
+def main() -> None:
+    nb01 = DEST / "01_generate_ontology_data.Notebook"
+    if nb01.exists():
+        shutil.rmtree(nb01)
+        print("removed 01_generate_ontology_data.Notebook")
+
+    src = GS.read_text(encoding="utf-8")
+    # Keep the original header (source marker + METADATA block) exactly as-is.
+    marker = "# MARKDOWN ********************"
+    head_end = src.index(marker)
+    header = src[:head_end]
+    GS.write_text(header + DOCS_BODY, encoding="utf-8")
+    print("GettingStarted rewritten as docs-only")
+
+
+if __name__ == "__main__":
+    main()
