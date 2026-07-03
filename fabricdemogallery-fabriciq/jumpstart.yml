@@ -17,7 +17,7 @@ scenario_tags:
 type: Demo
 source:
   repo_url: https://github.com/omerizm47/fabric-jumpstart-fabriciq-ontology.git
-  repo_ref: v0.4.0
+  repo_ref: v1.0.0
   workspace_path: fabricdemogallery-fabriciq/
 # Each install option (industry) has its own subfolder under workspace_path with
 # a complete fabric-cicd source; the installer deploys exactly one option folder.
@@ -60,29 +60,26 @@ data_load:
 entry_point: GettingStarted.Notebook
 owner_email: omerguzel@microsoft.com
 difficulty: Advanced
-minutes_to_deploy: 5
-minutes_to_complete_jumpstart: 25
+minutes_to_deploy: 10
+minutes_to_complete_jumpstart: 20
 mermaid_diagram: |
   graph LR
     DATA[Industry data]:::U1F4E6
 
     subgraph Fabric:::Workspace
-      NB1[01_generate_ontology_data]:::Notebook
-      NB2[02_create_ontology]:::Notebook
+      GS[GettingStarted]:::Notebook
       LH[fabriciq_lakehouse]:::Lakehouse
       EH[fabriciq_eventhouse]:::Eventhouse
       ONT[FabricIqOntology]:::Ontology
-      OAG[Ontology Data Agent]:::DataAgent
-      DAG[Direct Data Agent]:::DataAgent
+      OAG[FabricIqOntologyAgent]:::DataAgent
+      DAG[FabricIqDirectAgent]:::DataAgent
       direction LR
     end
 
-    DATA --> NB1
-    NB1 --> LH
-    NB1 --> EH
-    LH --> NB2
-    EH --> NB2
-    NB2 --> ONT
+    DATA --> LH
+    DATA --> EH
+    LH --> ONT
+    EH --> ONT
     ONT --> OAG
     LH -.-> DAG
     EH -.-> DAG

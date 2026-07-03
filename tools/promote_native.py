@@ -22,7 +22,7 @@ from pathlib import Path
 import requests
 
 HERE = Path(__file__).parent
-ROOT = HERE / "fabricdemogallery-fabriciq"
+ROOT = HERE.parent / "fabricdemogallery-fabriciq"
 FABRIC_API = "https://api.fabric.microsoft.com/v1"
 NS = uuid.UUID("a7c1b2d3-e4f5-4a6b-8c9d-0e1f2a3b4c5d")  # logicalId namespace
 

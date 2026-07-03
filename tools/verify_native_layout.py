@@ -2,7 +2,7 @@
 import py_compile
 from pathlib import Path
 
-ROOT = Path(__file__).parent / "fabricdemogallery-fabriciq"
+ROOT = Path(__file__).parent.parent / "fabricdemogallery-fabriciq"
 INDUSTRIES = ["construction", "education", "energy-grid", "financial-services", "healthcare",
               "hospitality", "manufacturing-qc", "media", "professional-services",
               "retail-sales", "technology", "transportation"]
