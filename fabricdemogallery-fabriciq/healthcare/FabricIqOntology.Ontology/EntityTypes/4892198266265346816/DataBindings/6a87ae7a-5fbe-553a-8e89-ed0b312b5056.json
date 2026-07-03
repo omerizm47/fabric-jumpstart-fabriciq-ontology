@@ -1,0 +1,30 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/ontology/dataBinding/1.0.0/schema.json",
+  "id": "6a87ae7a-5fbe-553a-8e89-ed0b312b5056",
+  "dataBindingConfiguration": {
+    "dataBindingType": "TimeSeries",
+    "timestampColumnName": "timestamp_utc",
+    "propertyBindings": [
+      {
+        "sourceColumnName": "value",
+        "targetPropertyId": "451772879667736805"
+      },
+      {
+        "sourceColumnName": "timestamp_utc",
+        "targetPropertyId": "3104822774772037005"
+      },
+      {
+        "sourceColumnName": "record_id",
+        "targetPropertyId": "6556675944125609476"
+      }
+    ],
+    "sourceTableProperties": {
+      "sourceType": "KustoTable",
+      "workspaceId": "64e1b413-b17a-44f8-b452-59d48e00d0d1",
+      "itemId": "eccc3c7a-d7ad-4390-a18d-63fada94960f",
+      "clusterUri": "https://trd-nmn1sgfqzhg5c7wk0u.z9.kusto.fabric.microsoft.com",
+      "databaseName": "fabriciq_eventhouse",
+      "sourceTableName": "clinical_records"
+    }
+  }
+}

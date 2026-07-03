@@ -1,0 +1,52 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/ontology/entityType/1.0.0/schema.json",
+  "id": "7847030203623705897",
+  "namespace": "usertypes",
+  "baseEntityTypeId": null,
+  "name": "Staff",
+  "entityIdParts": [
+    "781782910294870695"
+  ],
+  "displayNamePropertyId": "781782910294870695",
+  "namespaceType": "Custom",
+  "visibility": "Visible",
+  "properties": [
+    {
+      "id": "781782910294870695",
+      "name": "StaffId",
+      "redefines": null,
+      "baseTypeNamespaceType": null,
+      "valueType": "String"
+    },
+    {
+      "id": "3252825465171945187",
+      "name": "Role",
+      "redefines": null,
+      "baseTypeNamespaceType": null,
+      "valueType": "String"
+    },
+    {
+      "id": "5029841779420946170",
+      "name": "Department",
+      "redefines": null,
+      "baseTypeNamespaceType": null,
+      "valueType": "String"
+    },
+    {
+      "id": "2198273760960910016",
+      "name": "Shift",
+      "redefines": null,
+      "baseTypeNamespaceType": null,
+      "valueType": "String"
+    },
+    {
+      "id": "7668243815519304413",
+      "name": "HireDate",
+      "redefines": null,
+      "baseTypeNamespaceType": null,
+      "valueType": "DateTime"
+    }
+  ],
+  "timeseriesProperties": [],
+  "untypedProperties": []
+}

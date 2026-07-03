@@ -1,0 +1,40 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/ontology/dataBinding/1.0.0/schema.json",
+  "id": "8f367d83-2010-505a-b415-e1c59a5302c6",
+  "dataBindingConfiguration": {
+    "dataBindingType": "NonTimeSeries",
+    "propertyBindings": [
+      {
+        "sourceColumnName": "record_id",
+        "targetPropertyId": "6556675944125609476"
+      },
+      {
+        "sourceColumnName": "admission_id",
+        "targetPropertyId": "5848459120846431077"
+      },
+      {
+        "sourceColumnName": "patient_id",
+        "targetPropertyId": "6182475035338452877"
+      },
+      {
+        "sourceColumnName": "department",
+        "targetPropertyId": "3369216305459181672"
+      },
+      {
+        "sourceColumnName": "vital_type",
+        "targetPropertyId": "5284134078179114350"
+      },
+      {
+        "sourceColumnName": "recorded_by",
+        "targetPropertyId": "5524298031488600331"
+      }
+    ],
+    "sourceTableProperties": {
+      "sourceType": "LakehouseTable",
+      "workspaceId": "64e1b413-b17a-44f8-b452-59d48e00d0d1",
+      "itemId": "68f6a06c-8344-420a-82b9-9f2da976ac8e",
+      "sourceTableName": "clinical_records",
+      "sourceSchema": "dbo"
+    }
+  }
+}

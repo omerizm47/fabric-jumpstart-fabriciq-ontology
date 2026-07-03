@@ -13,3 +13,23 @@ find_replace:
     replace_value:
       _ALL_: "$items.Lakehouse.fabriciq_lakehouse.$id"
     item_type: "Notebook"
+  # --- native Ontology/DataAgent items: rewire authoring-workspace refs ---
+  # (find_values are globally-unique GUIDs/URIs so no item_type filter is needed)
+  - find_value: "64e1b413-b17a-44f8-b452-59d48e00d0d1" # ontology authoring workspace id
+    replace_value:
+      _ALL_: "$workspace.$id"
+  - find_value: "68f6a06c-8344-420a-82b9-9f2da976ac8e" # authoring fabriciq_lakehouse id
+    replace_value:
+      _ALL_: "$items.Lakehouse.fabriciq_lakehouse.$id"
+  - find_value: "eccc3c7a-d7ad-4390-a18d-63fada94960f" # authoring fabriciq_eventhouse id
+    replace_value:
+      _ALL_: "$items.Eventhouse.fabriciq_eventhouse.$id"
+  - find_value: "40b925ec-1c4d-4f2c-bb63-22cccffd5cd1" # authoring KQL database id
+    replace_value:
+      _ALL_: "$items.KQLDatabase.fabriciq_eventhouse.$id"
+  - find_value: "https://trd-nmn1sgfqzhg5c7wk0u.z9.kusto.fabric.microsoft.com" # authoring kusto cluster uri
+    replace_value:
+      _ALL_: "$items.KQLDatabase.fabriciq_eventhouse.$queryserviceuri"
+  - find_value: "509e83d5-cdc8-47b9-ba71-7788441dff81" # authoring FabricIqOntology item id
+    replace_value:
+      _ALL_: "$items.Ontology.FabricIqOntology.$id"

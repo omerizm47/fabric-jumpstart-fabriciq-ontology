@@ -1,0 +1,126 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/dataAgent/definition/dataSource/1.0.0/schema.json",
+  "artifactId": "40b925ec-1c4d-4f2c-bb63-22cccffd5cd1",
+  "workspaceId": "64e1b413-b17a-44f8-b452-59d48e00d0d1",
+  "dataSourceInstructions": null,
+  "displayName": "fabriciq_eventhouse",
+  "type": "kusto",
+  "userDescription": null,
+  "metadata": {},
+  "elements": [
+    {
+      "id": "9c3c7161-a53d-44dc-8f36-d84aa0b099e2",
+      "is_selected": true,
+      "display_name": "Tables",
+      "type": "table_grouping",
+      "description": null,
+      "children": [
+        {
+          "id": "46f42259-4e92-404a-a961-ace8976cb4a1",
+          "is_selected": true,
+          "display_name": "admissions",
+          "type": "kusto.table",
+          "description": null,
+          "children": [
+            {
+              "id": "admission_id",
+              "is_selected": true,
+              "display_name": "admission_id",
+              "type": "kusto.column",
+              "data_type": "System.String",
+              "description": null,
+              "children": []
+            },
+            {
+              "id": "timestamp_utc",
+              "is_selected": true,
+              "display_name": "timestamp_utc",
+              "type": "kusto.column",
+              "data_type": "System.DateTime",
+              "description": null,
+              "children": []
+            },
+            {
+              "id": "length_of_stay_days",
+              "is_selected": true,
+              "display_name": "length_of_stay_days",
+              "type": "kusto.column",
+              "data_type": "System.Int64",
+              "description": null,
+              "children": []
+            },
+            {
+              "id": "prior_admissions",
+              "is_selected": true,
+              "display_name": "prior_admissions",
+              "type": "kusto.column",
+              "data_type": "System.Int64",
+              "description": null,
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "85305d26-abb9-4d47-89e3-4b36168e4e3c",
+          "is_selected": true,
+          "display_name": "clinical_records",
+          "type": "kusto.table",
+          "description": null,
+          "children": [
+            {
+              "id": "record_id",
+              "is_selected": true,
+              "display_name": "record_id",
+              "type": "kusto.column",
+              "data_type": "System.String",
+              "description": null,
+              "children": []
+            },
+            {
+              "id": "timestamp_utc",
+              "is_selected": true,
+              "display_name": "timestamp_utc",
+              "type": "kusto.column",
+              "data_type": "System.DateTime",
+              "description": null,
+              "children": []
+            },
+            {
+              "id": "value",
+              "is_selected": true,
+              "display_name": "value",
+              "type": "kusto.column",
+              "data_type": "System.Double",
+              "description": null,
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "082bc39a-8408-43b4-85ad-6a32bb412fb3",
+      "is_selected": true,
+      "display_name": "Functions",
+      "type": "function_grouping",
+      "description": null,
+      "children": []
+    },
+    {
+      "id": "7f47a560-4232-4e8f-948b-cd74ba5246f9",
+      "is_selected": true,
+      "display_name": "Shortcuts",
+      "type": "shortcut_grouping",
+      "description": null,
+      "children": []
+    },
+    {
+      "id": "ec97d597-d491-4860-83c9-bca41abc1b27",
+      "is_selected": true,
+      "display_name": "Materialized Views",
+      "type": "materialized_view_grouping",
+      "description": null,
+      "children": []
+    }
+  ]
+}

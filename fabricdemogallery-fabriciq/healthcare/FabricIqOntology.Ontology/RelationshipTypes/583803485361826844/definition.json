@@ -1,0 +1,13 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/ontology/relationshipType/1.0.0/schema.json",
+  "namespace": "usertypes",
+  "id": "583803485361826844",
+  "name": "RecordForAdmission",
+  "namespaceType": "Custom",
+  "source": {
+    "entityTypeId": "4892198266265346816"
+  },
+  "target": {
+    "entityTypeId": "525012370434735875"
+  }
+}

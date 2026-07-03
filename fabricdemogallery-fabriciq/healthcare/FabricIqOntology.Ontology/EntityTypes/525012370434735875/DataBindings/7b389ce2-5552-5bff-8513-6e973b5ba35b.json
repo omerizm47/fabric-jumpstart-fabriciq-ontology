@@ -1,0 +1,48 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/ontology/dataBinding/1.0.0/schema.json",
+  "id": "7b389ce2-5552-5bff-8513-6e973b5ba35b",
+  "dataBindingConfiguration": {
+    "dataBindingType": "NonTimeSeries",
+    "propertyBindings": [
+      {
+        "sourceColumnName": "admission_id",
+        "targetPropertyId": "298091197461716858"
+      },
+      {
+        "sourceColumnName": "patient_id",
+        "targetPropertyId": "8922283011152159461"
+      },
+      {
+        "sourceColumnName": "department",
+        "targetPropertyId": "6362696440223282729"
+      },
+      {
+        "sourceColumnName": "assigned_staff_id",
+        "targetPropertyId": "2380055138787876998"
+      },
+      {
+        "sourceColumnName": "admission_type",
+        "targetPropertyId": "3028133132307659732"
+      },
+      {
+        "sourceColumnName": "insurance_type",
+        "targetPropertyId": "1746433129121248499"
+      },
+      {
+        "sourceColumnName": "primary_dx_code",
+        "targetPropertyId": "6233881345729692552"
+      },
+      {
+        "sourceColumnName": "age_group",
+        "targetPropertyId": "7094106550702009915"
+      }
+    ],
+    "sourceTableProperties": {
+      "sourceType": "LakehouseTable",
+      "workspaceId": "64e1b413-b17a-44f8-b452-59d48e00d0d1",
+      "itemId": "68f6a06c-8344-420a-82b9-9f2da976ac8e",
+      "sourceTableName": "admissions",
+      "sourceSchema": "dbo"
+    }
+  }
+}

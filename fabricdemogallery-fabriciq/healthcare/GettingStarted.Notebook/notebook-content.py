@@ -43,9 +43,11 @@
 # | `fabriciq_lakehouse` | Lakehouse | Static business entities (Delta tables) |
 # | `fabriciq_eventhouse` | Eventhouse | Time-series / event data (KQL tables) |
 # | `01_generate_ontology_data` | Notebook | Loads sample data into the Lakehouse + Eventhouse |
-# | `02_create_ontology` | Notebook | Builds the ontology, binds it, and creates two Data Agents |
+# | `FabricIqOntology` | Ontology | The semantic model, bound to the Lakehouse + Eventhouse tables |
+# | `FabricIqOntologyAgent` | Data Agent | Answers questions through the ontology |
+# | `FabricIqDirectAgent` | Data Agent | Baseline agent over the raw tables |
 # 
-# Pressing **Run all** runs `01_generate_ontology_data` then `02_create_ontology` for you, and the **Ontology** + the two **Data Agents** are created automatically.
+# The **Ontology** and both **Data Agents** are deployed natively. Pressing **Run all** loads the sample data (`01_generate_ontology_data`) and re-saves the ontology so its graph ingests the data.
 
 # MARKDOWN ********************
 
@@ -95,13 +97,35 @@ def _list_created():
             _lines.append(f"- {_n} (not found)")
     display(Markdown("**Created items** — open the two Data Agents and ask each the same question:\n\n" + "\n".join(_lines)))
 
+def _refresh_ontology():
+    # Re-save the deployed ontology so the graph re-ingests the freshly loaded data
+    # (saving the model triggers ingestion - learn.microsoft.com/fabric/graph/manage-data).
+    import time
+    import sempy.fabric as fabric
+    _c = fabric.FabricRestClient()
+    _ws = fabric.get_workspace_id()
+    _items = _c.get(f"/v1/workspaces/{_ws}/items").json()["value"]
+    _ont = next(_i for _i in _items if _i["type"] == "Ontology")
+    _d = _c.post(f"/v1/workspaces/{_ws}/items/{_ont['id']}/getDefinition")
+    if _d.status_code == 202:
+        _loc = _d.headers["Location"]
+        while True:
+            _s = _c.get(_loc)
+            if _s.json().get("status") in ("Succeeded", "Failed"):
+                break
+            time.sleep(2)
+        _d = _c.get(_loc + "/result")
+    _r = _c.post(f"/v1/workspaces/{_ws}/items/{_ont['id']}/updateDefinition",
+                 json={"definition": _d.json()["definition"]})
+    print(f"Ontology re-saved (graph re-ingestion triggered): HTTP {_r.status_code}")
+
 print(f"Industry: {INDUSTRY}")
 os.makedirs("/lakehouse/default/Files", exist_ok=True)
 urllib.request.urlretrieve(f"{_RAW}/{INDUSTRY}_ontology_package.iq",
                            "/lakehouse/default/Files/ontology_package.iq")
 print("Ontology package ready.\n")
 _run_step("01_generate_ontology_data")
-_run_step("02_create_ontology")
+_refresh_ontology()
 print("All steps complete.")
 _list_created()
 

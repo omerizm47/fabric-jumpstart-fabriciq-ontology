@@ -1,0 +1,31 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/ontology/entityType/1.0.0/schema.json",
+  "id": "6535414986220825964",
+  "namespace": "usertypes",
+  "baseEntityTypeId": null,
+  "name": "Department",
+  "entityIdParts": [
+    "4861357643406606347"
+  ],
+  "displayNamePropertyId": "4861357643406606347",
+  "namespaceType": "Custom",
+  "visibility": "Visible",
+  "properties": [
+    {
+      "id": "4861357643406606347",
+      "name": "DepartmentId",
+      "redefines": null,
+      "baseTypeNamespaceType": null,
+      "valueType": "String"
+    },
+    {
+      "id": "2302637381137552582",
+      "name": "DepartmentName",
+      "redefines": null,
+      "baseTypeNamespaceType": null,
+      "valueType": "String"
+    }
+  ],
+  "timeseriesProperties": [],
+  "untypedProperties": []
+}

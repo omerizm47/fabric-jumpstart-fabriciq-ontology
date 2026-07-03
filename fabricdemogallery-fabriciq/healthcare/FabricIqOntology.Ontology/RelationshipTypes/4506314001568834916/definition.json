@@ -1,0 +1,13 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/ontology/relationshipType/1.0.0/schema.json",
+  "namespace": "usertypes",
+  "id": "4506314001568834916",
+  "name": "AdmissionAssignedStaff",
+  "namespaceType": "Custom",
+  "source": {
+    "entityTypeId": "525012370434735875"
+  },
+  "target": {
+    "entityTypeId": "7847030203623705897"
+  }
+}

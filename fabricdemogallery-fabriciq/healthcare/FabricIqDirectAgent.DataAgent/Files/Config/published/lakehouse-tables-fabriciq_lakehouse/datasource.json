@@ -1,0 +1,264 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/dataAgent/definition/dataSource/1.0.0/schema.json",
+  "artifactId": "68f6a06c-8344-420a-82b9-9f2da976ac8e",
+  "workspaceId": "64e1b413-b17a-44f8-b452-59d48e00d0d1",
+  "dataSourceInstructions": null,
+  "displayName": "fabriciq_lakehouse",
+  "type": "lakehouse_tables",
+  "userDescription": null,
+  "metadata": {},
+  "elements": [
+    {
+      "id": "61c1a0c3-0265-4e97-9b78-67661142b2b1",
+      "is_selected": true,
+      "display_name": "Schemas",
+      "type": "schema_grouping",
+      "description": null,
+      "children": [
+        {
+          "id": "a37143cb-1adf-49d4-813f-b65d82553b22",
+          "is_selected": true,
+          "display_name": "dbo",
+          "type": "lakehouse_tables.schema",
+          "description": null,
+          "children": [
+            {
+              "id": "3e5ab00f-d8fe-4b45-9af9-a6012d5f79cc",
+              "is_selected": true,
+              "display_name": "Tables",
+              "type": "table_grouping",
+              "description": null,
+              "children": [
+                {
+                  "id": "a2a623d7-7842-4e90-a68c-e5628604b0f5",
+                  "is_selected": true,
+                  "display_name": "staff",
+                  "type": "lakehouse_tables.table",
+                  "description": null,
+                  "children": [
+                    {
+                      "id": "ac7a4879-4076-4ffa-ba73-61bb841c29b1",
+                      "is_selected": true,
+                      "display_name": "staff_id",
+                      "type": "lakehouse_tables.column",
+                      "data_type": "varchar",
+                      "description": null,
+                      "children": []
+                    },
+                    {
+                      "id": "07d73f40-10ad-4274-bb6a-0d0e5571df7f",
+                      "is_selected": true,
+                      "display_name": "role",
+                      "type": "lakehouse_tables.column",
+                      "data_type": "varchar",
+                      "description": null,
+                      "children": []
+                    },
+                    {
+                      "id": "99eec875-87c6-4014-88c9-87e1b9f6555a",
+                      "is_selected": true,
+                      "display_name": "department",
+                      "type": "lakehouse_tables.column",
+                      "data_type": "varchar",
+                      "description": null,
+                      "children": []
+                    },
+                    {
+                      "id": "aa5c251f-c00a-4a6b-a04d-838483058d3b",
+                      "is_selected": true,
+                      "display_name": "shift",
+                      "type": "lakehouse_tables.column",
+                      "data_type": "varchar",
+                      "description": null,
+                      "children": []
+                    },
+                    {
+                      "id": "90cd0157-d53b-433c-8bb6-10f80d49d460",
+                      "is_selected": true,
+                      "display_name": "hire_date",
+                      "type": "lakehouse_tables.column",
+                      "data_type": "datetime2",
+                      "description": null,
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "id": "9e908c01-132d-463e-9fda-ede53e00fed3",
+                  "is_selected": true,
+                  "display_name": "admissions",
+                  "type": "lakehouse_tables.table",
+                  "description": null,
+                  "children": [
+                    {
+                      "id": "ce031e57-6796-4428-9c8d-c99a8b0f30af",
+                      "is_selected": true,
+                      "display_name": "admission_id",
+                      "type": "lakehouse_tables.column",
+                      "data_type": "varchar",
+                      "description": null,
+                      "children": []
+                    },
+                    {
+                      "id": "e7c97adb-336b-4231-adc0-e18fccfb1d42",
+                      "is_selected": true,
+                      "display_name": "patient_id",
+                      "type": "lakehouse_tables.column",
+                      "data_type": "varchar",
+                      "description": null,
+                      "children": []
+                    },
+                    {
+                      "id": "bdcd6913-c0a9-4720-a5ab-5643406ec3f4",
+                      "is_selected": true,
+                      "display_name": "department",
+                      "type": "lakehouse_tables.column",
+                      "data_type": "varchar",
+                      "description": null,
+                      "children": []
+                    },
+                    {
+                      "id": "4369f9f4-765c-4fa2-82ce-6f45b5147e9b",
+                      "is_selected": true,
+                      "display_name": "assigned_staff_id",
+                      "type": "lakehouse_tables.column",
+                      "data_type": "varchar",
+                      "description": null,
+                      "children": []
+                    },
+                    {
+                      "id": "2db13c70-266c-4cc3-b510-45f667a5fabb",
+                      "is_selected": true,
+                      "display_name": "admission_type",
+                      "type": "lakehouse_tables.column",
+                      "data_type": "varchar",
+                      "description": null,
+                      "children": []
+                    },
+                    {
+                      "id": "201be2c1-b19e-43bd-87c7-ffa17ffbb0d0",
+                      "is_selected": true,
+                      "display_name": "insurance_type",
+                      "type": "lakehouse_tables.column",
+                      "data_type": "varchar",
+                      "description": null,
+                      "children": []
+                    },
+                    {
+                      "id": "06f7a565-5304-464b-b321-f7b140172585",
+                      "is_selected": true,
+                      "display_name": "primary_dx_code",
+                      "type": "lakehouse_tables.column",
+                      "data_type": "varchar",
+                      "description": null,
+                      "children": []
+                    },
+                    {
+                      "id": "1e76e577-ade8-4be2-8c4a-ac4da072e794",
+                      "is_selected": true,
+                      "display_name": "age_group",
+                      "type": "lakehouse_tables.column",
+                      "data_type": "varchar",
+                      "description": null,
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "id": "b07ddf69-e8a2-47c8-9a84-d258b7af613e",
+                  "is_selected": true,
+                  "display_name": "clinical_records",
+                  "type": "lakehouse_tables.table",
+                  "description": null,
+                  "children": [
+                    {
+                      "id": "9c721e2c-8b87-4ccd-8520-c43603de2317",
+                      "is_selected": true,
+                      "display_name": "record_id",
+                      "type": "lakehouse_tables.column",
+                      "data_type": "varchar",
+                      "description": null,
+                      "children": []
+                    },
+                    {
+                      "id": "f8cf4cf4-118f-497c-8fa7-ccf31f7ac59f",
+                      "is_selected": true,
+                      "display_name": "admission_id",
+                      "type": "lakehouse_tables.column",
+                      "data_type": "varchar",
+                      "description": null,
+                      "children": []
+                    },
+                    {
+                      "id": "3385bb5f-e7c2-4dbe-b1df-a25d713f4b10",
+                      "is_selected": true,
+                      "display_name": "patient_id",
+                      "type": "lakehouse_tables.column",
+                      "data_type": "varchar",
+                      "description": null,
+                      "children": []
+                    },
+                    {
+                      "id": "b8ad80f9-c647-42df-b5ec-05bf7066ba71",
+                      "is_selected": true,
+                      "display_name": "department",
+                      "type": "lakehouse_tables.column",
+                      "data_type": "varchar",
+                      "description": null,
+                      "children": []
+                    },
+                    {
+                      "id": "6d2b3177-10d7-4c7a-b859-9e056829017c",
+                      "is_selected": true,
+                      "display_name": "vital_type",
+                      "type": "lakehouse_tables.column",
+                      "data_type": "varchar",
+                      "description": null,
+                      "children": []
+                    },
+                    {
+                      "id": "d6c20feb-5506-4cbb-869e-065987b8896f",
+                      "is_selected": true,
+                      "display_name": "recorded_by",
+                      "type": "lakehouse_tables.column",
+                      "data_type": "varchar",
+                      "description": null,
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "id": "c82242c2-4237-4605-8d2e-802d6cbff896",
+                  "is_selected": true,
+                  "display_name": "departments",
+                  "type": "lakehouse_tables.table",
+                  "description": null,
+                  "children": [
+                    {
+                      "id": "832d16e5-3987-4086-b79c-6c07f4bd1da1",
+                      "is_selected": true,
+                      "display_name": "department_id",
+                      "type": "lakehouse_tables.column",
+                      "data_type": "varchar",
+                      "description": null,
+                      "children": []
+                    },
+                    {
+                      "id": "22ecf659-4680-4cf6-9562-7b136072d863",
+                      "is_selected": true,
+                      "display_name": "department_name",
+                      "type": "lakehouse_tables.column",
+                      "data_type": "varchar",
+                      "description": null,
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

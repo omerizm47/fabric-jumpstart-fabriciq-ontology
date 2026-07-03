@@ -1,0 +1,24 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/ontology/dataBinding/1.0.0/schema.json",
+  "id": "75cfb583-daca-51d9-819a-30b4ec1acfb9",
+  "dataBindingConfiguration": {
+    "dataBindingType": "NonTimeSeries",
+    "propertyBindings": [
+      {
+        "sourceColumnName": "department_id",
+        "targetPropertyId": "4861357643406606347"
+      },
+      {
+        "sourceColumnName": "department_name",
+        "targetPropertyId": "2302637381137552582"
+      }
+    ],
+    "sourceTableProperties": {
+      "sourceType": "LakehouseTable",
+      "workspaceId": "64e1b413-b17a-44f8-b452-59d48e00d0d1",
+      "itemId": "68f6a06c-8344-420a-82b9-9f2da976ac8e",
+      "sourceTableName": "departments",
+      "sourceSchema": "dbo"
+    }
+  }
+}

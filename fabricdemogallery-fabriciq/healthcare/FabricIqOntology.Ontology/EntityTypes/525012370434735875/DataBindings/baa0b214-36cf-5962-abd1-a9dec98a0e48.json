@@ -1,0 +1,34 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/ontology/dataBinding/1.0.0/schema.json",
+  "id": "baa0b214-36cf-5962-abd1-a9dec98a0e48",
+  "dataBindingConfiguration": {
+    "dataBindingType": "TimeSeries",
+    "timestampColumnName": "timestamp_utc",
+    "propertyBindings": [
+      {
+        "sourceColumnName": "length_of_stay_days",
+        "targetPropertyId": "8974339196914256234"
+      },
+      {
+        "sourceColumnName": "prior_admissions",
+        "targetPropertyId": "5583990043770023156"
+      },
+      {
+        "sourceColumnName": "timestamp_utc",
+        "targetPropertyId": "1078479615006937123"
+      },
+      {
+        "sourceColumnName": "admission_id",
+        "targetPropertyId": "298091197461716858"
+      }
+    ],
+    "sourceTableProperties": {
+      "sourceType": "KustoTable",
+      "workspaceId": "64e1b413-b17a-44f8-b452-59d48e00d0d1",
+      "itemId": "eccc3c7a-d7ad-4390-a18d-63fada94960f",
+      "clusterUri": "https://trd-nmn1sgfqzhg5c7wk0u.z9.kusto.fabric.microsoft.com",
+      "databaseName": "fabriciq_eventhouse",
+      "sourceTableName": "admissions"
+    }
+  }
+}

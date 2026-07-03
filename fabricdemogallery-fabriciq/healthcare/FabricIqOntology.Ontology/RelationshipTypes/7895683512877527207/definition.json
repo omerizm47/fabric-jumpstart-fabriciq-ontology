@@ -1,0 +1,13 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/ontology/relationshipType/1.0.0/schema.json",
+  "namespace": "usertypes",
+  "id": "7895683512877527207",
+  "name": "StaffInDepartment",
+  "namespaceType": "Custom",
+  "source": {
+    "entityTypeId": "7847030203623705897"
+  },
+  "target": {
+    "entityTypeId": "6535414986220825964"
+  }
+}

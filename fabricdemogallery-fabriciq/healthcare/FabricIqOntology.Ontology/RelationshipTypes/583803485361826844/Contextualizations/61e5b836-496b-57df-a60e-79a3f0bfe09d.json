@@ -1,0 +1,23 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/ontology/contextualization/1.0.0/schema.json",
+  "id": "61e5b836-496b-57df-a60e-79a3f0bfe09d",
+  "dataBindingTable": {
+    "workspaceId": "64e1b413-b17a-44f8-b452-59d48e00d0d1",
+    "itemId": "68f6a06c-8344-420a-82b9-9f2da976ac8e",
+    "sourceTableName": "clinical_records",
+    "sourceSchema": "dbo",
+    "sourceType": "LakehouseTable"
+  },
+  "sourceKeyRefBindings": [
+    {
+      "sourceColumnName": "record_id",
+      "targetPropertyId": "6556675944125609476"
+    }
+  ],
+  "targetKeyRefBindings": [
+    {
+      "sourceColumnName": "admission_id",
+      "targetPropertyId": "298091197461716858"
+    }
+  ]
+}
