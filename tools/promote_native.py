@@ -32,6 +32,12 @@ DOCS_BODY_TEMPLATE = '''# MARKDOWN ********************
 
 # # FabricIQ Ontology + Data Agent — Getting Started
 # 
+# This jumpstart builds a semantic **ontology** over a **Lakehouse** (business entities)
+# and an **Eventhouse** (time-series), binds it to real tables, and exposes it through a
+# **Fabric Data Agent** for natural-language, context-aware analytics. The objective is to
+# compare an **ontology-grounded agent** with a **direct-over-tables agent** on the same
+# questions and see the difference the semantic context makes.
+# 
 # **Everything is already deployed and loaded.** The install command deployed the
 # Lakehouse, Eventhouse, the **FabricIqOntology** semantic model, and both **Data
 # Agents** — and loaded the {industry} sample data. There is nothing to run here.
