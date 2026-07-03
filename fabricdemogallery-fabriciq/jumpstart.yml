@@ -17,7 +17,7 @@ scenario_tags:
 type: Demo
 source:
   repo_url: https://github.com/omerizm47/fabric-jumpstart-fabriciq-ontology.git
-  repo_ref: v0.2.0
+  repo_ref: v0.2.3
   workspace_path: fabricdemogallery-fabriciq/
 # Each install option (industry) has its own subfolder under workspace_path with
 # a complete fabric-cicd source; the installer deploys exactly one option folder.
@@ -35,15 +35,17 @@ install_options:
   - retail-sales
   - technology
   - transportation
-# fabric-cicd deploys the Lakehouse, Eventhouse (with its KQL database), and the
-# Notebooks. The Ontology item and the two Data Agents are created at runtime by
-# GettingStarted.Notebook (which orchestrates 01 then 02), so items_in_scope
-# lists deployed types only.
+# fabric-cicd deploys everything natively: the Lakehouse, Eventhouse (with its
+# KQL database), the Notebooks, the Ontology, and both Data Agents. The only
+# post-deploy step is the data generator (01_generate_ontology_data) plus an
+# ontology re-save so the graph ingests the loaded data.
 items_in_scope:
   - Lakehouse
   - Eventhouse
   - KQLDatabase
   - Notebook
+  - Ontology
+  - DataAgent
 entry_point: GettingStarted.Notebook
 owner_email: omerguzel@microsoft.com
 difficulty: Advanced
