@@ -1,0 +1,36 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/ontology/dataBinding/1.0.0/schema.json",
+  "id": "a125a280-eb29-515f-aa35-b50a1e46ef15",
+  "dataBindingConfiguration": {
+    "dataBindingType": "NonTimeSeries",
+    "propertyBindings": [
+      {
+        "sourceColumnName": "ticket_id",
+        "targetPropertyId": "5852771924071739217"
+      },
+      {
+        "sourceColumnName": "account_id",
+        "targetPropertyId": "2544464247191094811"
+      },
+      {
+        "sourceColumnName": "category",
+        "targetPropertyId": "2069099424037882903"
+      },
+      {
+        "sourceColumnName": "priority",
+        "targetPropertyId": "1570142756326431333"
+      },
+      {
+        "sourceColumnName": "is_sla_breached",
+        "targetPropertyId": "80094236613855316"
+      }
+    ],
+    "sourceTableProperties": {
+      "sourceType": "LakehouseTable",
+      "workspaceId": "afa69748-1167-48bf-be9e-720e27b83135",
+      "itemId": "f0a661ac-c10c-4f12-b335-83c22501e585",
+      "sourceTableName": "support_tickets",
+      "sourceSchema": "dbo"
+    }
+  }
+}

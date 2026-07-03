@@ -1,0 +1,13 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/ontology/relationshipType/1.0.0/schema.json",
+  "namespace": "usertypes",
+  "id": "8871758341824769047",
+  "name": "TicketForAccount",
+  "namespaceType": "Custom",
+  "source": {
+    "entityTypeId": "4246644483421425264"
+  },
+  "target": {
+    "entityTypeId": "8129366127051436426"
+  }
+}

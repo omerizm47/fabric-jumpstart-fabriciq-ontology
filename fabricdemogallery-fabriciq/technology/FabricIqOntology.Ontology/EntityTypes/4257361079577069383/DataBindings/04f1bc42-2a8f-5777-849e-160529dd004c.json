@@ -1,0 +1,30 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/ontology/dataBinding/1.0.0/schema.json",
+  "id": "04f1bc42-2a8f-5777-849e-160529dd004c",
+  "dataBindingConfiguration": {
+    "dataBindingType": "TimeSeries",
+    "timestampColumnName": "timestamp_utc",
+    "propertyBindings": [
+      {
+        "sourceColumnName": "duration_secs",
+        "targetPropertyId": "2456775788157580952"
+      },
+      {
+        "sourceColumnName": "timestamp_utc",
+        "targetPropertyId": "8148848037908480653"
+      },
+      {
+        "sourceColumnName": "event_id",
+        "targetPropertyId": "8570146193170571144"
+      }
+    ],
+    "sourceTableProperties": {
+      "sourceType": "KustoTable",
+      "workspaceId": "afa69748-1167-48bf-be9e-720e27b83135",
+      "itemId": "12162a51-0fea-4611-bccf-96b33547e637",
+      "clusterUri": "https://trd-3ndde74eg2kbeetrwe.z7.kusto.fabric.microsoft.com",
+      "databaseName": "fabriciq_eventhouse",
+      "sourceTableName": "events"
+    }
+  }
+}

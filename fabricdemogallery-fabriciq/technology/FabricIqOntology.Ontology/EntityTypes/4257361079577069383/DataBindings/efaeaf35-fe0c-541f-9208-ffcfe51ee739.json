@@ -1,0 +1,36 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/ontology/dataBinding/1.0.0/schema.json",
+  "id": "efaeaf35-fe0c-541f-9208-ffcfe51ee739",
+  "dataBindingConfiguration": {
+    "dataBindingType": "NonTimeSeries",
+    "propertyBindings": [
+      {
+        "sourceColumnName": "event_id",
+        "targetPropertyId": "8570146193170571144"
+      },
+      {
+        "sourceColumnName": "user_id",
+        "targetPropertyId": "1663622171546825269"
+      },
+      {
+        "sourceColumnName": "account_id",
+        "targetPropertyId": "1243318958718169898"
+      },
+      {
+        "sourceColumnName": "feature",
+        "targetPropertyId": "7563401963927152938"
+      },
+      {
+        "sourceColumnName": "action",
+        "targetPropertyId": "2015440083991030673"
+      }
+    ],
+    "sourceTableProperties": {
+      "sourceType": "LakehouseTable",
+      "workspaceId": "afa69748-1167-48bf-be9e-720e27b83135",
+      "itemId": "f0a661ac-c10c-4f12-b335-83c22501e585",
+      "sourceTableName": "events",
+      "sourceSchema": "dbo"
+    }
+  }
+}

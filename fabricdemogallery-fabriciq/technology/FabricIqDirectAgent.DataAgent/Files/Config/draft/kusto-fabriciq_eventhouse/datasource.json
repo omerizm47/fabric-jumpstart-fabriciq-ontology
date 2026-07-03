@@ -1,0 +1,126 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/dataAgent/definition/dataSource/1.0.0/schema.json",
+  "artifactId": "728d0569-3429-49d8-a214-6bc36eeec395",
+  "workspaceId": "afa69748-1167-48bf-be9e-720e27b83135",
+  "dataSourceInstructions": null,
+  "displayName": "fabriciq_eventhouse",
+  "type": "kusto",
+  "userDescription": null,
+  "metadata": {},
+  "elements": [
+    {
+      "id": "0bc71147-c2d7-465a-82dd-a35b914dde0f",
+      "is_selected": true,
+      "display_name": "Tables",
+      "type": "table_grouping",
+      "description": null,
+      "children": [
+        {
+          "id": "8509091a-9bd3-4900-a155-8b02a138908c",
+          "is_selected": true,
+          "display_name": "events",
+          "type": "kusto.table",
+          "description": null,
+          "children": [
+            {
+              "id": "event_id",
+              "is_selected": true,
+              "display_name": "event_id",
+              "type": "kusto.column",
+              "data_type": "System.String",
+              "description": null,
+              "children": []
+            },
+            {
+              "id": "timestamp_utc",
+              "is_selected": true,
+              "display_name": "timestamp_utc",
+              "type": "kusto.column",
+              "data_type": "System.DateTime",
+              "description": null,
+              "children": []
+            },
+            {
+              "id": "duration_secs",
+              "is_selected": true,
+              "display_name": "duration_secs",
+              "type": "kusto.column",
+              "data_type": "System.Int64",
+              "description": null,
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "04beab1d-b90a-4b4c-b577-20821d4d28dd",
+          "is_selected": true,
+          "display_name": "support_tickets",
+          "type": "kusto.table",
+          "description": null,
+          "children": [
+            {
+              "id": "ticket_id",
+              "is_selected": true,
+              "display_name": "ticket_id",
+              "type": "kusto.column",
+              "data_type": "System.String",
+              "description": null,
+              "children": []
+            },
+            {
+              "id": "timestamp_utc",
+              "is_selected": true,
+              "display_name": "timestamp_utc",
+              "type": "kusto.column",
+              "data_type": "System.DateTime",
+              "description": null,
+              "children": []
+            },
+            {
+              "id": "resolution_hrs",
+              "is_selected": true,
+              "display_name": "resolution_hrs",
+              "type": "kusto.column",
+              "data_type": "System.Double",
+              "description": null,
+              "children": []
+            },
+            {
+              "id": "csat_score",
+              "is_selected": true,
+              "display_name": "csat_score",
+              "type": "kusto.column",
+              "data_type": "System.Int64",
+              "description": null,
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "7c1c444e-937e-4e17-9d7e-f25d98f092f5",
+      "is_selected": true,
+      "display_name": "Functions",
+      "type": "function_grouping",
+      "description": null,
+      "children": []
+    },
+    {
+      "id": "21fbce8c-8da9-4ee2-adfe-38ef888e1127",
+      "is_selected": true,
+      "display_name": "Shortcuts",
+      "type": "shortcut_grouping",
+      "description": null,
+      "children": []
+    },
+    {
+      "id": "f38c20e1-edc4-4262-bb8c-8db8edcfe096",
+      "is_selected": true,
+      "display_name": "Materialized Views",
+      "type": "materialized_view_grouping",
+      "description": null,
+      "children": []
+    }
+  ]
+}

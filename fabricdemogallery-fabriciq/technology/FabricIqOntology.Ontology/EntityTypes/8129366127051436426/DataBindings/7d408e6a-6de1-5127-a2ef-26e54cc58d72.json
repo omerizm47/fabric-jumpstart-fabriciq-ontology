@@ -1,0 +1,48 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/ontology/dataBinding/1.0.0/schema.json",
+  "id": "7d408e6a-6de1-5127-a2ef-26e54cc58d72",
+  "dataBindingConfiguration": {
+    "dataBindingType": "NonTimeSeries",
+    "propertyBindings": [
+      {
+        "sourceColumnName": "account_id",
+        "targetPropertyId": "4072638237807358183"
+      },
+      {
+        "sourceColumnName": "plan",
+        "targetPropertyId": "7460399382877986798"
+      },
+      {
+        "sourceColumnName": "mrr_usd",
+        "targetPropertyId": "113269583751448493"
+      },
+      {
+        "sourceColumnName": "industry",
+        "targetPropertyId": "2697563497245117135"
+      },
+      {
+        "sourceColumnName": "region",
+        "targetPropertyId": "4739034960293959068"
+      },
+      {
+        "sourceColumnName": "is_churned",
+        "targetPropertyId": "5903826188401686630"
+      },
+      {
+        "sourceColumnName": "seat_count",
+        "targetPropertyId": "5609054828026774464"
+      },
+      {
+        "sourceColumnName": "health_score",
+        "targetPropertyId": "6735500943748385903"
+      }
+    ],
+    "sourceTableProperties": {
+      "sourceType": "LakehouseTable",
+      "workspaceId": "afa69748-1167-48bf-be9e-720e27b83135",
+      "itemId": "f0a661ac-c10c-4f12-b335-83c22501e585",
+      "sourceTableName": "accounts",
+      "sourceSchema": "dbo"
+    }
+  }
+}

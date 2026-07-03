@@ -1,0 +1,34 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/ontology/dataBinding/1.0.0/schema.json",
+  "id": "2a00c46d-0775-5cf8-9919-200c38125062",
+  "dataBindingConfiguration": {
+    "dataBindingType": "TimeSeries",
+    "timestampColumnName": "timestamp_utc",
+    "propertyBindings": [
+      {
+        "sourceColumnName": "resolution_hrs",
+        "targetPropertyId": "5697485946464745278"
+      },
+      {
+        "sourceColumnName": "csat_score",
+        "targetPropertyId": "3751420317718543309"
+      },
+      {
+        "sourceColumnName": "timestamp_utc",
+        "targetPropertyId": "3321593451678261039"
+      },
+      {
+        "sourceColumnName": "ticket_id",
+        "targetPropertyId": "5852771924071739217"
+      }
+    ],
+    "sourceTableProperties": {
+      "sourceType": "KustoTable",
+      "workspaceId": "afa69748-1167-48bf-be9e-720e27b83135",
+      "itemId": "12162a51-0fea-4611-bccf-96b33547e637",
+      "clusterUri": "https://trd-3ndde74eg2kbeetrwe.z7.kusto.fabric.microsoft.com",
+      "databaseName": "fabriciq_eventhouse",
+      "sourceTableName": "support_tickets"
+    }
+  }
+}

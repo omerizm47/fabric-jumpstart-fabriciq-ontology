@@ -1,12 +1,11 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
   "metadata": {
-    "type": "Notebook",
-    "displayName": "01_generate_ontology_data",
-    "description": "New notebook"
+    "type": "Ontology",
+    "displayName": "FabricIqOntology"
   },
   "config": {
     "version": "2.0",
-    "logicalId": "0ba51a4c-7fb9-a9a2-4c75-1d870077773e"
+    "logicalId": "fcaeda05-0fac-5f14-bcb8-71afddd2f92b"
   }
 }

@@ -1,0 +1,36 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/ontology/dataBinding/1.0.0/schema.json",
+  "id": "8d4da974-0a47-5f12-b56c-7856e23e854c",
+  "dataBindingConfiguration": {
+    "dataBindingType": "NonTimeSeries",
+    "propertyBindings": [
+      {
+        "sourceColumnName": "user_id",
+        "targetPropertyId": "2814436546235232619"
+      },
+      {
+        "sourceColumnName": "account_id",
+        "targetPropertyId": "6615249172608437751"
+      },
+      {
+        "sourceColumnName": "role",
+        "targetPropertyId": "4454064649432281583"
+      },
+      {
+        "sourceColumnName": "is_active",
+        "targetPropertyId": "219042502602003321"
+      },
+      {
+        "sourceColumnName": "logins_last_30_days",
+        "targetPropertyId": "5120380170850495264"
+      }
+    ],
+    "sourceTableProperties": {
+      "sourceType": "LakehouseTable",
+      "workspaceId": "afa69748-1167-48bf-be9e-720e27b83135",
+      "itemId": "f0a661ac-c10c-4f12-b335-83c22501e585",
+      "sourceTableName": "users",
+      "sourceSchema": "dbo"
+    }
+  }
+}
