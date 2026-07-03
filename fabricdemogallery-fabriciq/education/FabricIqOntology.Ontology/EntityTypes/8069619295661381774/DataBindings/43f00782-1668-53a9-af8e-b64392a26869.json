@@ -1,0 +1,52 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/ontology/dataBinding/1.0.0/schema.json",
+  "id": "43f00782-1668-53a9-af8e-b64392a26869",
+  "dataBindingConfiguration": {
+    "dataBindingType": "NonTimeSeries",
+    "propertyBindings": [
+      {
+        "sourceColumnName": "enrolment_id",
+        "targetPropertyId": "887146541295827608"
+      },
+      {
+        "sourceColumnName": "student_id",
+        "targetPropertyId": "2728814521006782362"
+      },
+      {
+        "sourceColumnName": "course_id",
+        "targetPropertyId": "1169205648646972311"
+      },
+      {
+        "sourceColumnName": "department",
+        "targetPropertyId": "8163698719572582564"
+      },
+      {
+        "sourceColumnName": "level",
+        "targetPropertyId": "6913671954662261535"
+      },
+      {
+        "sourceColumnName": "credits",
+        "targetPropertyId": "6387921318551726225"
+      },
+      {
+        "sourceColumnName": "status",
+        "targetPropertyId": "7479669184687662724"
+      },
+      {
+        "sourceColumnName": "is_completed",
+        "targetPropertyId": "4939056167508799807"
+      },
+      {
+        "sourceColumnName": "is_withdrawn",
+        "targetPropertyId": "8358001184239516149"
+      }
+    ],
+    "sourceTableProperties": {
+      "sourceType": "LakehouseTable",
+      "workspaceId": "61b4d577-724e-4258-bee4-c64f10b0fc93",
+      "itemId": "103791bf-3318-434e-8a3d-a4cde29cfeae",
+      "sourceTableName": "enrolments",
+      "sourceSchema": "dbo"
+    }
+  }
+}

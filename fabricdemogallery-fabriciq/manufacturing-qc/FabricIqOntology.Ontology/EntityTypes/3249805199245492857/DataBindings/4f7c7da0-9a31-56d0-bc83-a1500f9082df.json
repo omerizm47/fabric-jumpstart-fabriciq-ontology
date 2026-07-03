@@ -1,0 +1,38 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/ontology/dataBinding/1.0.0/schema.json",
+  "id": "4f7c7da0-9a31-56d0-bc83-a1500f9082df",
+  "dataBindingConfiguration": {
+    "dataBindingType": "TimeSeries",
+    "timestampColumnName": "timestamp_utc",
+    "propertyBindings": [
+      {
+        "sourceColumnName": "units_produced",
+        "targetPropertyId": "1257577079510415898"
+      },
+      {
+        "sourceColumnName": "defect_count",
+        "targetPropertyId": "7476511134529577636"
+      },
+      {
+        "sourceColumnName": "downtime_minutes",
+        "targetPropertyId": "4810848919967112221"
+      },
+      {
+        "sourceColumnName": "timestamp_utc",
+        "targetPropertyId": "429382604721209977"
+      },
+      {
+        "sourceColumnName": "batch_id",
+        "targetPropertyId": "3860845387392113308"
+      }
+    ],
+    "sourceTableProperties": {
+      "sourceType": "KustoTable",
+      "workspaceId": "8b535fae-cd55-4e17-a328-f2628de90cb2",
+      "itemId": "cb90bb47-d406-4d94-a32f-0c4bd24a63a5",
+      "clusterUri": "https://trd-ujnny7ftv7xyabk9gf.z6.kusto.fabric.microsoft.com",
+      "databaseName": "fabriciq_eventhouse",
+      "sourceTableName": "production_batches"
+    }
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/ontology/relationshipType/1.0.0/schema.json",
+  "namespace": "usertypes",
+  "id": "7030870338038959863",
+  "name": "AdForContent",
+  "namespaceType": "Custom",
+  "source": {
+    "entityTypeId": "7778780584629560932"
+  },
+  "target": {
+    "entityTypeId": "7318056284971727212"
+  }
+}

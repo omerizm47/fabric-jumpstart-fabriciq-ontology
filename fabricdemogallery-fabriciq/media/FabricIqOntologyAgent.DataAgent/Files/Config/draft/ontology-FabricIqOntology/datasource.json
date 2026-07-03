@@ -1,0 +1,44 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/dataAgent/definition/dataSource/1.0.0/schema.json",
+  "artifactId": "956adf1c-29f3-4916-a112-1bc80ccebf82",
+  "workspaceId": "ac507877-0899-4e34-be43-9306be4eff66",
+  "dataSourceInstructions": null,
+  "displayName": "FabricIqOntology",
+  "type": "ontology",
+  "userDescription": null,
+  "metadata": {},
+  "elements": [
+    {
+      "id": "Subscriber",
+      "is_selected": true,
+      "display_name": "Subscriber",
+      "type": "ontology.entity",
+      "description": "SubscriberId,PlanType,Region,AgeGroup,PaymentMethod,MonthlyFee,IsChurned",
+      "children": []
+    },
+    {
+      "id": "Content",
+      "is_selected": true,
+      "display_name": "Content",
+      "type": "ontology.entity",
+      "description": "ContentId,Title,Genre,ContentType,ReleaseYear,DurationMins,ProductionCostBucket,Language",
+      "children": []
+    },
+    {
+      "id": "AdImpression",
+      "is_selected": true,
+      "display_name": "AdImpression",
+      "type": "ontology.entity",
+      "description": "ImpressionId,Impressions,ContentId,Clicks,AdType,RevenueUsd,Cpm,TimestampUtc",
+      "children": []
+    },
+    {
+      "id": "ViewingEvent",
+      "is_selected": true,
+      "display_name": "ViewingEvent",
+      "type": "ontology.entity",
+      "description": "ViewId,WatchDurationMins,SubscriberId,Rating,ContentId,TimestampUtc,DeviceType,IsCompleted",
+      "children": []
+    }
+  ]
+}

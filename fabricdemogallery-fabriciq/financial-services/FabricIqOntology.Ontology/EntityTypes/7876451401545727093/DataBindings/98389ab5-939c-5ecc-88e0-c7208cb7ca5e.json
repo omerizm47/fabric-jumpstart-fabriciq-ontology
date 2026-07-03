@@ -1,0 +1,20 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/ontology/dataBinding/1.0.0/schema.json",
+  "id": "98389ab5-939c-5ecc-88e0-c7208cb7ca5e",
+  "dataBindingConfiguration": {
+    "dataBindingType": "NonTimeSeries",
+    "propertyBindings": [
+      {
+        "sourceColumnName": "category_id",
+        "targetPropertyId": "9205542280588368014"
+      }
+    ],
+    "sourceTableProperties": {
+      "sourceType": "LakehouseTable",
+      "workspaceId": "9bd7af9c-2c24-49b7-812c-a84dd37e2b25",
+      "itemId": "2918797d-beec-414b-936a-580b35b27c46",
+      "sourceTableName": "merchant_categories",
+      "sourceSchema": "dbo"
+    }
+  }
+}

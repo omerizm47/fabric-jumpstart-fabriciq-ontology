@@ -1,0 +1,32 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/ontology/dataBinding/1.0.0/schema.json",
+  "id": "2f0a15a4-1a32-59eb-8a77-60d3c4ba39de",
+  "dataBindingConfiguration": {
+    "dataBindingType": "NonTimeSeries",
+    "propertyBindings": [
+      {
+        "sourceColumnName": "inventory_id",
+        "targetPropertyId": "2140472521817763423"
+      },
+      {
+        "sourceColumnName": "store_id",
+        "targetPropertyId": "3285792363193359709"
+      },
+      {
+        "sourceColumnName": "product_id",
+        "targetPropertyId": "3286219014917795079"
+      },
+      {
+        "sourceColumnName": "reorder_point",
+        "targetPropertyId": "73854589978942371"
+      }
+    ],
+    "sourceTableProperties": {
+      "sourceType": "LakehouseTable",
+      "workspaceId": "7d82bcd4-0a36-4b7b-954f-00a0deff0427",
+      "itemId": "d29c4386-6d1d-4a68-9796-ce4c5d6639b2",
+      "sourceTableName": "inventory",
+      "sourceSchema": "dbo"
+    }
+  }
+}

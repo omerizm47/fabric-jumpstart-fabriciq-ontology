@@ -1,0 +1,34 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/ontology/dataBinding/1.0.0/schema.json",
+  "id": "967fa629-cf08-5210-ae5b-c2b099fe9ace",
+  "dataBindingConfiguration": {
+    "dataBindingType": "TimeSeries",
+    "timestampColumnName": "timestamp_utc",
+    "propertyBindings": [
+      {
+        "sourceColumnName": "unit_price",
+        "targetPropertyId": "6704229001616671730"
+      },
+      {
+        "sourceColumnName": "discount_pct",
+        "targetPropertyId": "2489904828661628981"
+      },
+      {
+        "sourceColumnName": "timestamp_utc",
+        "targetPropertyId": "8785403230265215780"
+      },
+      {
+        "sourceColumnName": "transaction_id",
+        "targetPropertyId": "184250266531455239"
+      }
+    ],
+    "sourceTableProperties": {
+      "sourceType": "KustoTable",
+      "workspaceId": "7d82bcd4-0a36-4b7b-954f-00a0deff0427",
+      "itemId": "5ddb068d-c7ba-4460-b7bc-481faa36a83e",
+      "clusterUri": "https://trd-9s8kmx2f376mhchha5.z9.kusto.fabric.microsoft.com",
+      "databaseName": "fabriciq_eventhouse",
+      "sourceTableName": "pos_transactions"
+    }
+  }
+}

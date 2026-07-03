@@ -1,0 +1,23 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/ontology/contextualization/1.0.0/schema.json",
+  "id": "51c19fc9-b0b4-5c2a-b41c-341f03230a36",
+  "dataBindingTable": {
+    "workspaceId": "61b4d577-724e-4258-bee4-c64f10b0fc93",
+    "itemId": "103791bf-3318-434e-8a3d-a4cde29cfeae",
+    "sourceTableName": "platform_events",
+    "sourceSchema": "dbo",
+    "sourceType": "LakehouseTable"
+  },
+  "sourceKeyRefBindings": [
+    {
+      "sourceColumnName": "event_id",
+      "targetPropertyId": "5344078080007051896"
+    }
+  ],
+  "targetKeyRefBindings": [
+    {
+      "sourceColumnName": "course_id",
+      "targetPropertyId": "3036719959652324424"
+    }
+  ]
+}

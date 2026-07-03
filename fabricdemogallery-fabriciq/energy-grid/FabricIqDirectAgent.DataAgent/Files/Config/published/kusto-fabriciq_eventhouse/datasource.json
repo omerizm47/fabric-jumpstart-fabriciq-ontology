@@ -1,0 +1,207 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/dataAgent/definition/dataSource/1.0.0/schema.json",
+  "artifactId": "fd4f5e8f-4002-41b5-9efb-d3b6f40c271f",
+  "workspaceId": "74aba7db-7ea5-4bfd-93b3-a01fe3716139",
+  "dataSourceInstructions": null,
+  "displayName": "fabriciq_eventhouse",
+  "type": "kusto",
+  "userDescription": null,
+  "metadata": {},
+  "elements": [
+    {
+      "id": "aea851c5-e47a-4fda-8cca-78ae3e4309e9",
+      "is_selected": true,
+      "display_name": "Tables",
+      "type": "table_grouping",
+      "description": null,
+      "children": [
+        {
+          "id": "af4bf441-1449-4da9-849e-4436c770b8b1",
+          "is_selected": true,
+          "display_name": "grid_sensors",
+          "type": "kusto.table",
+          "description": null,
+          "children": [
+            {
+              "id": "reading_id",
+              "is_selected": true,
+              "display_name": "reading_id",
+              "type": "kusto.column",
+              "data_type": "System.String",
+              "description": null,
+              "children": []
+            },
+            {
+              "id": "timestamp_utc",
+              "is_selected": true,
+              "display_name": "timestamp_utc",
+              "type": "kusto.column",
+              "data_type": "System.DateTime",
+              "description": null,
+              "children": []
+            },
+            {
+              "id": "voltage_v",
+              "is_selected": true,
+              "display_name": "voltage_v",
+              "type": "kusto.column",
+              "data_type": "System.Double",
+              "description": null,
+              "children": []
+            },
+            {
+              "id": "frequency_hz",
+              "is_selected": true,
+              "display_name": "frequency_hz",
+              "type": "kusto.column",
+              "data_type": "System.Double",
+              "description": null,
+              "children": []
+            },
+            {
+              "id": "power_factor",
+              "is_selected": true,
+              "display_name": "power_factor",
+              "type": "kusto.column",
+              "data_type": "System.Double",
+              "description": null,
+              "children": []
+            },
+            {
+              "id": "load_mw",
+              "is_selected": true,
+              "display_name": "load_mw",
+              "type": "kusto.column",
+              "data_type": "System.Double",
+              "description": null,
+              "children": []
+            },
+            {
+              "id": "temperature_c",
+              "is_selected": true,
+              "display_name": "temperature_c",
+              "type": "kusto.column",
+              "data_type": "System.Double",
+              "description": null,
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "1f740461-b695-4e8a-80c9-ed16cdb97af6",
+          "is_selected": true,
+          "display_name": "power_events",
+          "type": "kusto.table",
+          "description": null,
+          "children": [
+            {
+              "id": "event_id",
+              "is_selected": true,
+              "display_name": "event_id",
+              "type": "kusto.column",
+              "data_type": "System.String",
+              "description": null,
+              "children": []
+            },
+            {
+              "id": "timestamp_utc",
+              "is_selected": true,
+              "display_name": "timestamp_utc",
+              "type": "kusto.column",
+              "data_type": "System.DateTime",
+              "description": null,
+              "children": []
+            },
+            {
+              "id": "duration_sec",
+              "is_selected": true,
+              "display_name": "duration_sec",
+              "type": "kusto.column",
+              "data_type": "System.Int64",
+              "description": null,
+              "children": []
+            },
+            {
+              "id": "affected_customers",
+              "is_selected": true,
+              "display_name": "affected_customers",
+              "type": "kusto.column",
+              "data_type": "System.Int64",
+              "description": null,
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "d1789673-ed6e-4ea9-8feb-db3b8891354a",
+          "is_selected": true,
+          "display_name": "renewable_generation",
+          "type": "kusto.table",
+          "description": null,
+          "children": [
+            {
+              "id": "reading_id",
+              "is_selected": true,
+              "display_name": "reading_id",
+              "type": "kusto.column",
+              "data_type": "System.String",
+              "description": null,
+              "children": []
+            },
+            {
+              "id": "timestamp_utc",
+              "is_selected": true,
+              "display_name": "timestamp_utc",
+              "type": "kusto.column",
+              "data_type": "System.DateTime",
+              "description": null,
+              "children": []
+            },
+            {
+              "id": "generation_mw",
+              "is_selected": true,
+              "display_name": "generation_mw",
+              "type": "kusto.column",
+              "data_type": "System.Double",
+              "description": null,
+              "children": []
+            },
+            {
+              "id": "capacity_factor",
+              "is_selected": true,
+              "display_name": "capacity_factor",
+              "type": "kusto.column",
+              "data_type": "System.Double",
+              "description": null,
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cdd568c1-2f33-405c-a131-4efdfc37daa1",
+      "is_selected": true,
+      "display_name": "Functions",
+      "type": "function_grouping",
+      "description": null,
+      "children": []
+    },
+    {
+      "id": "576f5834-f017-4cba-b85b-b84499eccd91",
+      "is_selected": true,
+      "display_name": "Shortcuts",
+      "type": "shortcut_grouping",
+      "description": null,
+      "children": []
+    },
+    {
+      "id": "b11c554f-8da2-4c44-9ce6-535128f4a7b2",
+      "is_selected": true,
+      "display_name": "Materialized Views",
+      "type": "materialized_view_grouping",
+      "description": null,
+      "children": []
+    }
+  ]
+}

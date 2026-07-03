@@ -1,0 +1,13 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/ontology/relationshipType/1.0.0/schema.json",
+  "namespace": "usertypes",
+  "id": "2363688212969245574",
+  "name": "ReadingFromPlant",
+  "namespaceType": "Custom",
+  "source": {
+    "entityTypeId": "5169239606569794604"
+  },
+  "target": {
+    "entityTypeId": "6118173360996446548"
+  }
+}

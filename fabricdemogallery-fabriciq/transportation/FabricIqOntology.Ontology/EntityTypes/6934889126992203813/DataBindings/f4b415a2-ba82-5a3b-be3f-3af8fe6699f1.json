@@ -1,0 +1,38 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/ontology/dataBinding/1.0.0/schema.json",
+  "id": "f4b415a2-ba82-5a3b-be3f-3af8fe6699f1",
+  "dataBindingConfiguration": {
+    "dataBindingType": "TimeSeries",
+    "timestampColumnName": "timestamp_utc",
+    "propertyBindings": [
+      {
+        "sourceColumnName": "odometer_km",
+        "targetPropertyId": "2380406705045098501"
+      },
+      {
+        "sourceColumnName": "litres_filled",
+        "targetPropertyId": "2584961002422097891"
+      },
+      {
+        "sourceColumnName": "total_cost_gbp",
+        "targetPropertyId": "6852668898715568341"
+      },
+      {
+        "sourceColumnName": "timestamp_utc",
+        "targetPropertyId": "5007232571781703978"
+      },
+      {
+        "sourceColumnName": "log_id",
+        "targetPropertyId": "6007797832858606576"
+      }
+    ],
+    "sourceTableProperties": {
+      "sourceType": "KustoTable",
+      "workspaceId": "362181f4-0101-4319-96f1-7a8802121645",
+      "itemId": "dc6ec041-5074-4d32-a572-c0f834fe68af",
+      "clusterUri": "https://trd-ka9yptesy6kdu941cx.z5.kusto.fabric.microsoft.com",
+      "databaseName": "fabriciq_eventhouse",
+      "sourceTableName": "fuel_logs"
+    }
+  }
+}

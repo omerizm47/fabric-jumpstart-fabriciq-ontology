@@ -1,0 +1,31 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/ontology/entityType/1.0.0/schema.json",
+  "id": "2491521150204146387",
+  "namespace": "usertypes",
+  "baseEntityTypeId": null,
+  "name": "Course",
+  "entityIdParts": [
+    "3036719959652324424"
+  ],
+  "displayNamePropertyId": "3036719959652324424",
+  "namespaceType": "Custom",
+  "visibility": "Visible",
+  "properties": [
+    {
+      "id": "3036719959652324424",
+      "name": "CourseId",
+      "redefines": null,
+      "baseTypeNamespaceType": null,
+      "valueType": "String"
+    },
+    {
+      "id": "9012162642689487177",
+      "name": "Department",
+      "redefines": null,
+      "baseTypeNamespaceType": null,
+      "valueType": "String"
+    }
+  ],
+  "timeseriesProperties": [],
+  "untypedProperties": []
+}

@@ -1,0 +1,24 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/ontology/dataBinding/1.0.0/schema.json",
+  "id": "b5f839bd-9d6b-5c65-9d6d-4c3e3fea9a64",
+  "dataBindingConfiguration": {
+    "dataBindingType": "NonTimeSeries",
+    "propertyBindings": [
+      {
+        "sourceColumnName": "line_id",
+        "targetPropertyId": "7982306146542532049"
+      },
+      {
+        "sourceColumnName": "line_name",
+        "targetPropertyId": "1477628574023894280"
+      }
+    ],
+    "sourceTableProperties": {
+      "sourceType": "LakehouseTable",
+      "workspaceId": "8b535fae-cd55-4e17-a328-f2628de90cb2",
+      "itemId": "163ab9b2-30f4-486a-a443-c93f36347479",
+      "sourceTableName": "production_lines",
+      "sourceSchema": "dbo"
+    }
+  }
+}

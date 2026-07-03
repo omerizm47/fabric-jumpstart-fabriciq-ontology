@@ -1,0 +1,44 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/ontology/dataBinding/1.0.0/schema.json",
+  "id": "5f1aff9e-07eb-5562-ac0e-3f1a98011d0f",
+  "dataBindingConfiguration": {
+    "dataBindingType": "NonTimeSeries",
+    "propertyBindings": [
+      {
+        "sourceColumnName": "vehicle_id",
+        "targetPropertyId": "5147856290444028722"
+      },
+      {
+        "sourceColumnName": "vehicle_type",
+        "targetPropertyId": "6681808837490763128"
+      },
+      {
+        "sourceColumnName": "depot",
+        "targetPropertyId": "5094788679746919319"
+      },
+      {
+        "sourceColumnName": "capacity_tonnes",
+        "targetPropertyId": "3619004440030683207"
+      },
+      {
+        "sourceColumnName": "year_registered",
+        "targetPropertyId": "9207144251779931254"
+      },
+      {
+        "sourceColumnName": "status",
+        "targetPropertyId": "8590470142508555316"
+      },
+      {
+        "sourceColumnName": "driver_id",
+        "targetPropertyId": "3030621086484628081"
+      }
+    ],
+    "sourceTableProperties": {
+      "sourceType": "LakehouseTable",
+      "workspaceId": "362181f4-0101-4319-96f1-7a8802121645",
+      "itemId": "3b493fca-30ae-4711-9fc5-759e1af86ca0",
+      "sourceTableName": "vehicles",
+      "sourceSchema": "dbo"
+    }
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/ontology/dataBinding/1.0.0/schema.json",
+  "id": "c652f23c-0a66-58d0-a174-9870aa6f3175",
+  "dataBindingConfiguration": {
+    "dataBindingType": "NonTimeSeries",
+    "propertyBindings": [
+      {
+        "sourceColumnName": "guest_id",
+        "targetPropertyId": "5978100227024195654"
+      },
+      {
+        "sourceColumnName": "loyalty_tier",
+        "targetPropertyId": "480910090408498115"
+      },
+      {
+        "sourceColumnName": "region",
+        "targetPropertyId": "2726075073963260350"
+      },
+      {
+        "sourceColumnName": "age_group",
+        "targetPropertyId": "1990657554081176456"
+      },
+      {
+        "sourceColumnName": "nationality",
+        "targetPropertyId": "1352561912525508611"
+      },
+      {
+        "sourceColumnName": "total_stays",
+        "targetPropertyId": "7504386749423239906"
+      },
+      {
+        "sourceColumnName": "total_spend",
+        "targetPropertyId": "6185498016965331288"
+      },
+      {
+        "sourceColumnName": "preferred_channel",
+        "targetPropertyId": "6771675382179483927"
+      }
+    ],
+    "sourceTableProperties": {
+      "sourceType": "LakehouseTable",
+      "workspaceId": "7235ab18-0ba4-441e-b633-bc57f9e82ffa",
+      "itemId": "59af920f-869b-4b7b-9a0e-2d30ac271edc",
+      "sourceTableName": "guests",
+      "sourceSchema": "dbo"
+    }
+  }
+}

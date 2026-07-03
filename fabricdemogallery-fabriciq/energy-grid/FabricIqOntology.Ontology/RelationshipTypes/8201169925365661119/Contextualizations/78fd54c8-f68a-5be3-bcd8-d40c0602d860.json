@@ -1,0 +1,23 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/ontology/contextualization/1.0.0/schema.json",
+  "id": "78fd54c8-f68a-5be3-bcd8-d40c0602d860",
+  "dataBindingTable": {
+    "workspaceId": "74aba7db-7ea5-4bfd-93b3-a01fe3716139",
+    "itemId": "facdb147-cae6-40c3-bb22-c69bc8f73cdf",
+    "sourceTableName": "power_events",
+    "sourceSchema": "dbo",
+    "sourceType": "LakehouseTable"
+  },
+  "sourceKeyRefBindings": [
+    {
+      "sourceColumnName": "event_id",
+      "targetPropertyId": "4255772284066460964"
+    }
+  ],
+  "targetKeyRefBindings": [
+    {
+      "sourceColumnName": "substation_id",
+      "targetPropertyId": "7578714744104607337"
+    }
+  ]
+}

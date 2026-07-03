@@ -1,0 +1,52 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/dataAgent/definition/dataSource/1.0.0/schema.json",
+  "artifactId": "7314f2f2-41f3-4478-bee9-7c97b97754f3",
+  "workspaceId": "6b759b32-548c-47d3-ac32-f16aeb34eb1e",
+  "dataSourceInstructions": null,
+  "displayName": "FabricIqOntology",
+  "type": "ontology",
+  "userDescription": null,
+  "metadata": {},
+  "elements": [
+    {
+      "id": "ProjectEvent",
+      "is_selected": true,
+      "display_name": "ProjectEvent",
+      "type": "ontology.entity",
+      "description": "EventId,HoursLogged,EngagementId,CostGbp,ConsultantId,BudgetRemainingPct,TaskType,TimestampUtc",
+      "children": []
+    },
+    {
+      "id": "Engagement",
+      "is_selected": true,
+      "display_name": "Engagement",
+      "type": "ontology.entity",
+      "description": "EngagementId,ActualSpendGbp,ClientId,MarginPct,LeadConsultantId,TimestampUtc,Practice,Status,IsOverBudget,BudgetGbp,Headcount",
+      "children": []
+    },
+    {
+      "id": "Timesheet",
+      "is_selected": true,
+      "display_name": "Timesheet",
+      "type": "ontology.entity",
+      "description": "TimesheetId,HoursLogged,ConsultantId,BilledValueGbp,EngagementId,TimestampUtc,TaskType,IsBillable",
+      "children": []
+    },
+    {
+      "id": "Client",
+      "is_selected": true,
+      "display_name": "Client",
+      "type": "ontology.entity",
+      "description": "ClientId,ClientName,Industry,Region,Tier,ContractValueGbp,RelationshipYears,NpsScore",
+      "children": []
+    },
+    {
+      "id": "Consultant",
+      "is_selected": true,
+      "display_name": "Consultant",
+      "type": "ontology.entity",
+      "description": "ConsultantId,Grade,Practice,Region,DailyRateGbp,YearsExperience,IsBillable",
+      "children": []
+    }
+  ]
+}

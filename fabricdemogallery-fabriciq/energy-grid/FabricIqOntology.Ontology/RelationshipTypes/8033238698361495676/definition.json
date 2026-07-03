@@ -1,0 +1,13 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/ontology/relationshipType/1.0.0/schema.json",
+  "namespace": "usertypes",
+  "id": "8033238698361495676",
+  "name": "GridSensorAtSubstation",
+  "namespaceType": "Custom",
+  "source": {
+    "entityTypeId": "5617815896520059359"
+  },
+  "target": {
+    "entityTypeId": "7999720638090387751"
+  }
+}

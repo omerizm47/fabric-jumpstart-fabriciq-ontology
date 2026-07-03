@@ -1,0 +1,32 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/ontology/dataBinding/1.0.0/schema.json",
+  "id": "915c4467-f110-5200-8131-8290a2d03517",
+  "dataBindingConfiguration": {
+    "dataBindingType": "NonTimeSeries",
+    "propertyBindings": [
+      {
+        "sourceColumnName": "log_id",
+        "targetPropertyId": "6007797832858606576"
+      },
+      {
+        "sourceColumnName": "vehicle_id",
+        "targetPropertyId": "1446968438081837144"
+      },
+      {
+        "sourceColumnName": "depot",
+        "targetPropertyId": "1224288493166194364"
+      },
+      {
+        "sourceColumnName": "fuel_type",
+        "targetPropertyId": "543020223753604335"
+      }
+    ],
+    "sourceTableProperties": {
+      "sourceType": "LakehouseTable",
+      "workspaceId": "362181f4-0101-4319-96f1-7a8802121645",
+      "itemId": "3b493fca-30ae-4711-9fc5-759e1af86ca0",
+      "sourceTableName": "fuel_logs",
+      "sourceSchema": "dbo"
+    }
+  }
+}

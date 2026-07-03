@@ -1,0 +1,23 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/ontology/contextualization/1.0.0/schema.json",
+  "id": "47cfd7e4-d2e9-5d3f-9ac0-8eef7408d77a",
+  "dataBindingTable": {
+    "workspaceId": "7235ab18-0ba4-441e-b633-bc57f9e82ffa",
+    "itemId": "59af920f-869b-4b7b-9a0e-2d30ac271edc",
+    "sourceTableName": "bookings",
+    "sourceSchema": "dbo",
+    "sourceType": "LakehouseTable"
+  },
+  "sourceKeyRefBindings": [
+    {
+      "sourceColumnName": "booking_id",
+      "targetPropertyId": "4544038892445289158"
+    }
+  ],
+  "targetKeyRefBindings": [
+    {
+      "sourceColumnName": "guest_id",
+      "targetPropertyId": "5978100227024195654"
+    }
+  ]
+}

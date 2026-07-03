@@ -1,0 +1,44 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/ontology/dataBinding/1.0.0/schema.json",
+  "id": "b1abc6f4-4152-569a-acec-98a063f006b4",
+  "dataBindingConfiguration": {
+    "dataBindingType": "NonTimeSeries",
+    "propertyBindings": [
+      {
+        "sourceColumnName": "account_id",
+        "targetPropertyId": "4072638237807358183"
+      },
+      {
+        "sourceColumnName": "customer_id",
+        "targetPropertyId": "6725707929670241562"
+      },
+      {
+        "sourceColumnName": "account_type",
+        "targetPropertyId": "7880782692652240170"
+      },
+      {
+        "sourceColumnName": "balance",
+        "targetPropertyId": "3336032636635106917"
+      },
+      {
+        "sourceColumnName": "credit_limit",
+        "targetPropertyId": "2944567764223095835"
+      },
+      {
+        "sourceColumnName": "credit_utilisation_pct",
+        "targetPropertyId": "3728037273445454287"
+      },
+      {
+        "sourceColumnName": "status",
+        "targetPropertyId": "3113715895721670817"
+      }
+    ],
+    "sourceTableProperties": {
+      "sourceType": "LakehouseTable",
+      "workspaceId": "9bd7af9c-2c24-49b7-812c-a84dd37e2b25",
+      "itemId": "2918797d-beec-414b-936a-580b35b27c46",
+      "sourceTableName": "accounts",
+      "sourceSchema": "dbo"
+    }
+  }
+}

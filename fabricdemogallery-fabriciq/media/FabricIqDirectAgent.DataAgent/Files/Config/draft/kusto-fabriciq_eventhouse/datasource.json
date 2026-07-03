@@ -1,0 +1,153 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/dataAgent/definition/dataSource/1.0.0/schema.json",
+  "artifactId": "1090d8b1-ac86-4e24-aec9-ac09c394c13b",
+  "workspaceId": "ac507877-0899-4e34-be43-9306be4eff66",
+  "dataSourceInstructions": null,
+  "displayName": "fabriciq_eventhouse",
+  "type": "kusto",
+  "userDescription": null,
+  "metadata": {},
+  "elements": [
+    {
+      "id": "aabb524a-e435-4be7-b42e-20b0f2cf72a2",
+      "is_selected": true,
+      "display_name": "Tables",
+      "type": "table_grouping",
+      "description": null,
+      "children": [
+        {
+          "id": "075bf0d5-fef6-457f-a6a7-27fd38337fa7",
+          "is_selected": true,
+          "display_name": "viewing_history",
+          "type": "kusto.table",
+          "description": null,
+          "children": [
+            {
+              "id": "view_id",
+              "is_selected": true,
+              "display_name": "view_id",
+              "type": "kusto.column",
+              "data_type": "System.String",
+              "description": null,
+              "children": []
+            },
+            {
+              "id": "timestamp_utc",
+              "is_selected": true,
+              "display_name": "timestamp_utc",
+              "type": "kusto.column",
+              "data_type": "System.DateTime",
+              "description": null,
+              "children": []
+            },
+            {
+              "id": "watch_duration_mins",
+              "is_selected": true,
+              "display_name": "watch_duration_mins",
+              "type": "kusto.column",
+              "data_type": "System.Double",
+              "description": null,
+              "children": []
+            },
+            {
+              "id": "rating",
+              "is_selected": true,
+              "display_name": "rating",
+              "type": "kusto.column",
+              "data_type": "System.Int64",
+              "description": null,
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "e8dd59bd-8dd1-49c7-88bb-3a0f37d7d92c",
+          "is_selected": true,
+          "display_name": "ad_impressions",
+          "type": "kusto.table",
+          "description": null,
+          "children": [
+            {
+              "id": "impression_id",
+              "is_selected": true,
+              "display_name": "impression_id",
+              "type": "kusto.column",
+              "data_type": "System.String",
+              "description": null,
+              "children": []
+            },
+            {
+              "id": "timestamp_utc",
+              "is_selected": true,
+              "display_name": "timestamp_utc",
+              "type": "kusto.column",
+              "data_type": "System.DateTime",
+              "description": null,
+              "children": []
+            },
+            {
+              "id": "impressions",
+              "is_selected": true,
+              "display_name": "impressions",
+              "type": "kusto.column",
+              "data_type": "System.Int64",
+              "description": null,
+              "children": []
+            },
+            {
+              "id": "clicks",
+              "is_selected": true,
+              "display_name": "clicks",
+              "type": "kusto.column",
+              "data_type": "System.Int64",
+              "description": null,
+              "children": []
+            },
+            {
+              "id": "revenue_usd",
+              "is_selected": true,
+              "display_name": "revenue_usd",
+              "type": "kusto.column",
+              "data_type": "System.Double",
+              "description": null,
+              "children": []
+            },
+            {
+              "id": "cpm",
+              "is_selected": true,
+              "display_name": "cpm",
+              "type": "kusto.column",
+              "data_type": "System.Double",
+              "description": null,
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "2146fdc5-a22c-4aed-b758-3fb4a6ae86cc",
+      "is_selected": true,
+      "display_name": "Functions",
+      "type": "function_grouping",
+      "description": null,
+      "children": []
+    },
+    {
+      "id": "2a8e8c05-1617-4684-835c-01f49f4ce9fa",
+      "is_selected": true,
+      "display_name": "Shortcuts",
+      "type": "shortcut_grouping",
+      "description": null,
+      "children": []
+    },
+    {
+      "id": "452d46ba-e66b-4c0f-b3a3-98f84bda7b3f",
+      "is_selected": true,
+      "display_name": "Materialized Views",
+      "type": "materialized_view_grouping",
+      "description": null,
+      "children": []
+    }
+  ]
+}

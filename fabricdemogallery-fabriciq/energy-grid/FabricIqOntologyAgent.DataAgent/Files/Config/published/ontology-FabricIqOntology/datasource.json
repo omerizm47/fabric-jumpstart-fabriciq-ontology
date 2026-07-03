@@ -1,0 +1,52 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/dataAgent/definition/dataSource/1.0.0/schema.json",
+  "artifactId": "1ff4980f-782b-46b3-a55d-855239b0dbfa",
+  "workspaceId": "74aba7db-7ea5-4bfd-93b3-a01fe3716139",
+  "dataSourceInstructions": null,
+  "displayName": "FabricIqOntology",
+  "type": "ontology",
+  "userDescription": null,
+  "metadata": {},
+  "elements": [
+    {
+      "id": "PowerEvent",
+      "is_selected": true,
+      "display_name": "PowerEvent",
+      "type": "ontology.entity",
+      "description": "EventId,DurationSec,SubstationId,AffectedCustomers,Region,TimestampUtc,EventType,Severity,Resolved",
+      "children": []
+    },
+    {
+      "id": "RenewableReading",
+      "is_selected": true,
+      "display_name": "RenewableReading",
+      "type": "ontology.entity",
+      "description": "ReadingId,GenerationMw,PlantId,CapacityFactor,Weather,TimestampUtc",
+      "children": []
+    },
+    {
+      "id": "GridSensor",
+      "is_selected": true,
+      "display_name": "GridSensor",
+      "type": "ontology.entity",
+      "description": "ReadingId,VoltageV,SubstationId,FrequencyHz,Region,PowerFactor,LoadMw,TemperatureC,TimestampUtc",
+      "children": []
+    },
+    {
+      "id": "GenerationPlant",
+      "is_selected": true,
+      "display_name": "GenerationPlant",
+      "type": "ontology.entity",
+      "description": "PlantId,PlantType,CapacityMw",
+      "children": []
+    },
+    {
+      "id": "Substation",
+      "is_selected": true,
+      "display_name": "Substation",
+      "type": "ontology.entity",
+      "description": "SubstationId,Region",
+      "children": []
+    }
+  ]
+}

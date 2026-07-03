@@ -1,0 +1,23 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/ontology/contextualization/1.0.0/schema.json",
+  "id": "bd3a52c5-6223-5311-9529-eb754ef80abc",
+  "dataBindingTable": {
+    "workspaceId": "74aba7db-7ea5-4bfd-93b3-a01fe3716139",
+    "itemId": "facdb147-cae6-40c3-bb22-c69bc8f73cdf",
+    "sourceTableName": "renewable_generation",
+    "sourceSchema": "dbo",
+    "sourceType": "LakehouseTable"
+  },
+  "sourceKeyRefBindings": [
+    {
+      "sourceColumnName": "reading_id",
+      "targetPropertyId": "4598161085283092665"
+    }
+  ],
+  "targetKeyRefBindings": [
+    {
+      "sourceColumnName": "plant_id",
+      "targetPropertyId": "3156060452175361360"
+    }
+  ]
+}

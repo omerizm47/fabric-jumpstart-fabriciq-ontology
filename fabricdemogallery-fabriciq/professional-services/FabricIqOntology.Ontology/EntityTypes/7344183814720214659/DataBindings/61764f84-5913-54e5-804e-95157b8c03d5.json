@@ -1,0 +1,36 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/ontology/dataBinding/1.0.0/schema.json",
+  "id": "61764f84-5913-54e5-804e-95157b8c03d5",
+  "dataBindingConfiguration": {
+    "dataBindingType": "NonTimeSeries",
+    "propertyBindings": [
+      {
+        "sourceColumnName": "timesheet_id",
+        "targetPropertyId": "2845604648662009447"
+      },
+      {
+        "sourceColumnName": "consultant_id",
+        "targetPropertyId": "788575428728806147"
+      },
+      {
+        "sourceColumnName": "engagement_id",
+        "targetPropertyId": "4094432003145584746"
+      },
+      {
+        "sourceColumnName": "task_type",
+        "targetPropertyId": "2569934580410542936"
+      },
+      {
+        "sourceColumnName": "is_billable",
+        "targetPropertyId": "1655503858136411937"
+      }
+    ],
+    "sourceTableProperties": {
+      "sourceType": "LakehouseTable",
+      "workspaceId": "6b759b32-548c-47d3-ac32-f16aeb34eb1e",
+      "itemId": "29192285-2245-4c0f-91b2-7ce059011537",
+      "sourceTableName": "timesheets",
+      "sourceSchema": "dbo"
+    }
+  }
+}

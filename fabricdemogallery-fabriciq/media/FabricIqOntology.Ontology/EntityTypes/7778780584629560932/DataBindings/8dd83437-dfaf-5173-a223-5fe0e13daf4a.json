@@ -1,0 +1,42 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/ontology/dataBinding/1.0.0/schema.json",
+  "id": "8dd83437-dfaf-5173-a223-5fe0e13daf4a",
+  "dataBindingConfiguration": {
+    "dataBindingType": "TimeSeries",
+    "timestampColumnName": "timestamp_utc",
+    "propertyBindings": [
+      {
+        "sourceColumnName": "impressions",
+        "targetPropertyId": "4785072084927563427"
+      },
+      {
+        "sourceColumnName": "clicks",
+        "targetPropertyId": "6002645037721561830"
+      },
+      {
+        "sourceColumnName": "revenue_usd",
+        "targetPropertyId": "2030513164461212590"
+      },
+      {
+        "sourceColumnName": "cpm",
+        "targetPropertyId": "8783543933960937630"
+      },
+      {
+        "sourceColumnName": "timestamp_utc",
+        "targetPropertyId": "4078834190271248850"
+      },
+      {
+        "sourceColumnName": "impression_id",
+        "targetPropertyId": "8987434039053080579"
+      }
+    ],
+    "sourceTableProperties": {
+      "sourceType": "KustoTable",
+      "workspaceId": "ac507877-0899-4e34-be43-9306be4eff66",
+      "itemId": "dc2858bb-3727-4962-b5a7-24c9b6105d4a",
+      "clusterUri": "https://trd-98fz1xbvgu9yhag7w6.z7.kusto.fabric.microsoft.com",
+      "databaseName": "fabriciq_eventhouse",
+      "sourceTableName": "ad_impressions"
+    }
+  }
+}

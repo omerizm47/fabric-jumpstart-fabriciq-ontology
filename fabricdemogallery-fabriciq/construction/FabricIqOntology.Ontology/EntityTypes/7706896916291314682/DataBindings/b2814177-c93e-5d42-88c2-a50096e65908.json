@@ -1,0 +1,36 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/ontology/dataBinding/1.0.0/schema.json",
+  "id": "b2814177-c93e-5d42-88c2-a50096e65908",
+  "dataBindingConfiguration": {
+    "dataBindingType": "NonTimeSeries",
+    "propertyBindings": [
+      {
+        "sourceColumnName": "cost_id",
+        "targetPropertyId": "2808726761217014440"
+      },
+      {
+        "sourceColumnName": "project_id",
+        "targetPropertyId": "685034983331650264"
+      },
+      {
+        "sourceColumnName": "cost_category",
+        "targetPropertyId": "1896477907359749317"
+      },
+      {
+        "sourceColumnName": "supplier",
+        "targetPropertyId": "5497609736844494468"
+      },
+      {
+        "sourceColumnName": "approved",
+        "targetPropertyId": "1840044513339891871"
+      }
+    ],
+    "sourceTableProperties": {
+      "sourceType": "LakehouseTable",
+      "workspaceId": "ee8a5d4d-9d33-4d11-9997-7f91af878bbd",
+      "itemId": "478d485b-e4e9-4024-9700-96bf5abd781b",
+      "sourceTableName": "cost_ledger",
+      "sourceSchema": "dbo"
+    }
+  }
+}

@@ -1,0 +1,81 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/dataAgent/definition/dataSource/1.0.0/schema.json",
+  "artifactId": "5118db7b-2e42-464f-81da-cbfdd3fc7a88",
+  "workspaceId": "9bd7af9c-2c24-49b7-812c-a84dd37e2b25",
+  "dataSourceInstructions": null,
+  "displayName": "fabriciq_eventhouse",
+  "type": "kusto",
+  "userDescription": null,
+  "metadata": {},
+  "elements": [
+    {
+      "id": "a66be940-d7e3-411c-b00d-42e10e98b8f2",
+      "is_selected": true,
+      "display_name": "Tables",
+      "type": "table_grouping",
+      "description": null,
+      "children": [
+        {
+          "id": "fbcd9912-c3cc-4ec2-83b3-f51334f689d4",
+          "is_selected": true,
+          "display_name": "txn_events",
+          "type": "kusto.table",
+          "description": null,
+          "children": [
+            {
+              "id": "transaction_id",
+              "is_selected": true,
+              "display_name": "transaction_id",
+              "type": "kusto.column",
+              "data_type": "System.String",
+              "description": null,
+              "children": []
+            },
+            {
+              "id": "timestamp_utc",
+              "is_selected": true,
+              "display_name": "timestamp_utc",
+              "type": "kusto.column",
+              "data_type": "System.DateTime",
+              "description": null,
+              "children": []
+            },
+            {
+              "id": "amount",
+              "is_selected": true,
+              "display_name": "amount",
+              "type": "kusto.column",
+              "data_type": "System.Double",
+              "description": null,
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "b60bdb1a-c415-411d-8ba9-f2c6ccd6d1b6",
+      "is_selected": true,
+      "display_name": "Functions",
+      "type": "function_grouping",
+      "description": null,
+      "children": []
+    },
+    {
+      "id": "b7c93170-42d2-429c-a9c5-23d17ce53ca1",
+      "is_selected": true,
+      "display_name": "Shortcuts",
+      "type": "shortcut_grouping",
+      "description": null,
+      "children": []
+    },
+    {
+      "id": "3e2ae0d6-57d7-43d1-b4ee-ca181d27e50d",
+      "is_selected": true,
+      "display_name": "Materialized Views",
+      "type": "materialized_view_grouping",
+      "description": null,
+      "children": []
+    }
+  ]
+}

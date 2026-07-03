@@ -1,0 +1,52 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/dataAgent/definition/dataSource/1.0.0/schema.json",
+  "artifactId": "6e438d2b-cd97-461b-a2d1-dfb53b5c7a63",
+  "workspaceId": "61b4d577-724e-4258-bee4-c64f10b0fc93",
+  "dataSourceInstructions": null,
+  "displayName": "FabricIqOntology",
+  "type": "ontology",
+  "userDescription": null,
+  "metadata": {},
+  "elements": [
+    {
+      "id": "Assessment",
+      "is_selected": true,
+      "display_name": "Assessment",
+      "type": "ontology.entity",
+      "description": "AssessmentId,Score,EnrolmentId,AttemptNumber,StudentId,WordCount,CourseId,TimestampUtc,AssessmentType,Grade,IsPass",
+      "children": []
+    },
+    {
+      "id": "Course",
+      "is_selected": true,
+      "display_name": "Course",
+      "type": "ontology.entity",
+      "description": "CourseId,Department",
+      "children": []
+    },
+    {
+      "id": "PlatformEvent",
+      "is_selected": true,
+      "display_name": "PlatformEvent",
+      "type": "ontology.entity",
+      "description": "EventId,SessionDurationSecs,StudentId,TimestampUtc,CourseId,EventType,Platform,IsError",
+      "children": []
+    },
+    {
+      "id": "Student",
+      "is_selected": true,
+      "display_name": "Student",
+      "type": "ontology.entity",
+      "description": "StudentId,Programme,Department,Level,CohortYear,Status,Gender,Region,AgeAtEnrolment",
+      "children": []
+    },
+    {
+      "id": "Enrolment",
+      "is_selected": true,
+      "display_name": "Enrolment",
+      "type": "ontology.entity",
+      "description": "EnrolmentId,StudentId,CourseId,Department,Level,Credits,Status,IsCompleted,IsWithdrawn",
+      "children": []
+    }
+  ]
+}

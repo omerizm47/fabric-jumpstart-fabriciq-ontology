@@ -1,0 +1,44 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/ontology/dataBinding/1.0.0/schema.json",
+  "id": "8d23ad93-1bc6-5475-9dd5-b67089352670",
+  "dataBindingConfiguration": {
+    "dataBindingType": "NonTimeSeries",
+    "propertyBindings": [
+      {
+        "sourceColumnName": "consultant_id",
+        "targetPropertyId": "114972300394401331"
+      },
+      {
+        "sourceColumnName": "grade",
+        "targetPropertyId": "7320598837679406276"
+      },
+      {
+        "sourceColumnName": "practice",
+        "targetPropertyId": "6561345322813082752"
+      },
+      {
+        "sourceColumnName": "region",
+        "targetPropertyId": "3246833212636428178"
+      },
+      {
+        "sourceColumnName": "daily_rate_gbp",
+        "targetPropertyId": "3099628365348808583"
+      },
+      {
+        "sourceColumnName": "years_experience",
+        "targetPropertyId": "4302066584624317435"
+      },
+      {
+        "sourceColumnName": "is_billable",
+        "targetPropertyId": "920155396428976686"
+      }
+    ],
+    "sourceTableProperties": {
+      "sourceType": "LakehouseTable",
+      "workspaceId": "6b759b32-548c-47d3-ac32-f16aeb34eb1e",
+      "itemId": "29192285-2245-4c0f-91b2-7ce059011537",
+      "sourceTableName": "consultants",
+      "sourceSchema": "dbo"
+    }
+  }
+}

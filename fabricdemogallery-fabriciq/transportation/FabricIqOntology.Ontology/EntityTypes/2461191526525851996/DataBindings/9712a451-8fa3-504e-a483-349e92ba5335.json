@@ -1,0 +1,36 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/ontology/dataBinding/1.0.0/schema.json",
+  "id": "9712a451-8fa3-504e-a483-349e92ba5335",
+  "dataBindingConfiguration": {
+    "dataBindingType": "NonTimeSeries",
+    "propertyBindings": [
+      {
+        "sourceColumnName": "delivery_id",
+        "targetPropertyId": "3715562306305931812"
+      },
+      {
+        "sourceColumnName": "vehicle_id",
+        "targetPropertyId": "6470128342984136471"
+      },
+      {
+        "sourceColumnName": "route_id",
+        "targetPropertyId": "9118221001898965291"
+      },
+      {
+        "sourceColumnName": "status",
+        "targetPropertyId": "433050747247989893"
+      },
+      {
+        "sourceColumnName": "is_late",
+        "targetPropertyId": "6872100612809823127"
+      }
+    ],
+    "sourceTableProperties": {
+      "sourceType": "LakehouseTable",
+      "workspaceId": "362181f4-0101-4319-96f1-7a8802121645",
+      "itemId": "3b493fca-30ae-4711-9fc5-759e1af86ca0",
+      "sourceTableName": "deliveries",
+      "sourceSchema": "dbo"
+    }
+  }
+}

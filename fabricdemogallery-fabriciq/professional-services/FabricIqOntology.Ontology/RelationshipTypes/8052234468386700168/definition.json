@@ -1,0 +1,13 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/ontology/relationshipType/1.0.0/schema.json",
+  "namespace": "usertypes",
+  "id": "8052234468386700168",
+  "name": "TimesheetForEngagement",
+  "namespaceType": "Custom",
+  "source": {
+    "entityTypeId": "7344183814720214659"
+  },
+  "target": {
+    "entityTypeId": "3998546578326930688"
+  }
+}

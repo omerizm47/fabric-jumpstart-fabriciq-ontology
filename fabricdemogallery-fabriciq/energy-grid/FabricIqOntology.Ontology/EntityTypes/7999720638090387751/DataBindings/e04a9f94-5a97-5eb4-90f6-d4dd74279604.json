@@ -1,0 +1,24 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/ontology/dataBinding/1.0.0/schema.json",
+  "id": "e04a9f94-5a97-5eb4-90f6-d4dd74279604",
+  "dataBindingConfiguration": {
+    "dataBindingType": "NonTimeSeries",
+    "propertyBindings": [
+      {
+        "sourceColumnName": "substation_id",
+        "targetPropertyId": "7578714744104607337"
+      },
+      {
+        "sourceColumnName": "region",
+        "targetPropertyId": "2414994917738068124"
+      }
+    ],
+    "sourceTableProperties": {
+      "sourceType": "LakehouseTable",
+      "workspaceId": "74aba7db-7ea5-4bfd-93b3-a01fe3716139",
+      "itemId": "facdb147-cae6-40c3-bb22-c69bc8f73cdf",
+      "sourceTableName": "substations",
+      "sourceSchema": "dbo"
+    }
+  }
+}

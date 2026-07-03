@@ -1,0 +1,13 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/ontology/relationshipType/1.0.0/schema.json",
+  "namespace": "usertypes",
+  "id": "4608161000423416658",
+  "name": "BatchOnLine",
+  "namespaceType": "Custom",
+  "source": {
+    "entityTypeId": "3249805199245492857"
+  },
+  "target": {
+    "entityTypeId": "833376799451534299"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/ontology/relationshipType/1.0.0/schema.json",
+  "namespace": "usertypes",
+  "id": "1326267262507215865",
+  "name": "EventByConsultant",
+  "namespaceType": "Custom",
+  "source": {
+    "entityTypeId": "1012796335818852312"
+  },
+  "target": {
+    "entityTypeId": "921071019928592894"
+  }
+}

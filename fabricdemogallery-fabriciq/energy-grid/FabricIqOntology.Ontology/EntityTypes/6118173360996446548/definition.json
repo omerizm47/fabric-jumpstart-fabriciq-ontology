@@ -1,0 +1,38 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/ontology/entityType/1.0.0/schema.json",
+  "id": "6118173360996446548",
+  "namespace": "usertypes",
+  "baseEntityTypeId": null,
+  "name": "GenerationPlant",
+  "entityIdParts": [
+    "3156060452175361360"
+  ],
+  "displayNamePropertyId": "3156060452175361360",
+  "namespaceType": "Custom",
+  "visibility": "Visible",
+  "properties": [
+    {
+      "id": "3156060452175361360",
+      "name": "PlantId",
+      "redefines": null,
+      "baseTypeNamespaceType": null,
+      "valueType": "String"
+    },
+    {
+      "id": "6084337936182941672",
+      "name": "PlantType",
+      "redefines": null,
+      "baseTypeNamespaceType": null,
+      "valueType": "String"
+    },
+    {
+      "id": "4378117818276313115",
+      "name": "CapacityMw",
+      "redefines": null,
+      "baseTypeNamespaceType": null,
+      "valueType": "Double"
+    }
+  ],
+  "timeseriesProperties": [],
+  "untypedProperties": []
+}

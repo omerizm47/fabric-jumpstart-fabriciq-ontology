@@ -1,0 +1,24 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/ontology/dataBinding/1.0.0/schema.json",
+  "id": "d3077a50-78e5-5ee0-b86a-c3c3ee54b1e1",
+  "dataBindingConfiguration": {
+    "dataBindingType": "NonTimeSeries",
+    "propertyBindings": [
+      {
+        "sourceColumnName": "course_id",
+        "targetPropertyId": "3036719959652324424"
+      },
+      {
+        "sourceColumnName": "department",
+        "targetPropertyId": "9012162642689487177"
+      }
+    ],
+    "sourceTableProperties": {
+      "sourceType": "LakehouseTable",
+      "workspaceId": "61b4d577-724e-4258-bee4-c64f10b0fc93",
+      "itemId": "103791bf-3318-434e-8a3d-a4cde29cfeae",
+      "sourceTableName": "courses",
+      "sourceSchema": "dbo"
+    }
+  }
+}

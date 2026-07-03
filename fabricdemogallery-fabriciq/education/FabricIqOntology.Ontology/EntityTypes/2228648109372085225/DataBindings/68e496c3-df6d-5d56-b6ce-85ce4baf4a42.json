@@ -1,0 +1,44 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/ontology/dataBinding/1.0.0/schema.json",
+  "id": "68e496c3-df6d-5d56-b6ce-85ce4baf4a42",
+  "dataBindingConfiguration": {
+    "dataBindingType": "NonTimeSeries",
+    "propertyBindings": [
+      {
+        "sourceColumnName": "assessment_id",
+        "targetPropertyId": "2075698275911600369"
+      },
+      {
+        "sourceColumnName": "enrolment_id",
+        "targetPropertyId": "99579979378310269"
+      },
+      {
+        "sourceColumnName": "student_id",
+        "targetPropertyId": "2381708556372683563"
+      },
+      {
+        "sourceColumnName": "course_id",
+        "targetPropertyId": "4144613013285999509"
+      },
+      {
+        "sourceColumnName": "assessment_type",
+        "targetPropertyId": "1642609777246310116"
+      },
+      {
+        "sourceColumnName": "grade",
+        "targetPropertyId": "9190549245555900320"
+      },
+      {
+        "sourceColumnName": "is_pass",
+        "targetPropertyId": "2800730735308858410"
+      }
+    ],
+    "sourceTableProperties": {
+      "sourceType": "LakehouseTable",
+      "workspaceId": "61b4d577-724e-4258-bee4-c64f10b0fc93",
+      "itemId": "103791bf-3318-434e-8a3d-a4cde29cfeae",
+      "sourceTableName": "assessments",
+      "sourceSchema": "dbo"
+    }
+  }
+}

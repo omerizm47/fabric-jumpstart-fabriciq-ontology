@@ -1,0 +1,38 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/ontology/dataBinding/1.0.0/schema.json",
+  "id": "98ea3273-43ea-5ff3-8e8a-3e374ffa202e",
+  "dataBindingConfiguration": {
+    "dataBindingType": "TimeSeries",
+    "timestampColumnName": "timestamp_utc",
+    "propertyBindings": [
+      {
+        "sourceColumnName": "actual_duration_hrs",
+        "targetPropertyId": "5563629963980416056"
+      },
+      {
+        "sourceColumnName": "delay_hrs",
+        "targetPropertyId": "5186397714928013835"
+      },
+      {
+        "sourceColumnName": "load_tonnes",
+        "targetPropertyId": "4607687266928283321"
+      },
+      {
+        "sourceColumnName": "timestamp_utc",
+        "targetPropertyId": "7248869283945200587"
+      },
+      {
+        "sourceColumnName": "delivery_id",
+        "targetPropertyId": "3715562306305931812"
+      }
+    ],
+    "sourceTableProperties": {
+      "sourceType": "KustoTable",
+      "workspaceId": "362181f4-0101-4319-96f1-7a8802121645",
+      "itemId": "dc6ec041-5074-4d32-a572-c0f834fe68af",
+      "clusterUri": "https://trd-ka9yptesy6kdu941cx.z5.kusto.fabric.microsoft.com",
+      "databaseName": "fabriciq_eventhouse",
+      "sourceTableName": "deliveries"
+    }
+  }
+}

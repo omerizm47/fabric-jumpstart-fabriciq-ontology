@@ -1,0 +1,44 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/dataAgent/definition/dataSource/1.0.0/schema.json",
+  "artifactId": "894e0f1c-0c3a-419c-ad75-d1c3a3eec260",
+  "workspaceId": "9bd7af9c-2c24-49b7-812c-a84dd37e2b25",
+  "dataSourceInstructions": null,
+  "displayName": "FabricIqOntology",
+  "type": "ontology",
+  "userDescription": null,
+  "metadata": {},
+  "elements": [
+    {
+      "id": "Customer",
+      "is_selected": true,
+      "display_name": "Customer",
+      "type": "ontology.entity",
+      "description": "CustomerId,AgeGroup,Segment,Region,RiskTier,SinceYear",
+      "children": []
+    },
+    {
+      "id": "MerchantCategory",
+      "is_selected": true,
+      "display_name": "MerchantCategory",
+      "type": "ontology.entity",
+      "description": "CategoryId",
+      "children": []
+    },
+    {
+      "id": "Account",
+      "is_selected": true,
+      "display_name": "Account",
+      "type": "ontology.entity",
+      "description": "AccountId,CustomerId,AccountType,Balance,CreditLimit,CreditUtilisationPct,Status",
+      "children": []
+    },
+    {
+      "id": "Transaction",
+      "is_selected": true,
+      "display_name": "Transaction",
+      "type": "ontology.entity",
+      "description": "TransactionId,Amount,AccountId,TimestampUtc,CustomerId,MerchantCategory,TransactionType,Channel,Country,IsFlaggedFraud",
+      "children": []
+    }
+  ]
+}

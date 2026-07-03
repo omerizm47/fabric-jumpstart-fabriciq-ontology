@@ -1,0 +1,38 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/ontology/dataBinding/1.0.0/schema.json",
+  "id": "8b2f453e-e235-5364-8443-230fe9d4b403",
+  "dataBindingConfiguration": {
+    "dataBindingType": "TimeSeries",
+    "timestampColumnName": "timestamp_utc",
+    "propertyBindings": [
+      {
+        "sourceColumnName": "score",
+        "targetPropertyId": "7155002178729200353"
+      },
+      {
+        "sourceColumnName": "attempt_number",
+        "targetPropertyId": "1556951415657694130"
+      },
+      {
+        "sourceColumnName": "word_count",
+        "targetPropertyId": "5706722937678656971"
+      },
+      {
+        "sourceColumnName": "timestamp_utc",
+        "targetPropertyId": "3746559579839116444"
+      },
+      {
+        "sourceColumnName": "assessment_id",
+        "targetPropertyId": "2075698275911600369"
+      }
+    ],
+    "sourceTableProperties": {
+      "sourceType": "KustoTable",
+      "workspaceId": "61b4d577-724e-4258-bee4-c64f10b0fc93",
+      "itemId": "46329042-41db-42c7-8e94-caa2e1e59da3",
+      "clusterUri": "https://trd-qtggw0s01srgcyq28g.z7.kusto.fabric.microsoft.com",
+      "databaseName": "fabriciq_eventhouse",
+      "sourceTableName": "assessments"
+    }
+  }
+}

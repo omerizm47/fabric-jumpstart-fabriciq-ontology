@@ -1,0 +1,31 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/ontology/entityType/1.0.0/schema.json",
+  "id": "833376799451534299",
+  "namespace": "usertypes",
+  "baseEntityTypeId": null,
+  "name": "ProductionLine",
+  "entityIdParts": [
+    "7982306146542532049"
+  ],
+  "displayNamePropertyId": "7982306146542532049",
+  "namespaceType": "Custom",
+  "visibility": "Visible",
+  "properties": [
+    {
+      "id": "7982306146542532049",
+      "name": "LineId",
+      "redefines": null,
+      "baseTypeNamespaceType": null,
+      "valueType": "String"
+    },
+    {
+      "id": "1477628574023894280",
+      "name": "LineName",
+      "redefines": null,
+      "baseTypeNamespaceType": null,
+      "valueType": "String"
+    }
+  ],
+  "timeseriesProperties": [],
+  "untypedProperties": []
+}

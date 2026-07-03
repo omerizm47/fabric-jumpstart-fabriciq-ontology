@@ -1,0 +1,13 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/ontology/relationshipType/1.0.0/schema.json",
+  "namespace": "usertypes",
+  "id": "6887624535880480134",
+  "name": "FuelLogForVehicle",
+  "namespaceType": "Custom",
+  "source": {
+    "entityTypeId": "6934889126992203813"
+  },
+  "target": {
+    "entityTypeId": "5402009441252561157"
+  }
+}

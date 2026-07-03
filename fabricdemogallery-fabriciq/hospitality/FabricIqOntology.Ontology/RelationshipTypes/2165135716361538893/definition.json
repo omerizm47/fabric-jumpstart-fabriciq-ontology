@@ -1,0 +1,13 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/ontology/relationshipType/1.0.0/schema.json",
+  "namespace": "usertypes",
+  "id": "2165135716361538893",
+  "name": "BookingAtProperty",
+  "namespaceType": "Custom",
+  "source": {
+    "entityTypeId": "5676322827651142074"
+  },
+  "target": {
+    "entityTypeId": "6884236842510163741"
+  }
+}

@@ -1,0 +1,4 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/dataAgent/definition/stageConfiguration/1.0.0/schema.json",
+  "aiInstructions": "You answer questions about operations by querying the lakehouse tables and the eventhouse (KQL) tables directly. Join tables on their shared id columns."
+}

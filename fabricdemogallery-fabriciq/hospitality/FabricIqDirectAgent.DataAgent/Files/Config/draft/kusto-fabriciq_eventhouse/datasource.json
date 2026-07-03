@@ -1,0 +1,180 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/dataAgent/definition/dataSource/1.0.0/schema.json",
+  "artifactId": "a86073c0-f4e1-4650-baca-c43d12350cef",
+  "workspaceId": "7235ab18-0ba4-441e-b633-bc57f9e82ffa",
+  "dataSourceInstructions": null,
+  "displayName": "fabriciq_eventhouse",
+  "type": "kusto",
+  "userDescription": null,
+  "metadata": {},
+  "elements": [
+    {
+      "id": "45a1523f-67b6-4d2c-8510-cf8a2e196993",
+      "is_selected": true,
+      "display_name": "Tables",
+      "type": "table_grouping",
+      "description": null,
+      "children": [
+        {
+          "id": "5c0a6505-f2a8-4a5e-9b73-c0311cab7dfd",
+          "is_selected": true,
+          "display_name": "bookings",
+          "type": "kusto.table",
+          "description": null,
+          "children": [
+            {
+              "id": "booking_id",
+              "is_selected": true,
+              "display_name": "booking_id",
+              "type": "kusto.column",
+              "data_type": "System.String",
+              "description": null,
+              "children": []
+            },
+            {
+              "id": "timestamp_utc",
+              "is_selected": true,
+              "display_name": "timestamp_utc",
+              "type": "kusto.column",
+              "data_type": "System.DateTime",
+              "description": null,
+              "children": []
+            },
+            {
+              "id": "nights",
+              "is_selected": true,
+              "display_name": "nights",
+              "type": "kusto.column",
+              "data_type": "System.Int64",
+              "description": null,
+              "children": []
+            },
+            {
+              "id": "room_rate",
+              "is_selected": true,
+              "display_name": "room_rate",
+              "type": "kusto.column",
+              "data_type": "System.Double",
+              "description": null,
+              "children": []
+            },
+            {
+              "id": "total_amount",
+              "is_selected": true,
+              "display_name": "total_amount",
+              "type": "kusto.column",
+              "data_type": "System.Double",
+              "description": null,
+              "children": []
+            },
+            {
+              "id": "lead_time_days",
+              "is_selected": true,
+              "display_name": "lead_time_days",
+              "type": "kusto.column",
+              "data_type": "System.Int64",
+              "description": null,
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "f8f73fd8-3141-4dca-aab6-3b99506859ac",
+          "is_selected": true,
+          "display_name": "reviews",
+          "type": "kusto.table",
+          "description": null,
+          "children": [
+            {
+              "id": "review_id",
+              "is_selected": true,
+              "display_name": "review_id",
+              "type": "kusto.column",
+              "data_type": "System.String",
+              "description": null,
+              "children": []
+            },
+            {
+              "id": "timestamp_utc",
+              "is_selected": true,
+              "display_name": "timestamp_utc",
+              "type": "kusto.column",
+              "data_type": "System.DateTime",
+              "description": null,
+              "children": []
+            },
+            {
+              "id": "overall_score",
+              "is_selected": true,
+              "display_name": "overall_score",
+              "type": "kusto.column",
+              "data_type": "System.Int64",
+              "description": null,
+              "children": []
+            },
+            {
+              "id": "cleanliness_score",
+              "is_selected": true,
+              "display_name": "cleanliness_score",
+              "type": "kusto.column",
+              "data_type": "System.Int64",
+              "description": null,
+              "children": []
+            },
+            {
+              "id": "service_score",
+              "is_selected": true,
+              "display_name": "service_score",
+              "type": "kusto.column",
+              "data_type": "System.Int64",
+              "description": null,
+              "children": []
+            },
+            {
+              "id": "value_score",
+              "is_selected": true,
+              "display_name": "value_score",
+              "type": "kusto.column",
+              "data_type": "System.Int64",
+              "description": null,
+              "children": []
+            },
+            {
+              "id": "food_score",
+              "is_selected": true,
+              "display_name": "food_score",
+              "type": "kusto.column",
+              "data_type": "System.Int64",
+              "description": null,
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "b6706bd8-8c22-4bb1-86ce-fca963278e82",
+      "is_selected": true,
+      "display_name": "Functions",
+      "type": "function_grouping",
+      "description": null,
+      "children": []
+    },
+    {
+      "id": "b934301e-491a-4e50-a2af-03e05c3c606e",
+      "is_selected": true,
+      "display_name": "Shortcuts",
+      "type": "shortcut_grouping",
+      "description": null,
+      "children": []
+    },
+    {
+      "id": "36934675-4c55-4f4f-b32c-a559cca75a3e",
+      "is_selected": true,
+      "display_name": "Materialized Views",
+      "type": "materialized_view_grouping",
+      "description": null,
+      "children": []
+    }
+  ]
+}

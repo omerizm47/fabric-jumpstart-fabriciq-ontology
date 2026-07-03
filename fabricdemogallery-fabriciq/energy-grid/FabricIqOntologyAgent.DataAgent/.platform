@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "DataAgent",
+    "displayName": "FabricIqOntologyAgent"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "731fea06-e94c-502e-b69d-1eef09369e6d"
+  }
+}

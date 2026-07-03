@@ -1,0 +1,48 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/ontology/dataBinding/1.0.0/schema.json",
+  "id": "ce0e0f6e-b74c-5ec2-860b-f584eb6243c0",
+  "dataBindingConfiguration": {
+    "dataBindingType": "NonTimeSeries",
+    "propertyBindings": [
+      {
+        "sourceColumnName": "transaction_id",
+        "targetPropertyId": "380995105235486141"
+      },
+      {
+        "sourceColumnName": "account_id",
+        "targetPropertyId": "2177883460719090186"
+      },
+      {
+        "sourceColumnName": "customer_id",
+        "targetPropertyId": "4251588926474227836"
+      },
+      {
+        "sourceColumnName": "merchant_category",
+        "targetPropertyId": "3808602107929447924"
+      },
+      {
+        "sourceColumnName": "transaction_type",
+        "targetPropertyId": "3262072737883912319"
+      },
+      {
+        "sourceColumnName": "channel",
+        "targetPropertyId": "5211244790961791656"
+      },
+      {
+        "sourceColumnName": "country",
+        "targetPropertyId": "5553106752293313432"
+      },
+      {
+        "sourceColumnName": "is_flagged_fraud",
+        "targetPropertyId": "5045129224745354137"
+      }
+    ],
+    "sourceTableProperties": {
+      "sourceType": "LakehouseTable",
+      "workspaceId": "9bd7af9c-2c24-49b7-812c-a84dd37e2b25",
+      "itemId": "2918797d-beec-414b-936a-580b35b27c46",
+      "sourceTableName": "transactions",
+      "sourceSchema": "dbo"
+    }
+  }
+}

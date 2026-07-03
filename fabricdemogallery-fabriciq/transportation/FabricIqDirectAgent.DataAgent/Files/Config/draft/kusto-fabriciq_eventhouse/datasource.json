@@ -1,0 +1,153 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/dataAgent/definition/dataSource/1.0.0/schema.json",
+  "artifactId": "47216e48-cfee-4c0b-83db-6afa29c2f4b2",
+  "workspaceId": "362181f4-0101-4319-96f1-7a8802121645",
+  "dataSourceInstructions": null,
+  "displayName": "fabriciq_eventhouse",
+  "type": "kusto",
+  "userDescription": null,
+  "metadata": {},
+  "elements": [
+    {
+      "id": "3bad5c8e-935a-4560-b9ed-1bbedea848fb",
+      "is_selected": true,
+      "display_name": "Tables",
+      "type": "table_grouping",
+      "description": null,
+      "children": [
+        {
+          "id": "76e43f05-f21f-48f8-931f-33befade7bef",
+          "is_selected": true,
+          "display_name": "deliveries",
+          "type": "kusto.table",
+          "description": null,
+          "children": [
+            {
+              "id": "delivery_id",
+              "is_selected": true,
+              "display_name": "delivery_id",
+              "type": "kusto.column",
+              "data_type": "System.String",
+              "description": null,
+              "children": []
+            },
+            {
+              "id": "timestamp_utc",
+              "is_selected": true,
+              "display_name": "timestamp_utc",
+              "type": "kusto.column",
+              "data_type": "System.DateTime",
+              "description": null,
+              "children": []
+            },
+            {
+              "id": "actual_duration_hrs",
+              "is_selected": true,
+              "display_name": "actual_duration_hrs",
+              "type": "kusto.column",
+              "data_type": "System.Double",
+              "description": null,
+              "children": []
+            },
+            {
+              "id": "delay_hrs",
+              "is_selected": true,
+              "display_name": "delay_hrs",
+              "type": "kusto.column",
+              "data_type": "System.Double",
+              "description": null,
+              "children": []
+            },
+            {
+              "id": "load_tonnes",
+              "is_selected": true,
+              "display_name": "load_tonnes",
+              "type": "kusto.column",
+              "data_type": "System.Double",
+              "description": null,
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "551cdb4a-6a92-4fb8-aa1c-6d03b6608004",
+          "is_selected": true,
+          "display_name": "fuel_logs",
+          "type": "kusto.table",
+          "description": null,
+          "children": [
+            {
+              "id": "log_id",
+              "is_selected": true,
+              "display_name": "log_id",
+              "type": "kusto.column",
+              "data_type": "System.String",
+              "description": null,
+              "children": []
+            },
+            {
+              "id": "timestamp_utc",
+              "is_selected": true,
+              "display_name": "timestamp_utc",
+              "type": "kusto.column",
+              "data_type": "System.DateTime",
+              "description": null,
+              "children": []
+            },
+            {
+              "id": "odometer_km",
+              "is_selected": true,
+              "display_name": "odometer_km",
+              "type": "kusto.column",
+              "data_type": "System.Int64",
+              "description": null,
+              "children": []
+            },
+            {
+              "id": "litres_filled",
+              "is_selected": true,
+              "display_name": "litres_filled",
+              "type": "kusto.column",
+              "data_type": "System.Double",
+              "description": null,
+              "children": []
+            },
+            {
+              "id": "total_cost_gbp",
+              "is_selected": true,
+              "display_name": "total_cost_gbp",
+              "type": "kusto.column",
+              "data_type": "System.Double",
+              "description": null,
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "9d14783d-b49b-46e7-9cde-e2d766cc76e2",
+      "is_selected": true,
+      "display_name": "Functions",
+      "type": "function_grouping",
+      "description": null,
+      "children": []
+    },
+    {
+      "id": "f8239a07-4842-43f8-b470-a65a8547ef39",
+      "is_selected": true,
+      "display_name": "Shortcuts",
+      "type": "shortcut_grouping",
+      "description": null,
+      "children": []
+    },
+    {
+      "id": "66aaa949-9d96-4895-b362-a3cc8b077228",
+      "is_selected": true,
+      "display_name": "Materialized Views",
+      "type": "materialized_view_grouping",
+      "description": null,
+      "children": []
+    }
+  ]
+}

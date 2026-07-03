@@ -1,0 +1,23 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/ontology/contextualization/1.0.0/schema.json",
+  "id": "17f03d51-31ca-5c78-a123-3bdf857d63e5",
+  "dataBindingTable": {
+    "workspaceId": "ee8a5d4d-9d33-4d11-9997-7f91af878bbd",
+    "itemId": "478d485b-e4e9-4024-9700-96bf5abd781b",
+    "sourceTableName": "projects",
+    "sourceSchema": "dbo",
+    "sourceType": "LakehouseTable"
+  },
+  "sourceKeyRefBindings": [
+    {
+      "sourceColumnName": "project_id",
+      "targetPropertyId": "8028284716679159087"
+    }
+  ],
+  "targetKeyRefBindings": [
+    {
+      "sourceColumnName": "lead_subcontractor_id",
+      "targetPropertyId": "361026350715966487"
+    }
+  ]
+}

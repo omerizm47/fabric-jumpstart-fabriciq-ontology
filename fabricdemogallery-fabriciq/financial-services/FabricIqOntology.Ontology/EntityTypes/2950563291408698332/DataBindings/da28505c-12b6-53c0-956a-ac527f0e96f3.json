@@ -1,0 +1,40 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/ontology/dataBinding/1.0.0/schema.json",
+  "id": "da28505c-12b6-53c0-956a-ac527f0e96f3",
+  "dataBindingConfiguration": {
+    "dataBindingType": "NonTimeSeries",
+    "propertyBindings": [
+      {
+        "sourceColumnName": "customer_id",
+        "targetPropertyId": "7073198799240369298"
+      },
+      {
+        "sourceColumnName": "age_group",
+        "targetPropertyId": "2557249328652895689"
+      },
+      {
+        "sourceColumnName": "segment",
+        "targetPropertyId": "2447779811414376179"
+      },
+      {
+        "sourceColumnName": "region",
+        "targetPropertyId": "38480959732976706"
+      },
+      {
+        "sourceColumnName": "risk_tier",
+        "targetPropertyId": "2591971571228865315"
+      },
+      {
+        "sourceColumnName": "since_year",
+        "targetPropertyId": "3269263244723616869"
+      }
+    ],
+    "sourceTableProperties": {
+      "sourceType": "LakehouseTable",
+      "workspaceId": "9bd7af9c-2c24-49b7-812c-a84dd37e2b25",
+      "itemId": "2918797d-beec-414b-936a-580b35b27c46",
+      "sourceTableName": "customers",
+      "sourceSchema": "dbo"
+    }
+  }
+}

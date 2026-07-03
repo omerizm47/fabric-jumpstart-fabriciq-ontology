@@ -1,0 +1,336 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/dataAgent/definition/dataSource/1.0.0/schema.json",
+  "artifactId": "59af920f-869b-4b7b-9a0e-2d30ac271edc",
+  "workspaceId": "7235ab18-0ba4-441e-b633-bc57f9e82ffa",
+  "dataSourceInstructions": null,
+  "displayName": "fabriciq_lakehouse",
+  "type": "lakehouse_tables",
+  "userDescription": null,
+  "metadata": {},
+  "elements": [
+    {
+      "id": "15885829-c379-4f97-bcf7-7355297da6fd",
+      "is_selected": true,
+      "display_name": "Schemas",
+      "type": "schema_grouping",
+      "description": null,
+      "children": [
+        {
+          "id": "31acd963-6e7e-4523-aece-67629fcb8988",
+          "is_selected": true,
+          "display_name": "dbo",
+          "type": "lakehouse_tables.schema",
+          "description": null,
+          "children": [
+            {
+              "id": "612dcd7c-3da3-4fbe-b3f6-0323969a9ce2",
+              "is_selected": true,
+              "display_name": "Tables",
+              "type": "table_grouping",
+              "description": null,
+              "children": [
+                {
+                  "id": "5bbb7358-f991-4cc6-8f61-429774d054ac",
+                  "is_selected": true,
+                  "display_name": "properties",
+                  "type": "lakehouse_tables.table",
+                  "description": null,
+                  "children": [
+                    {
+                      "id": "5d9935e7-d3c5-4bd7-9a95-b29df7963c10",
+                      "is_selected": true,
+                      "display_name": "property_id",
+                      "type": "lakehouse_tables.column",
+                      "data_type": "varchar",
+                      "description": null,
+                      "children": []
+                    },
+                    {
+                      "id": "89c3a9a3-0087-464d-ae47-ad8540b0f35a",
+                      "is_selected": true,
+                      "display_name": "property_name",
+                      "type": "lakehouse_tables.column",
+                      "data_type": "varchar",
+                      "description": null,
+                      "children": []
+                    },
+                    {
+                      "id": "9737c5ad-364d-4548-84cf-2782c7401370",
+                      "is_selected": true,
+                      "display_name": "city",
+                      "type": "lakehouse_tables.column",
+                      "data_type": "varchar",
+                      "description": null,
+                      "children": []
+                    },
+                    {
+                      "id": "4448d975-839d-48b1-a00d-a64c7da98d1d",
+                      "is_selected": true,
+                      "display_name": "country",
+                      "type": "lakehouse_tables.column",
+                      "data_type": "varchar",
+                      "description": null,
+                      "children": []
+                    },
+                    {
+                      "id": "dedf3758-a388-43e5-83da-689585782cc4",
+                      "is_selected": true,
+                      "display_name": "property_type",
+                      "type": "lakehouse_tables.column",
+                      "data_type": "varchar",
+                      "description": null,
+                      "children": []
+                    },
+                    {
+                      "id": "15116035-5412-458a-80c1-e30f7dba372a",
+                      "is_selected": true,
+                      "display_name": "star_rating",
+                      "type": "lakehouse_tables.column",
+                      "data_type": "bigint",
+                      "description": null,
+                      "children": []
+                    },
+                    {
+                      "id": "30c879c9-f717-4a38-aa02-9fbe8f9b1e52",
+                      "is_selected": true,
+                      "display_name": "room_count",
+                      "type": "lakehouse_tables.column",
+                      "data_type": "bigint",
+                      "description": null,
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "id": "2210a5ca-907f-435b-a665-5b7782576387",
+                  "is_selected": true,
+                  "display_name": "bookings",
+                  "type": "lakehouse_tables.table",
+                  "description": null,
+                  "children": [
+                    {
+                      "id": "31bb1e72-6c8c-4fd2-9f6d-4953c35a5328",
+                      "is_selected": true,
+                      "display_name": "booking_id",
+                      "type": "lakehouse_tables.column",
+                      "data_type": "varchar",
+                      "description": null,
+                      "children": []
+                    },
+                    {
+                      "id": "7d6abaf5-5332-4029-9f52-a9a400b0cf7b",
+                      "is_selected": true,
+                      "display_name": "property_id",
+                      "type": "lakehouse_tables.column",
+                      "data_type": "varchar",
+                      "description": null,
+                      "children": []
+                    },
+                    {
+                      "id": "2fc57b50-58b7-47d7-9879-1c9a108ec7b9",
+                      "is_selected": true,
+                      "display_name": "guest_id",
+                      "type": "lakehouse_tables.column",
+                      "data_type": "varchar",
+                      "description": null,
+                      "children": []
+                    },
+                    {
+                      "id": "a2b5e46d-3459-4e36-bf72-d7fbe5d65c8d",
+                      "is_selected": true,
+                      "display_name": "room_type",
+                      "type": "lakehouse_tables.column",
+                      "data_type": "varchar",
+                      "description": null,
+                      "children": []
+                    },
+                    {
+                      "id": "b1952c33-46bb-4715-934e-a21a631dcf39",
+                      "is_selected": true,
+                      "display_name": "channel",
+                      "type": "lakehouse_tables.column",
+                      "data_type": "varchar",
+                      "description": null,
+                      "children": []
+                    },
+                    {
+                      "id": "c24fec41-9d6d-4d04-9580-39aac77cea5b",
+                      "is_selected": true,
+                      "display_name": "meal_plan",
+                      "type": "lakehouse_tables.column",
+                      "data_type": "varchar",
+                      "description": null,
+                      "children": []
+                    },
+                    {
+                      "id": "763a047c-f791-4f0b-9825-6e6b5e922805",
+                      "is_selected": true,
+                      "display_name": "status",
+                      "type": "lakehouse_tables.column",
+                      "data_type": "varchar",
+                      "description": null,
+                      "children": []
+                    },
+                    {
+                      "id": "0fe21db7-bd5c-47ee-8ef4-fdd56b21108f",
+                      "is_selected": true,
+                      "display_name": "is_cancelled",
+                      "type": "lakehouse_tables.column",
+                      "data_type": "bigint",
+                      "description": null,
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "id": "f874e4e3-6a1f-4e84-a889-cae2d32bdf3d",
+                  "is_selected": true,
+                  "display_name": "reviews",
+                  "type": "lakehouse_tables.table",
+                  "description": null,
+                  "children": [
+                    {
+                      "id": "07178f53-6963-40c9-8b74-b53b6b406395",
+                      "is_selected": true,
+                      "display_name": "review_id",
+                      "type": "lakehouse_tables.column",
+                      "data_type": "varchar",
+                      "description": null,
+                      "children": []
+                    },
+                    {
+                      "id": "620ac0bb-1214-4bb3-ae70-61cccb9008bd",
+                      "is_selected": true,
+                      "display_name": "booking_id",
+                      "type": "lakehouse_tables.column",
+                      "data_type": "varchar",
+                      "description": null,
+                      "children": []
+                    },
+                    {
+                      "id": "4ea8b2d7-f89f-4423-be64-b899b0078b83",
+                      "is_selected": true,
+                      "display_name": "property_id",
+                      "type": "lakehouse_tables.column",
+                      "data_type": "varchar",
+                      "description": null,
+                      "children": []
+                    },
+                    {
+                      "id": "79442abb-01a8-4fd3-a25d-c0fda6545d47",
+                      "is_selected": true,
+                      "display_name": "guest_id",
+                      "type": "lakehouse_tables.column",
+                      "data_type": "varchar",
+                      "description": null,
+                      "children": []
+                    },
+                    {
+                      "id": "d39e029a-3045-459e-a48e-4f36723d5d2e",
+                      "is_selected": true,
+                      "display_name": "sentiment",
+                      "type": "lakehouse_tables.column",
+                      "data_type": "varchar",
+                      "description": null,
+                      "children": []
+                    },
+                    {
+                      "id": "1b1a7f90-9d79-4a66-bfbe-df665923b3a0",
+                      "is_selected": true,
+                      "display_name": "platform",
+                      "type": "lakehouse_tables.column",
+                      "data_type": "varchar",
+                      "description": null,
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "id": "d926ded6-78ef-4576-b6aa-48ee9fa29303",
+                  "is_selected": true,
+                  "display_name": "guests",
+                  "type": "lakehouse_tables.table",
+                  "description": null,
+                  "children": [
+                    {
+                      "id": "f46a64da-dfab-4428-b1ba-18c4640711aa",
+                      "is_selected": true,
+                      "display_name": "guest_id",
+                      "type": "lakehouse_tables.column",
+                      "data_type": "varchar",
+                      "description": null,
+                      "children": []
+                    },
+                    {
+                      "id": "520afa9e-f839-45d6-b158-075acc51ff3f",
+                      "is_selected": true,
+                      "display_name": "loyalty_tier",
+                      "type": "lakehouse_tables.column",
+                      "data_type": "varchar",
+                      "description": null,
+                      "children": []
+                    },
+                    {
+                      "id": "73817281-a522-4ec4-a0cc-35fb1727f88f",
+                      "is_selected": true,
+                      "display_name": "region",
+                      "type": "lakehouse_tables.column",
+                      "data_type": "varchar",
+                      "description": null,
+                      "children": []
+                    },
+                    {
+                      "id": "d6544ea9-ae09-4c5a-b4a4-15fec51474e2",
+                      "is_selected": true,
+                      "display_name": "age_group",
+                      "type": "lakehouse_tables.column",
+                      "data_type": "varchar",
+                      "description": null,
+                      "children": []
+                    },
+                    {
+                      "id": "263b0575-b380-40b4-9560-2ec4eb4b7e52",
+                      "is_selected": true,
+                      "display_name": "nationality",
+                      "type": "lakehouse_tables.column",
+                      "data_type": "varchar",
+                      "description": null,
+                      "children": []
+                    },
+                    {
+                      "id": "3f62fd68-c033-4505-9578-f27cd37edab3",
+                      "is_selected": true,
+                      "display_name": "total_stays",
+                      "type": "lakehouse_tables.column",
+                      "data_type": "bigint",
+                      "description": null,
+                      "children": []
+                    },
+                    {
+                      "id": "1a4110df-d418-4da1-948f-e5d5a4db33ad",
+                      "is_selected": true,
+                      "display_name": "total_spend",
+                      "type": "lakehouse_tables.column",
+                      "data_type": "float",
+                      "description": null,
+                      "children": []
+                    },
+                    {
+                      "id": "e05ddd4a-7e81-4696-9382-e7c4153be5fd",
+                      "is_selected": true,
+                      "display_name": "preferred_channel",
+                      "type": "lakehouse_tables.column",
+                      "data_type": "varchar",
+                      "description": null,
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

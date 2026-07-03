@@ -1,0 +1,13 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/ontology/relationshipType/1.0.0/schema.json",
+  "namespace": "usertypes",
+  "id": "658878506629075440",
+  "name": "EventByStudent",
+  "namespaceType": "Custom",
+  "source": {
+    "entityTypeId": "448522343455600531"
+  },
+  "target": {
+    "entityTypeId": "7767796418746708358"
+  }
+}

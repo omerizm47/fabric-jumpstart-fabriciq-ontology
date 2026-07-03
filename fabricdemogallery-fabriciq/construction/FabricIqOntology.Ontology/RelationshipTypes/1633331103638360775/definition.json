@@ -1,0 +1,13 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/ontology/relationshipType/1.0.0/schema.json",
+  "namespace": "usertypes",
+  "id": "1633331103638360775",
+  "name": "ProjectLedBy",
+  "namespaceType": "Custom",
+  "source": {
+    "entityTypeId": "4526203560902030490"
+  },
+  "target": {
+    "entityTypeId": "5714198341106749667"
+  }
+}

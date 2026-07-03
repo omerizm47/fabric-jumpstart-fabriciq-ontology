@@ -1,0 +1,34 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/ontology/dataBinding/1.0.0/schema.json",
+  "id": "f89d2e08-2ec1-57e1-8697-15a0b467ffea",
+  "dataBindingConfiguration": {
+    "dataBindingType": "TimeSeries",
+    "timestampColumnName": "timestamp_utc",
+    "propertyBindings": [
+      {
+        "sourceColumnName": "duration_sec",
+        "targetPropertyId": "6164858322907330606"
+      },
+      {
+        "sourceColumnName": "affected_customers",
+        "targetPropertyId": "8451853781712076943"
+      },
+      {
+        "sourceColumnName": "timestamp_utc",
+        "targetPropertyId": "7667340549967355840"
+      },
+      {
+        "sourceColumnName": "event_id",
+        "targetPropertyId": "4255772284066460964"
+      }
+    ],
+    "sourceTableProperties": {
+      "sourceType": "KustoTable",
+      "workspaceId": "74aba7db-7ea5-4bfd-93b3-a01fe3716139",
+      "itemId": "a2e651c6-c038-438e-8dd8-9edcd15b5aba",
+      "clusterUri": "https://trd-ekjnctnen57xxrwvk2.z3.kusto.fabric.microsoft.com",
+      "databaseName": "fabriciq_eventhouse",
+      "sourceTableName": "power_events"
+    }
+  }
+}

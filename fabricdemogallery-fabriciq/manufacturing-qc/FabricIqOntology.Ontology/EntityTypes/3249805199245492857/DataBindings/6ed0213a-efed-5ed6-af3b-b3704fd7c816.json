@@ -1,0 +1,40 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/ontology/dataBinding/1.0.0/schema.json",
+  "id": "6ed0213a-efed-5ed6-af3b-b3704fd7c816",
+  "dataBindingConfiguration": {
+    "dataBindingType": "NonTimeSeries",
+    "propertyBindings": [
+      {
+        "sourceColumnName": "batch_id",
+        "targetPropertyId": "3860845387392113308"
+      },
+      {
+        "sourceColumnName": "machine_id",
+        "targetPropertyId": "6939921729808611757"
+      },
+      {
+        "sourceColumnName": "production_line",
+        "targetPropertyId": "2392144000676252922"
+      },
+      {
+        "sourceColumnName": "product",
+        "targetPropertyId": "5267586228157761071"
+      },
+      {
+        "sourceColumnName": "planned_units",
+        "targetPropertyId": "2347657266761404800"
+      },
+      {
+        "sourceColumnName": "failure_event",
+        "targetPropertyId": "4746203686269508177"
+      }
+    ],
+    "sourceTableProperties": {
+      "sourceType": "LakehouseTable",
+      "workspaceId": "8b535fae-cd55-4e17-a328-f2628de90cb2",
+      "itemId": "163ab9b2-30f4-486a-a443-c93f36347479",
+      "sourceTableName": "production_batches",
+      "sourceSchema": "dbo"
+    }
+  }
+}

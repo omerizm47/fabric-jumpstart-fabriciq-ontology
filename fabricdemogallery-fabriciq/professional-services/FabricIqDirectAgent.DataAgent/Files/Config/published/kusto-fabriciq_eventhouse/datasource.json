@@ -1,0 +1,189 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/dataAgent/definition/dataSource/1.0.0/schema.json",
+  "artifactId": "47a377cd-b54c-4afe-81e7-c6ea2bc06bc0",
+  "workspaceId": "6b759b32-548c-47d3-ac32-f16aeb34eb1e",
+  "dataSourceInstructions": null,
+  "displayName": "fabriciq_eventhouse",
+  "type": "kusto",
+  "userDescription": null,
+  "metadata": {},
+  "elements": [
+    {
+      "id": "77cfa346-03f4-4d96-860b-0d6e4a758cd3",
+      "is_selected": true,
+      "display_name": "Tables",
+      "type": "table_grouping",
+      "description": null,
+      "children": [
+        {
+          "id": "7947657b-13a9-4a80-8ae0-b69e7aaf0d64",
+          "is_selected": true,
+          "display_name": "engagements",
+          "type": "kusto.table",
+          "description": null,
+          "children": [
+            {
+              "id": "engagement_id",
+              "is_selected": true,
+              "display_name": "engagement_id",
+              "type": "kusto.column",
+              "data_type": "System.String",
+              "description": null,
+              "children": []
+            },
+            {
+              "id": "timestamp_utc",
+              "is_selected": true,
+              "display_name": "timestamp_utc",
+              "type": "kusto.column",
+              "data_type": "System.DateTime",
+              "description": null,
+              "children": []
+            },
+            {
+              "id": "actual_spend_gbp",
+              "is_selected": true,
+              "display_name": "actual_spend_gbp",
+              "type": "kusto.column",
+              "data_type": "System.Double",
+              "description": null,
+              "children": []
+            },
+            {
+              "id": "margin_pct",
+              "is_selected": true,
+              "display_name": "margin_pct",
+              "type": "kusto.column",
+              "data_type": "System.Double",
+              "description": null,
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "a1e47c67-6707-478d-8dfc-65a617e0b44f",
+          "is_selected": true,
+          "display_name": "project_events",
+          "type": "kusto.table",
+          "description": null,
+          "children": [
+            {
+              "id": "event_id",
+              "is_selected": true,
+              "display_name": "event_id",
+              "type": "kusto.column",
+              "data_type": "System.String",
+              "description": null,
+              "children": []
+            },
+            {
+              "id": "timestamp_utc",
+              "is_selected": true,
+              "display_name": "timestamp_utc",
+              "type": "kusto.column",
+              "data_type": "System.DateTime",
+              "description": null,
+              "children": []
+            },
+            {
+              "id": "hours_logged",
+              "is_selected": true,
+              "display_name": "hours_logged",
+              "type": "kusto.column",
+              "data_type": "System.Double",
+              "description": null,
+              "children": []
+            },
+            {
+              "id": "cost_gbp",
+              "is_selected": true,
+              "display_name": "cost_gbp",
+              "type": "kusto.column",
+              "data_type": "System.Double",
+              "description": null,
+              "children": []
+            },
+            {
+              "id": "budget_remaining_pct",
+              "is_selected": true,
+              "display_name": "budget_remaining_pct",
+              "type": "kusto.column",
+              "data_type": "System.Double",
+              "description": null,
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "f7e49c49-d35f-4a63-b239-4178b4171d2d",
+          "is_selected": true,
+          "display_name": "timesheets",
+          "type": "kusto.table",
+          "description": null,
+          "children": [
+            {
+              "id": "timesheet_id",
+              "is_selected": true,
+              "display_name": "timesheet_id",
+              "type": "kusto.column",
+              "data_type": "System.String",
+              "description": null,
+              "children": []
+            },
+            {
+              "id": "timestamp_utc",
+              "is_selected": true,
+              "display_name": "timestamp_utc",
+              "type": "kusto.column",
+              "data_type": "System.DateTime",
+              "description": null,
+              "children": []
+            },
+            {
+              "id": "hours_logged",
+              "is_selected": true,
+              "display_name": "hours_logged",
+              "type": "kusto.column",
+              "data_type": "System.Double",
+              "description": null,
+              "children": []
+            },
+            {
+              "id": "billed_value_gbp",
+              "is_selected": true,
+              "display_name": "billed_value_gbp",
+              "type": "kusto.column",
+              "data_type": "System.Double",
+              "description": null,
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "38b6cfbf-661a-413a-a0ec-ad932a7c19b1",
+      "is_selected": true,
+      "display_name": "Functions",
+      "type": "function_grouping",
+      "description": null,
+      "children": []
+    },
+    {
+      "id": "ab0d43ef-153e-480b-911c-2882c119fd37",
+      "is_selected": true,
+      "display_name": "Shortcuts",
+      "type": "shortcut_grouping",
+      "description": null,
+      "children": []
+    },
+    {
+      "id": "fe685df8-3377-401f-8ec6-cfacb96e31b4",
+      "is_selected": true,
+      "display_name": "Materialized Views",
+      "type": "materialized_view_grouping",
+      "description": null,
+      "children": []
+    }
+  ]
+}

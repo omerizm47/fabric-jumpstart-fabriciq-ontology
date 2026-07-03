@@ -1,0 +1,48 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/ontology/dataBinding/1.0.0/schema.json",
+  "id": "f1b992b1-ffd7-5f87-bf3e-61d381e7da9b",
+  "dataBindingConfiguration": {
+    "dataBindingType": "NonTimeSeries",
+    "propertyBindings": [
+      {
+        "sourceColumnName": "client_id",
+        "targetPropertyId": "8037684813436313158"
+      },
+      {
+        "sourceColumnName": "client_name",
+        "targetPropertyId": "6755329267674302076"
+      },
+      {
+        "sourceColumnName": "industry",
+        "targetPropertyId": "9143393032081400867"
+      },
+      {
+        "sourceColumnName": "region",
+        "targetPropertyId": "5426562014729363112"
+      },
+      {
+        "sourceColumnName": "tier",
+        "targetPropertyId": "3540671873899399512"
+      },
+      {
+        "sourceColumnName": "contract_value_gbp",
+        "targetPropertyId": "8593436417346583339"
+      },
+      {
+        "sourceColumnName": "relationship_years",
+        "targetPropertyId": "6628608526526474403"
+      },
+      {
+        "sourceColumnName": "nps_score",
+        "targetPropertyId": "6092049425530371694"
+      }
+    ],
+    "sourceTableProperties": {
+      "sourceType": "LakehouseTable",
+      "workspaceId": "6b759b32-548c-47d3-ac32-f16aeb34eb1e",
+      "itemId": "29192285-2245-4c0f-91b2-7ce059011537",
+      "sourceTableName": "clients",
+      "sourceSchema": "dbo"
+    }
+  }
+}

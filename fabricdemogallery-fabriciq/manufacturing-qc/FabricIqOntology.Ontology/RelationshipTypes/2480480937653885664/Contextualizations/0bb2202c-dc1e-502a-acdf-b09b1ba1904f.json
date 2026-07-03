@@ -1,0 +1,23 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/ontology/contextualization/1.0.0/schema.json",
+  "id": "0bb2202c-dc1e-502a-acdf-b09b1ba1904f",
+  "dataBindingTable": {
+    "workspaceId": "8b535fae-cd55-4e17-a328-f2628de90cb2",
+    "itemId": "163ab9b2-30f4-486a-a443-c93f36347479",
+    "sourceTableName": "machines",
+    "sourceSchema": "dbo",
+    "sourceType": "LakehouseTable"
+  },
+  "sourceKeyRefBindings": [
+    {
+      "sourceColumnName": "machine_id",
+      "targetPropertyId": "2765557301072050920"
+    }
+  ],
+  "targetKeyRefBindings": [
+    {
+      "sourceColumnName": "production_line",
+      "targetPropertyId": "7982306146542532049"
+    }
+  ]
+}

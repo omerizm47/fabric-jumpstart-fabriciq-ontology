@@ -1,0 +1,44 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/dataAgent/definition/dataSource/1.0.0/schema.json",
+  "artifactId": "673fd8da-f956-4a70-b84b-b228ae8ebc32",
+  "workspaceId": "ee8a5d4d-9d33-4d11-9997-7f91af878bbd",
+  "dataSourceInstructions": null,
+  "displayName": "FabricIqOntology",
+  "type": "ontology",
+  "userDescription": null,
+  "metadata": {},
+  "elements": [
+    {
+      "id": "Task",
+      "is_selected": true,
+      "display_name": "Task",
+      "type": "ontology.entity",
+      "description": "TaskId,PctComplete,ProjectId,ScheduleVarianceDays,AssignedSubcontractorId,TimestampUtc,TaskName,Status,IsDelayed",
+      "children": []
+    },
+    {
+      "id": "Project",
+      "is_selected": true,
+      "display_name": "Project",
+      "type": "ontology.entity",
+      "description": "ProjectId,ProjectName,ProjectType,Region,Status,Budget,LeadSubcontractorId",
+      "children": []
+    },
+    {
+      "id": "Subcontractor",
+      "is_selected": true,
+      "display_name": "Subcontractor",
+      "type": "ontology.entity",
+      "description": "SubcontractorId,CompanyName,Trade,Region,Rating,YearsActive,Accredited",
+      "children": []
+    },
+    {
+      "id": "CostEntry",
+      "is_selected": true,
+      "display_name": "CostEntry",
+      "type": "ontology.entity",
+      "description": "CostId,PlannedCost,ProjectId,ActualCost,CostCategory,CostVariance,Supplier,CostVariancePct,Approved,TimestampUtc",
+      "children": []
+    }
+  ]
+}

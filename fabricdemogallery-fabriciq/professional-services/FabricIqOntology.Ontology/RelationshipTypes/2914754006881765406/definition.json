@@ -1,0 +1,13 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/ontology/relationshipType/1.0.0/schema.json",
+  "namespace": "usertypes",
+  "id": "2914754006881765406",
+  "name": "TimesheetByConsultant",
+  "namespaceType": "Custom",
+  "source": {
+    "entityTypeId": "7344183814720214659"
+  },
+  "target": {
+    "entityTypeId": "921071019928592894"
+  }
+}

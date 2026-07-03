@@ -1,0 +1,13 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/ontology/relationshipType/1.0.0/schema.json",
+  "namespace": "usertypes",
+  "id": "1450688035875250891",
+  "name": "BookingByGuest",
+  "namespaceType": "Custom",
+  "source": {
+    "entityTypeId": "5676322827651142074"
+  },
+  "target": {
+    "entityTypeId": "4912563802235251465"
+  }
+}

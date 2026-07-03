@@ -1,0 +1,13 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/ontology/relationshipType/1.0.0/schema.json",
+  "namespace": "usertypes",
+  "id": "630164943083438697",
+  "name": "EnrolmentInCourse",
+  "namespaceType": "Custom",
+  "source": {
+    "entityTypeId": "8069619295661381774"
+  },
+  "target": {
+    "entityTypeId": "2491521150204146387"
+  }
+}

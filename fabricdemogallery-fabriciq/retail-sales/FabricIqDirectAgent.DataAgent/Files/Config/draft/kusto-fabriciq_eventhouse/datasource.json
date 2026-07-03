@@ -1,0 +1,135 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/dataAgent/definition/dataSource/1.0.0/schema.json",
+  "artifactId": "26a673e3-8fc1-406d-8560-1dcb85cb6611",
+  "workspaceId": "7d82bcd4-0a36-4b7b-954f-00a0deff0427",
+  "dataSourceInstructions": null,
+  "displayName": "fabriciq_eventhouse",
+  "type": "kusto",
+  "userDescription": null,
+  "metadata": {},
+  "elements": [
+    {
+      "id": "6833d5b3-4ca4-4a75-b4bf-0279feb2d638",
+      "is_selected": true,
+      "display_name": "Tables",
+      "type": "table_grouping",
+      "description": null,
+      "children": [
+        {
+          "id": "d90f603f-15e4-4228-bd28-30383b87c48c",
+          "is_selected": true,
+          "display_name": "inventory",
+          "type": "kusto.table",
+          "description": null,
+          "children": [
+            {
+              "id": "inventory_id",
+              "is_selected": true,
+              "display_name": "inventory_id",
+              "type": "kusto.column",
+              "data_type": "System.String",
+              "description": null,
+              "children": []
+            },
+            {
+              "id": "timestamp_utc",
+              "is_selected": true,
+              "display_name": "timestamp_utc",
+              "type": "kusto.column",
+              "data_type": "System.DateTime",
+              "description": null,
+              "children": []
+            },
+            {
+              "id": "quantity_on_hand",
+              "is_selected": true,
+              "display_name": "quantity_on_hand",
+              "type": "kusto.column",
+              "data_type": "System.Int64",
+              "description": null,
+              "children": []
+            },
+            {
+              "id": "quantity_on_order",
+              "is_selected": true,
+              "display_name": "quantity_on_order",
+              "type": "kusto.column",
+              "data_type": "System.Int64",
+              "description": null,
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "63ed5d80-8287-4eb4-949c-9829b5f0b4c4",
+          "is_selected": true,
+          "display_name": "pos_transactions",
+          "type": "kusto.table",
+          "description": null,
+          "children": [
+            {
+              "id": "transaction_id",
+              "is_selected": true,
+              "display_name": "transaction_id",
+              "type": "kusto.column",
+              "data_type": "System.String",
+              "description": null,
+              "children": []
+            },
+            {
+              "id": "timestamp_utc",
+              "is_selected": true,
+              "display_name": "timestamp_utc",
+              "type": "kusto.column",
+              "data_type": "System.DateTime",
+              "description": null,
+              "children": []
+            },
+            {
+              "id": "unit_price",
+              "is_selected": true,
+              "display_name": "unit_price",
+              "type": "kusto.column",
+              "data_type": "System.Double",
+              "description": null,
+              "children": []
+            },
+            {
+              "id": "discount_pct",
+              "is_selected": true,
+              "display_name": "discount_pct",
+              "type": "kusto.column",
+              "data_type": "System.Int64",
+              "description": null,
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "7d90db0f-0917-4210-8a3d-bde9fe50ebf8",
+      "is_selected": true,
+      "display_name": "Functions",
+      "type": "function_grouping",
+      "description": null,
+      "children": []
+    },
+    {
+      "id": "bc10df08-1c75-4c56-a887-75022ce79510",
+      "is_selected": true,
+      "display_name": "Shortcuts",
+      "type": "shortcut_grouping",
+      "description": null,
+      "children": []
+    },
+    {
+      "id": "57811782-5355-4036-b68f-e4f28c9f4acd",
+      "is_selected": true,
+      "display_name": "Materialized Views",
+      "type": "materialized_view_grouping",
+      "description": null,
+      "children": []
+    }
+  ]
+}

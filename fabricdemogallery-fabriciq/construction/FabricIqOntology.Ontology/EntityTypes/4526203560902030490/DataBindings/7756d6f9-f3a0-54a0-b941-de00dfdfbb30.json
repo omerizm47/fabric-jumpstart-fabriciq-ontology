@@ -1,0 +1,44 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/ontology/dataBinding/1.0.0/schema.json",
+  "id": "7756d6f9-f3a0-54a0-b941-de00dfdfbb30",
+  "dataBindingConfiguration": {
+    "dataBindingType": "NonTimeSeries",
+    "propertyBindings": [
+      {
+        "sourceColumnName": "project_id",
+        "targetPropertyId": "8028284716679159087"
+      },
+      {
+        "sourceColumnName": "project_name",
+        "targetPropertyId": "8105840080599641319"
+      },
+      {
+        "sourceColumnName": "project_type",
+        "targetPropertyId": "7024874218538395607"
+      },
+      {
+        "sourceColumnName": "region",
+        "targetPropertyId": "3528518781158222066"
+      },
+      {
+        "sourceColumnName": "status",
+        "targetPropertyId": "6229485447043928656"
+      },
+      {
+        "sourceColumnName": "budget",
+        "targetPropertyId": "5759518411691463809"
+      },
+      {
+        "sourceColumnName": "lead_subcontractor_id",
+        "targetPropertyId": "2234558289598363090"
+      }
+    ],
+    "sourceTableProperties": {
+      "sourceType": "LakehouseTable",
+      "workspaceId": "ee8a5d4d-9d33-4d11-9997-7f91af878bbd",
+      "itemId": "478d485b-e4e9-4024-9700-96bf5abd781b",
+      "sourceTableName": "projects",
+      "sourceSchema": "dbo"
+    }
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/ontology/dataBinding/1.0.0/schema.json",
+  "id": "28335ee8-5754-5f45-9b8d-a02984248027",
+  "dataBindingConfiguration": {
+    "dataBindingType": "NonTimeSeries",
+    "propertyBindings": [
+      {
+        "sourceColumnName": "task_id",
+        "targetPropertyId": "869137231566344236"
+      },
+      {
+        "sourceColumnName": "project_id",
+        "targetPropertyId": "9010408373613665269"
+      },
+      {
+        "sourceColumnName": "assigned_subcontractor_id",
+        "targetPropertyId": "2099037655187331701"
+      },
+      {
+        "sourceColumnName": "task_name",
+        "targetPropertyId": "7437650184079180803"
+      },
+      {
+        "sourceColumnName": "status",
+        "targetPropertyId": "9062609922131316523"
+      },
+      {
+        "sourceColumnName": "is_delayed",
+        "targetPropertyId": "5094133696425760303"
+      }
+    ],
+    "sourceTableProperties": {
+      "sourceType": "LakehouseTable",
+      "workspaceId": "ee8a5d4d-9d33-4d11-9997-7f91af878bbd",
+      "itemId": "478d485b-e4e9-4024-9700-96bf5abd781b",
+      "sourceTableName": "tasks",
+      "sourceSchema": "dbo"
+    }
+  }
+}

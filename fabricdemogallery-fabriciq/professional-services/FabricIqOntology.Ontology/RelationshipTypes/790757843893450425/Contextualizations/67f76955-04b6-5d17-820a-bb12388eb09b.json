@@ -1,0 +1,23 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/ontology/contextualization/1.0.0/schema.json",
+  "id": "67f76955-04b6-5d17-820a-bb12388eb09b",
+  "dataBindingTable": {
+    "workspaceId": "6b759b32-548c-47d3-ac32-f16aeb34eb1e",
+    "itemId": "29192285-2245-4c0f-91b2-7ce059011537",
+    "sourceTableName": "engagements",
+    "sourceSchema": "dbo",
+    "sourceType": "LakehouseTable"
+  },
+  "sourceKeyRefBindings": [
+    {
+      "sourceColumnName": "engagement_id",
+      "targetPropertyId": "3421674361619602687"
+    }
+  ],
+  "targetKeyRefBindings": [
+    {
+      "sourceColumnName": "client_id",
+      "targetPropertyId": "8037684813436313158"
+    }
+  ]
+}

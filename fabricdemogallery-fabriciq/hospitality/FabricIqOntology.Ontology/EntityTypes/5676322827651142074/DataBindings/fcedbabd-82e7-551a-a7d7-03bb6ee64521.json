@@ -1,0 +1,48 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/ontology/dataBinding/1.0.0/schema.json",
+  "id": "fcedbabd-82e7-551a-a7d7-03bb6ee64521",
+  "dataBindingConfiguration": {
+    "dataBindingType": "NonTimeSeries",
+    "propertyBindings": [
+      {
+        "sourceColumnName": "booking_id",
+        "targetPropertyId": "4544038892445289158"
+      },
+      {
+        "sourceColumnName": "property_id",
+        "targetPropertyId": "1258387754359231649"
+      },
+      {
+        "sourceColumnName": "guest_id",
+        "targetPropertyId": "5161358426719407709"
+      },
+      {
+        "sourceColumnName": "room_type",
+        "targetPropertyId": "6929856058699583140"
+      },
+      {
+        "sourceColumnName": "channel",
+        "targetPropertyId": "3075893954107175723"
+      },
+      {
+        "sourceColumnName": "meal_plan",
+        "targetPropertyId": "40552528106741011"
+      },
+      {
+        "sourceColumnName": "status",
+        "targetPropertyId": "9213468324221572791"
+      },
+      {
+        "sourceColumnName": "is_cancelled",
+        "targetPropertyId": "3989464910230031549"
+      }
+    ],
+    "sourceTableProperties": {
+      "sourceType": "LakehouseTable",
+      "workspaceId": "7235ab18-0ba4-441e-b633-bc57f9e82ffa",
+      "itemId": "59af920f-869b-4b7b-9a0e-2d30ac271edc",
+      "sourceTableName": "bookings",
+      "sourceSchema": "dbo"
+    }
+  }
+}

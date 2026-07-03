@@ -1,0 +1,135 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/dataAgent/definition/dataSource/1.0.0/schema.json",
+  "artifactId": "073f3926-e591-45de-b78f-de69252b989f",
+  "workspaceId": "61b4d577-724e-4258-bee4-c64f10b0fc93",
+  "dataSourceInstructions": null,
+  "displayName": "fabriciq_eventhouse",
+  "type": "kusto",
+  "userDescription": null,
+  "metadata": {},
+  "elements": [
+    {
+      "id": "97fc6fd7-e70f-41cb-967a-28079d1f6833",
+      "is_selected": true,
+      "display_name": "Tables",
+      "type": "table_grouping",
+      "description": null,
+      "children": [
+        {
+          "id": "b059f42c-3626-4c9f-8a2a-23132fedcb05",
+          "is_selected": true,
+          "display_name": "assessments",
+          "type": "kusto.table",
+          "description": null,
+          "children": [
+            {
+              "id": "assessment_id",
+              "is_selected": true,
+              "display_name": "assessment_id",
+              "type": "kusto.column",
+              "data_type": "System.String",
+              "description": null,
+              "children": []
+            },
+            {
+              "id": "timestamp_utc",
+              "is_selected": true,
+              "display_name": "timestamp_utc",
+              "type": "kusto.column",
+              "data_type": "System.DateTime",
+              "description": null,
+              "children": []
+            },
+            {
+              "id": "score",
+              "is_selected": true,
+              "display_name": "score",
+              "type": "kusto.column",
+              "data_type": "System.Double",
+              "description": null,
+              "children": []
+            },
+            {
+              "id": "attempt_number",
+              "is_selected": true,
+              "display_name": "attempt_number",
+              "type": "kusto.column",
+              "data_type": "System.Int64",
+              "description": null,
+              "children": []
+            },
+            {
+              "id": "word_count",
+              "is_selected": true,
+              "display_name": "word_count",
+              "type": "kusto.column",
+              "data_type": "System.Int64",
+              "description": null,
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "5716f754-321e-4f19-a681-c2d7a43f3af8",
+          "is_selected": true,
+          "display_name": "platform_events",
+          "type": "kusto.table",
+          "description": null,
+          "children": [
+            {
+              "id": "event_id",
+              "is_selected": true,
+              "display_name": "event_id",
+              "type": "kusto.column",
+              "data_type": "System.String",
+              "description": null,
+              "children": []
+            },
+            {
+              "id": "timestamp_utc",
+              "is_selected": true,
+              "display_name": "timestamp_utc",
+              "type": "kusto.column",
+              "data_type": "System.DateTime",
+              "description": null,
+              "children": []
+            },
+            {
+              "id": "session_duration_secs",
+              "is_selected": true,
+              "display_name": "session_duration_secs",
+              "type": "kusto.column",
+              "data_type": "System.Int64",
+              "description": null,
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "44dec609-d0fb-458d-8183-bf1fd4aea9bd",
+      "is_selected": true,
+      "display_name": "Functions",
+      "type": "function_grouping",
+      "description": null,
+      "children": []
+    },
+    {
+      "id": "9d1326fe-7246-471e-80ae-c3d581267d52",
+      "is_selected": true,
+      "display_name": "Shortcuts",
+      "type": "shortcut_grouping",
+      "description": null,
+      "children": []
+    },
+    {
+      "id": "216dccf3-940c-430b-a046-9823336c47a8",
+      "is_selected": true,
+      "display_name": "Materialized Views",
+      "type": "materialized_view_grouping",
+      "description": null,
+      "children": []
+    }
+  ]
+}

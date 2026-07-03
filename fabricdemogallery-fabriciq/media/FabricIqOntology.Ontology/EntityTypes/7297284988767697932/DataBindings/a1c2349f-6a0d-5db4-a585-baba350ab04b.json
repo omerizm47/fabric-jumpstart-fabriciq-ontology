@@ -1,0 +1,44 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/ontology/dataBinding/1.0.0/schema.json",
+  "id": "a1c2349f-6a0d-5db4-a585-baba350ab04b",
+  "dataBindingConfiguration": {
+    "dataBindingType": "NonTimeSeries",
+    "propertyBindings": [
+      {
+        "sourceColumnName": "subscriber_id",
+        "targetPropertyId": "7607767185944354297"
+      },
+      {
+        "sourceColumnName": "plan_type",
+        "targetPropertyId": "796631443238446228"
+      },
+      {
+        "sourceColumnName": "region",
+        "targetPropertyId": "5331711645555612629"
+      },
+      {
+        "sourceColumnName": "age_group",
+        "targetPropertyId": "8016906296459620859"
+      },
+      {
+        "sourceColumnName": "payment_method",
+        "targetPropertyId": "4288808030303431384"
+      },
+      {
+        "sourceColumnName": "monthly_fee",
+        "targetPropertyId": "1849315491275532089"
+      },
+      {
+        "sourceColumnName": "is_churned",
+        "targetPropertyId": "6053603364887336581"
+      }
+    ],
+    "sourceTableProperties": {
+      "sourceType": "LakehouseTable",
+      "workspaceId": "ac507877-0899-4e34-be43-9306be4eff66",
+      "itemId": "b851dce6-56dc-442f-81d0-411ca17fcf17",
+      "sourceTableName": "subscribers",
+      "sourceSchema": "dbo"
+    }
+  }
+}

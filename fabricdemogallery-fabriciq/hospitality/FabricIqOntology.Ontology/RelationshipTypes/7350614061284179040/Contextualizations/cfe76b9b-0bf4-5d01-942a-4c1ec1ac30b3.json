@@ -1,0 +1,23 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/ontology/contextualization/1.0.0/schema.json",
+  "id": "cfe76b9b-0bf4-5d01-942a-4c1ec1ac30b3",
+  "dataBindingTable": {
+    "workspaceId": "7235ab18-0ba4-441e-b633-bc57f9e82ffa",
+    "itemId": "59af920f-869b-4b7b-9a0e-2d30ac271edc",
+    "sourceTableName": "reviews",
+    "sourceSchema": "dbo",
+    "sourceType": "LakehouseTable"
+  },
+  "sourceKeyRefBindings": [
+    {
+      "sourceColumnName": "review_id",
+      "targetPropertyId": "7740811621299664591"
+    }
+  ],
+  "targetKeyRefBindings": [
+    {
+      "sourceColumnName": "guest_id",
+      "targetPropertyId": "5978100227024195654"
+    }
+  ]
+}

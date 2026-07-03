@@ -1,0 +1,32 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/ontology/dataBinding/1.0.0/schema.json",
+  "id": "6cfcf072-c34f-596e-a425-522dc01cc037",
+  "dataBindingConfiguration": {
+    "dataBindingType": "NonTimeSeries",
+    "propertyBindings": [
+      {
+        "sourceColumnName": "event_id",
+        "targetPropertyId": "7387919577985021900"
+      },
+      {
+        "sourceColumnName": "engagement_id",
+        "targetPropertyId": "5564550419732564267"
+      },
+      {
+        "sourceColumnName": "consultant_id",
+        "targetPropertyId": "5674123755339001942"
+      },
+      {
+        "sourceColumnName": "task_type",
+        "targetPropertyId": "333926241502791136"
+      }
+    ],
+    "sourceTableProperties": {
+      "sourceType": "LakehouseTable",
+      "workspaceId": "6b759b32-548c-47d3-ac32-f16aeb34eb1e",
+      "itemId": "29192285-2245-4c0f-91b2-7ce059011537",
+      "sourceTableName": "project_events",
+      "sourceSchema": "dbo"
+    }
+  }
+}

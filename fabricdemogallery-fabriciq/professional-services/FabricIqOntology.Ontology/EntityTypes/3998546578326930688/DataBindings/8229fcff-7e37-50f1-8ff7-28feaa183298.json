@@ -1,0 +1,48 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/ontology/dataBinding/1.0.0/schema.json",
+  "id": "8229fcff-7e37-50f1-8ff7-28feaa183298",
+  "dataBindingConfiguration": {
+    "dataBindingType": "NonTimeSeries",
+    "propertyBindings": [
+      {
+        "sourceColumnName": "engagement_id",
+        "targetPropertyId": "3421674361619602687"
+      },
+      {
+        "sourceColumnName": "client_id",
+        "targetPropertyId": "8762900900851653858"
+      },
+      {
+        "sourceColumnName": "lead_consultant_id",
+        "targetPropertyId": "3276257368920098216"
+      },
+      {
+        "sourceColumnName": "practice",
+        "targetPropertyId": "2172006064651474023"
+      },
+      {
+        "sourceColumnName": "status",
+        "targetPropertyId": "9157565264109207942"
+      },
+      {
+        "sourceColumnName": "is_over_budget",
+        "targetPropertyId": "4036109010049277490"
+      },
+      {
+        "sourceColumnName": "budget_gbp",
+        "targetPropertyId": "1923503045898539540"
+      },
+      {
+        "sourceColumnName": "headcount",
+        "targetPropertyId": "1473984648763842365"
+      }
+    ],
+    "sourceTableProperties": {
+      "sourceType": "LakehouseTable",
+      "workspaceId": "6b759b32-548c-47d3-ac32-f16aeb34eb1e",
+      "itemId": "29192285-2245-4c0f-91b2-7ce059011537",
+      "sourceTableName": "engagements",
+      "sourceSchema": "dbo"
+    }
+  }
+}

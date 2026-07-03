@@ -1,0 +1,34 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/ontology/dataBinding/1.0.0/schema.json",
+  "id": "e755030e-4afd-558e-806c-00501383b306",
+  "dataBindingConfiguration": {
+    "dataBindingType": "TimeSeries",
+    "timestampColumnName": "timestamp_utc",
+    "propertyBindings": [
+      {
+        "sourceColumnName": "generation_mw",
+        "targetPropertyId": "4812774368741668428"
+      },
+      {
+        "sourceColumnName": "capacity_factor",
+        "targetPropertyId": "4955919948532259118"
+      },
+      {
+        "sourceColumnName": "timestamp_utc",
+        "targetPropertyId": "1077792862972969356"
+      },
+      {
+        "sourceColumnName": "reading_id",
+        "targetPropertyId": "4598161085283092665"
+      }
+    ],
+    "sourceTableProperties": {
+      "sourceType": "KustoTable",
+      "workspaceId": "74aba7db-7ea5-4bfd-93b3-a01fe3716139",
+      "itemId": "a2e651c6-c038-438e-8dd8-9edcd15b5aba",
+      "clusterUri": "https://trd-ekjnctnen57xxrwvk2.z3.kusto.fabric.microsoft.com",
+      "databaseName": "fabriciq_eventhouse",
+      "sourceTableName": "renewable_generation"
+    }
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/ontology/dataBinding/1.0.0/schema.json",
+  "id": "b054dc17-f42c-54a8-bc61-1750ee31bda3",
+  "dataBindingConfiguration": {
+    "dataBindingType": "NonTimeSeries",
+    "propertyBindings": [
+      {
+        "sourceColumnName": "event_id",
+        "targetPropertyId": "4255772284066460964"
+      },
+      {
+        "sourceColumnName": "substation_id",
+        "targetPropertyId": "304674415120684047"
+      },
+      {
+        "sourceColumnName": "region",
+        "targetPropertyId": "4622034940556743741"
+      },
+      {
+        "sourceColumnName": "event_type",
+        "targetPropertyId": "2329017251541269663"
+      },
+      {
+        "sourceColumnName": "severity",
+        "targetPropertyId": "5770657997384415335"
+      },
+      {
+        "sourceColumnName": "resolved",
+        "targetPropertyId": "4348291510946437346"
+      }
+    ],
+    "sourceTableProperties": {
+      "sourceType": "LakehouseTable",
+      "workspaceId": "74aba7db-7ea5-4bfd-93b3-a01fe3716139",
+      "itemId": "facdb147-cae6-40c3-bb22-c69bc8f73cdf",
+      "sourceTableName": "power_events",
+      "sourceSchema": "dbo"
+    }
+  }
+}

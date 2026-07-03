@@ -1,0 +1,31 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/ontology/entityType/1.0.0/schema.json",
+  "id": "7999720638090387751",
+  "namespace": "usertypes",
+  "baseEntityTypeId": null,
+  "name": "Substation",
+  "entityIdParts": [
+    "7578714744104607337"
+  ],
+  "displayNamePropertyId": "7578714744104607337",
+  "namespaceType": "Custom",
+  "visibility": "Visible",
+  "properties": [
+    {
+      "id": "7578714744104607337",
+      "name": "SubstationId",
+      "redefines": null,
+      "baseTypeNamespaceType": null,
+      "valueType": "String"
+    },
+    {
+      "id": "2414994917738068124",
+      "name": "Region",
+      "redefines": null,
+      "baseTypeNamespaceType": null,
+      "valueType": "String"
+    }
+  ],
+  "timeseriesProperties": [],
+  "untypedProperties": []
+}

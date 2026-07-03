@@ -1,0 +1,13 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/ontology/relationshipType/1.0.0/schema.json",
+  "namespace": "usertypes",
+  "id": "755157699446875269",
+  "name": "InventoryAtStore",
+  "namespaceType": "Custom",
+  "source": {
+    "entityTypeId": "8924634164481587792"
+  },
+  "target": {
+    "entityTypeId": "3440528067551286273"
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/ontology/contextualization/1.0.0/schema.json",
+  "id": "e12fb81a-a3d9-5385-b0e1-9863b3b21409",
+  "dataBindingTable": {
+    "workspaceId": "8b535fae-cd55-4e17-a328-f2628de90cb2",
+    "itemId": "163ab9b2-30f4-486a-a443-c93f36347479",
+    "sourceTableName": "sensor_readings",
+    "sourceSchema": "dbo",
+    "sourceType": "LakehouseTable"
+  },
+  "sourceKeyRefBindings": [
+    {
+      "sourceColumnName": "reading_id",
+      "targetPropertyId": "1798778413606986111"
+    }
+  ],
+  "targetKeyRefBindings": [
+    {
+      "sourceColumnName": "machine_id",
+      "targetPropertyId": "2765557301072050920"
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/ontology/relationshipType/1.0.0/schema.json",
+  "namespace": "usertypes",
+  "id": "865477880661664402",
+  "name": "TaskInProject",
+  "namespaceType": "Custom",
+  "source": {
+    "entityTypeId": "1608737066121743898"
+  },
+  "target": {
+    "entityTypeId": "4526203560902030490"
+  }
+}

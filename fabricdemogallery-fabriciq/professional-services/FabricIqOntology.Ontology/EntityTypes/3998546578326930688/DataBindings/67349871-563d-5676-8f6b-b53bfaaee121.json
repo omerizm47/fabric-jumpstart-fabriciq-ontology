@@ -1,0 +1,34 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/ontology/dataBinding/1.0.0/schema.json",
+  "id": "67349871-563d-5676-8f6b-b53bfaaee121",
+  "dataBindingConfiguration": {
+    "dataBindingType": "TimeSeries",
+    "timestampColumnName": "timestamp_utc",
+    "propertyBindings": [
+      {
+        "sourceColumnName": "actual_spend_gbp",
+        "targetPropertyId": "754730377158380437"
+      },
+      {
+        "sourceColumnName": "margin_pct",
+        "targetPropertyId": "4163220377556143873"
+      },
+      {
+        "sourceColumnName": "timestamp_utc",
+        "targetPropertyId": "9027753445217526823"
+      },
+      {
+        "sourceColumnName": "engagement_id",
+        "targetPropertyId": "3421674361619602687"
+      }
+    ],
+    "sourceTableProperties": {
+      "sourceType": "KustoTable",
+      "workspaceId": "6b759b32-548c-47d3-ac32-f16aeb34eb1e",
+      "itemId": "ea51713b-15d2-46c3-a265-87b5e6f956ef",
+      "clusterUri": "https://trd-kqg46h7uw09v280be8.z9.kusto.fabric.microsoft.com",
+      "databaseName": "fabriciq_eventhouse",
+      "sourceTableName": "engagements"
+    }
+  }
+}

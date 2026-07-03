@@ -1,0 +1,34 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/ontology/dataBinding/1.0.0/schema.json",
+  "id": "b21f89f9-86d2-515b-a313-12947b0350e6",
+  "dataBindingConfiguration": {
+    "dataBindingType": "TimeSeries",
+    "timestampColumnName": "timestamp_utc",
+    "propertyBindings": [
+      {
+        "sourceColumnName": "hours_logged",
+        "targetPropertyId": "6271353173377564905"
+      },
+      {
+        "sourceColumnName": "billed_value_gbp",
+        "targetPropertyId": "4582809450341322835"
+      },
+      {
+        "sourceColumnName": "timestamp_utc",
+        "targetPropertyId": "8389483705280432827"
+      },
+      {
+        "sourceColumnName": "timesheet_id",
+        "targetPropertyId": "2845604648662009447"
+      }
+    ],
+    "sourceTableProperties": {
+      "sourceType": "KustoTable",
+      "workspaceId": "6b759b32-548c-47d3-ac32-f16aeb34eb1e",
+      "itemId": "ea51713b-15d2-46c3-a265-87b5e6f956ef",
+      "clusterUri": "https://trd-kqg46h7uw09v280be8.z9.kusto.fabric.microsoft.com",
+      "databaseName": "fabriciq_eventhouse",
+      "sourceTableName": "timesheets"
+    }
+  }
+}

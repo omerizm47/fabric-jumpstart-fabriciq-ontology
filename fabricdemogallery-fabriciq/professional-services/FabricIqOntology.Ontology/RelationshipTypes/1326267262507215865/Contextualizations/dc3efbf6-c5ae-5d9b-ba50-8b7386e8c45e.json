@@ -1,0 +1,23 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/ontology/contextualization/1.0.0/schema.json",
+  "id": "dc3efbf6-c5ae-5d9b-ba50-8b7386e8c45e",
+  "dataBindingTable": {
+    "workspaceId": "6b759b32-548c-47d3-ac32-f16aeb34eb1e",
+    "itemId": "29192285-2245-4c0f-91b2-7ce059011537",
+    "sourceTableName": "project_events",
+    "sourceSchema": "dbo",
+    "sourceType": "LakehouseTable"
+  },
+  "sourceKeyRefBindings": [
+    {
+      "sourceColumnName": "event_id",
+      "targetPropertyId": "7387919577985021900"
+    }
+  ],
+  "targetKeyRefBindings": [
+    {
+      "sourceColumnName": "consultant_id",
+      "targetPropertyId": "114972300394401331"
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/ontology/dataBinding/1.0.0/schema.json",
+  "id": "5bf57d0c-ac30-5ca5-adaa-a2bacb4daa6c",
+  "dataBindingConfiguration": {
+    "dataBindingType": "NonTimeSeries",
+    "propertyBindings": [
+      {
+        "sourceColumnName": "plant_id",
+        "targetPropertyId": "3156060452175361360"
+      },
+      {
+        "sourceColumnName": "plant_type",
+        "targetPropertyId": "6084337936182941672"
+      },
+      {
+        "sourceColumnName": "capacity_mw",
+        "targetPropertyId": "4378117818276313115"
+      }
+    ],
+    "sourceTableProperties": {
+      "sourceType": "LakehouseTable",
+      "workspaceId": "74aba7db-7ea5-4bfd-93b3-a01fe3716139",
+      "itemId": "facdb147-cae6-40c3-bb22-c69bc8f73cdf",
+      "sourceTableName": "generation_plants",
+      "sourceSchema": "dbo"
+    }
+  }
+}

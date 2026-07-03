@@ -1,0 +1,153 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/dataAgent/definition/dataSource/1.0.0/schema.json",
+  "artifactId": "34db8001-4e0d-4b65-837c-1aee26694396",
+  "workspaceId": "ee8a5d4d-9d33-4d11-9997-7f91af878bbd",
+  "dataSourceInstructions": null,
+  "displayName": "fabriciq_eventhouse",
+  "type": "kusto",
+  "userDescription": null,
+  "metadata": {},
+  "elements": [
+    {
+      "id": "fddc69bb-b194-49de-827a-16fdb11816f2",
+      "is_selected": true,
+      "display_name": "Tables",
+      "type": "table_grouping",
+      "description": null,
+      "children": [
+        {
+          "id": "d8845d8b-1783-4140-8f61-c4318f4f8bf3",
+          "is_selected": true,
+          "display_name": "tasks",
+          "type": "kusto.table",
+          "description": null,
+          "children": [
+            {
+              "id": "task_id",
+              "is_selected": true,
+              "display_name": "task_id",
+              "type": "kusto.column",
+              "data_type": "System.String",
+              "description": null,
+              "children": []
+            },
+            {
+              "id": "timestamp_utc",
+              "is_selected": true,
+              "display_name": "timestamp_utc",
+              "type": "kusto.column",
+              "data_type": "System.DateTime",
+              "description": null,
+              "children": []
+            },
+            {
+              "id": "pct_complete",
+              "is_selected": true,
+              "display_name": "pct_complete",
+              "type": "kusto.column",
+              "data_type": "System.Double",
+              "description": null,
+              "children": []
+            },
+            {
+              "id": "schedule_variance_days",
+              "is_selected": true,
+              "display_name": "schedule_variance_days",
+              "type": "kusto.column",
+              "data_type": "System.Int64",
+              "description": null,
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "26f5006a-1a6f-446c-b7c9-da735941108b",
+          "is_selected": true,
+          "display_name": "cost_ledger",
+          "type": "kusto.table",
+          "description": null,
+          "children": [
+            {
+              "id": "cost_id",
+              "is_selected": true,
+              "display_name": "cost_id",
+              "type": "kusto.column",
+              "data_type": "System.String",
+              "description": null,
+              "children": []
+            },
+            {
+              "id": "timestamp_utc",
+              "is_selected": true,
+              "display_name": "timestamp_utc",
+              "type": "kusto.column",
+              "data_type": "System.DateTime",
+              "description": null,
+              "children": []
+            },
+            {
+              "id": "planned_cost",
+              "is_selected": true,
+              "display_name": "planned_cost",
+              "type": "kusto.column",
+              "data_type": "System.Double",
+              "description": null,
+              "children": []
+            },
+            {
+              "id": "actual_cost",
+              "is_selected": true,
+              "display_name": "actual_cost",
+              "type": "kusto.column",
+              "data_type": "System.Double",
+              "description": null,
+              "children": []
+            },
+            {
+              "id": "cost_variance",
+              "is_selected": true,
+              "display_name": "cost_variance",
+              "type": "kusto.column",
+              "data_type": "System.Double",
+              "description": null,
+              "children": []
+            },
+            {
+              "id": "cost_variance_pct",
+              "is_selected": true,
+              "display_name": "cost_variance_pct",
+              "type": "kusto.column",
+              "data_type": "System.Double",
+              "description": null,
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "b3c69080-fe4c-4622-834d-8d7e7ebfc8ba",
+      "is_selected": true,
+      "display_name": "Functions",
+      "type": "function_grouping",
+      "description": null,
+      "children": []
+    },
+    {
+      "id": "2a324b45-a626-4667-b072-671196caea13",
+      "is_selected": true,
+      "display_name": "Shortcuts",
+      "type": "shortcut_grouping",
+      "description": null,
+      "children": []
+    },
+    {
+      "id": "b4246050-64a5-4010-bbaa-dd3fa7590fb6",
+      "is_selected": true,
+      "display_name": "Materialized Views",
+      "type": "materialized_view_grouping",
+      "description": null,
+      "children": []
+    }
+  ]
+}

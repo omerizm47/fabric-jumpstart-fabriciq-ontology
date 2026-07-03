@@ -1,0 +1,13 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/ontology/relationshipType/1.0.0/schema.json",
+  "namespace": "usertypes",
+  "id": "6834661410969728556",
+  "name": "EventForEngagement",
+  "namespaceType": "Custom",
+  "source": {
+    "entityTypeId": "1012796335818852312"
+  },
+  "target": {
+    "entityTypeId": "3998546578326930688"
+  }
+}

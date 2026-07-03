@@ -1,0 +1,23 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/ontology/contextualization/1.0.0/schema.json",
+  "id": "68291c91-52a7-5c1e-8e85-bc49a61013f5",
+  "dataBindingTable": {
+    "workspaceId": "ac507877-0899-4e34-be43-9306be4eff66",
+    "itemId": "b851dce6-56dc-442f-81d0-411ca17fcf17",
+    "sourceTableName": "viewing_history",
+    "sourceSchema": "dbo",
+    "sourceType": "LakehouseTable"
+  },
+  "sourceKeyRefBindings": [
+    {
+      "sourceColumnName": "view_id",
+      "targetPropertyId": "4963406485912724201"
+    }
+  ],
+  "targetKeyRefBindings": [
+    {
+      "sourceColumnName": "content_id",
+      "targetPropertyId": "3379527867933493363"
+    }
+  ]
+}

@@ -1,0 +1,44 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/ontology/dataBinding/1.0.0/schema.json",
+  "id": "ee16e08a-66df-59d8-abd3-7e92e9f03e12",
+  "dataBindingConfiguration": {
+    "dataBindingType": "NonTimeSeries",
+    "propertyBindings": [
+      {
+        "sourceColumnName": "route_id",
+        "targetPropertyId": "7818456783284112743"
+      },
+      {
+        "sourceColumnName": "origin",
+        "targetPropertyId": "5543866029276010877"
+      },
+      {
+        "sourceColumnName": "destination",
+        "targetPropertyId": "4352706373816700467"
+      },
+      {
+        "sourceColumnName": "distance_km",
+        "targetPropertyId": "1799271435526816080"
+      },
+      {
+        "sourceColumnName": "route_type",
+        "targetPropertyId": "348219696156143388"
+      },
+      {
+        "sourceColumnName": "sla_hours",
+        "targetPropertyId": "4577710759993206077"
+      },
+      {
+        "sourceColumnName": "toll_cost_gbp",
+        "targetPropertyId": "8630586340635575830"
+      }
+    ],
+    "sourceTableProperties": {
+      "sourceType": "LakehouseTable",
+      "workspaceId": "362181f4-0101-4319-96f1-7a8802121645",
+      "itemId": "3b493fca-30ae-4711-9fc5-759e1af86ca0",
+      "sourceTableName": "routes",
+      "sourceSchema": "dbo"
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/ontology/entityType/1.0.0/schema.json",
+  "id": "7876451401545727093",
+  "namespace": "usertypes",
+  "baseEntityTypeId": null,
+  "name": "MerchantCategory",
+  "entityIdParts": [
+    "9205542280588368014"
+  ],
+  "displayNamePropertyId": "9205542280588368014",
+  "namespaceType": "Custom",
+  "visibility": "Visible",
+  "properties": [
+    {
+      "id": "9205542280588368014",
+      "name": "CategoryId",
+      "redefines": null,
+      "baseTypeNamespaceType": null,
+      "valueType": "String"
+    }
+  ],
+  "timeseriesProperties": [],
+  "untypedProperties": []
+}

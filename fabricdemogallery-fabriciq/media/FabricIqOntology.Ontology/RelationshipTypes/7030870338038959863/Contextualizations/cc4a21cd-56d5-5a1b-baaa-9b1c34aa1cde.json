@@ -1,0 +1,23 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/ontology/contextualization/1.0.0/schema.json",
+  "id": "cc4a21cd-56d5-5a1b-baaa-9b1c34aa1cde",
+  "dataBindingTable": {
+    "workspaceId": "ac507877-0899-4e34-be43-9306be4eff66",
+    "itemId": "b851dce6-56dc-442f-81d0-411ca17fcf17",
+    "sourceTableName": "ad_impressions",
+    "sourceSchema": "dbo",
+    "sourceType": "LakehouseTable"
+  },
+  "sourceKeyRefBindings": [
+    {
+      "sourceColumnName": "impression_id",
+      "targetPropertyId": "8987434039053080579"
+    }
+  ],
+  "targetKeyRefBindings": [
+    {
+      "sourceColumnName": "content_id",
+      "targetPropertyId": "3379527867933493363"
+    }
+  ]
+}

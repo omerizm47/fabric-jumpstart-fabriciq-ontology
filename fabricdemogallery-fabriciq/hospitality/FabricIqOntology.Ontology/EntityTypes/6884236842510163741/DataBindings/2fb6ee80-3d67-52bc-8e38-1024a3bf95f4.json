@@ -1,0 +1,44 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/ontology/dataBinding/1.0.0/schema.json",
+  "id": "2fb6ee80-3d67-52bc-8e38-1024a3bf95f4",
+  "dataBindingConfiguration": {
+    "dataBindingType": "NonTimeSeries",
+    "propertyBindings": [
+      {
+        "sourceColumnName": "property_id",
+        "targetPropertyId": "6543400353261354367"
+      },
+      {
+        "sourceColumnName": "property_name",
+        "targetPropertyId": "4621109557086241900"
+      },
+      {
+        "sourceColumnName": "city",
+        "targetPropertyId": "5036226159205989734"
+      },
+      {
+        "sourceColumnName": "country",
+        "targetPropertyId": "7121781002476890875"
+      },
+      {
+        "sourceColumnName": "property_type",
+        "targetPropertyId": "5837462036926033397"
+      },
+      {
+        "sourceColumnName": "star_rating",
+        "targetPropertyId": "3898912735321449256"
+      },
+      {
+        "sourceColumnName": "room_count",
+        "targetPropertyId": "3974971411616324421"
+      }
+    ],
+    "sourceTableProperties": {
+      "sourceType": "LakehouseTable",
+      "workspaceId": "7235ab18-0ba4-441e-b633-bc57f9e82ffa",
+      "itemId": "59af920f-869b-4b7b-9a0e-2d30ac271edc",
+      "sourceTableName": "properties",
+      "sourceSchema": "dbo"
+    }
+  }
+}

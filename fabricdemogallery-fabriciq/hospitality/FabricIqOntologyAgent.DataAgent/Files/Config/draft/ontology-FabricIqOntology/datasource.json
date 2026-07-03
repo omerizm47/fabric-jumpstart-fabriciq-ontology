@@ -1,0 +1,44 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/dataAgent/definition/dataSource/1.0.0/schema.json",
+  "artifactId": "44201536-90ca-42b1-b1a1-48f4898d21aa",
+  "workspaceId": "7235ab18-0ba4-441e-b633-bc57f9e82ffa",
+  "dataSourceInstructions": null,
+  "displayName": "FabricIqOntology",
+  "type": "ontology",
+  "userDescription": null,
+  "metadata": {},
+  "elements": [
+    {
+      "id": "Guest",
+      "is_selected": true,
+      "display_name": "Guest",
+      "type": "ontology.entity",
+      "description": "GuestId,LoyaltyTier,Region,AgeGroup,Nationality,TotalStays,TotalSpend,PreferredChannel",
+      "children": []
+    },
+    {
+      "id": "Booking",
+      "is_selected": true,
+      "display_name": "Booking",
+      "type": "ontology.entity",
+      "description": "BookingId,Nights,PropertyId,RoomRate,GuestId,TotalAmount,RoomType,LeadTimeDays,Channel,TimestampUtc,MealPlan,Status,IsCancelled",
+      "children": []
+    },
+    {
+      "id": "Review",
+      "is_selected": true,
+      "display_name": "Review",
+      "type": "ontology.entity",
+      "description": "ReviewId,OverallScore,BookingId,CleanlinessScore,PropertyId,ServiceScore,GuestId,ValueScore,Sentiment,FoodScore,Platform,TimestampUtc",
+      "children": []
+    },
+    {
+      "id": "Property",
+      "is_selected": true,
+      "display_name": "Property",
+      "type": "ontology.entity",
+      "description": "PropertyId,PropertyName,City,Country,PropertyType,StarRating,RoomCount",
+      "children": []
+    }
+  ]
+}

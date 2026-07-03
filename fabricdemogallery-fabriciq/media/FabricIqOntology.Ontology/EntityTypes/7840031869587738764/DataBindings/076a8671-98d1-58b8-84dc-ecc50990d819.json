@@ -1,0 +1,36 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/ontology/dataBinding/1.0.0/schema.json",
+  "id": "076a8671-98d1-58b8-84dc-ecc50990d819",
+  "dataBindingConfiguration": {
+    "dataBindingType": "NonTimeSeries",
+    "propertyBindings": [
+      {
+        "sourceColumnName": "view_id",
+        "targetPropertyId": "4963406485912724201"
+      },
+      {
+        "sourceColumnName": "subscriber_id",
+        "targetPropertyId": "325624456148927622"
+      },
+      {
+        "sourceColumnName": "content_id",
+        "targetPropertyId": "5191618942413669493"
+      },
+      {
+        "sourceColumnName": "device_type",
+        "targetPropertyId": "5414454165327062655"
+      },
+      {
+        "sourceColumnName": "is_completed",
+        "targetPropertyId": "9136679479732264379"
+      }
+    ],
+    "sourceTableProperties": {
+      "sourceType": "LakehouseTable",
+      "workspaceId": "ac507877-0899-4e34-be43-9306be4eff66",
+      "itemId": "b851dce6-56dc-442f-81d0-411ca17fcf17",
+      "sourceTableName": "viewing_history",
+      "sourceSchema": "dbo"
+    }
+  }
+}

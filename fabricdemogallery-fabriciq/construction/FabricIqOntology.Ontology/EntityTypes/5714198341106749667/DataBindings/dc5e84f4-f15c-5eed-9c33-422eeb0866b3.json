@@ -1,0 +1,44 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/ontology/dataBinding/1.0.0/schema.json",
+  "id": "dc5e84f4-f15c-5eed-9c33-422eeb0866b3",
+  "dataBindingConfiguration": {
+    "dataBindingType": "NonTimeSeries",
+    "propertyBindings": [
+      {
+        "sourceColumnName": "subcontractor_id",
+        "targetPropertyId": "361026350715966487"
+      },
+      {
+        "sourceColumnName": "company_name",
+        "targetPropertyId": "6331061314001102810"
+      },
+      {
+        "sourceColumnName": "trade",
+        "targetPropertyId": "2457796028918969795"
+      },
+      {
+        "sourceColumnName": "region",
+        "targetPropertyId": "1795268203495288726"
+      },
+      {
+        "sourceColumnName": "rating",
+        "targetPropertyId": "347183133611657864"
+      },
+      {
+        "sourceColumnName": "years_active",
+        "targetPropertyId": "1591989852345487516"
+      },
+      {
+        "sourceColumnName": "accredited",
+        "targetPropertyId": "1724804651380203582"
+      }
+    ],
+    "sourceTableProperties": {
+      "sourceType": "LakehouseTable",
+      "workspaceId": "ee8a5d4d-9d33-4d11-9997-7f91af878bbd",
+      "itemId": "478d485b-e4e9-4024-9700-96bf5abd781b",
+      "sourceTableName": "subcontractors",
+      "sourceSchema": "dbo"
+    }
+  }
+}

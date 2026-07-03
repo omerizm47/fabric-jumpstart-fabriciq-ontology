@@ -1,0 +1,40 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/ontology/dataBinding/1.0.0/schema.json",
+  "id": "b2c8366e-b078-5c58-ad4f-86c44d9d978b",
+  "dataBindingConfiguration": {
+    "dataBindingType": "NonTimeSeries",
+    "propertyBindings": [
+      {
+        "sourceColumnName": "store_id",
+        "targetPropertyId": "8269699212909587775"
+      },
+      {
+        "sourceColumnName": "store_name",
+        "targetPropertyId": "9002189513612965164"
+      },
+      {
+        "sourceColumnName": "city",
+        "targetPropertyId": "9147437152957107625"
+      },
+      {
+        "sourceColumnName": "state",
+        "targetPropertyId": "5490342826024415119"
+      },
+      {
+        "sourceColumnName": "region",
+        "targetPropertyId": "7750823078141556803"
+      },
+      {
+        "sourceColumnName": "store_format",
+        "targetPropertyId": "5205227758953589683"
+      }
+    ],
+    "sourceTableProperties": {
+      "sourceType": "LakehouseTable",
+      "workspaceId": "7d82bcd4-0a36-4b7b-954f-00a0deff0427",
+      "itemId": "d29c4386-6d1d-4a68-9796-ce4c5d6639b2",
+      "sourceTableName": "stores",
+      "sourceSchema": "dbo"
+    }
+  }
+}

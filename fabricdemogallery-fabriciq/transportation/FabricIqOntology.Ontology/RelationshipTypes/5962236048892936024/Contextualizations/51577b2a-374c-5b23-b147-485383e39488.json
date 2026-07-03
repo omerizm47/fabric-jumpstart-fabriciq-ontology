@@ -1,0 +1,23 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/ontology/contextualization/1.0.0/schema.json",
+  "id": "51577b2a-374c-5b23-b147-485383e39488",
+  "dataBindingTable": {
+    "workspaceId": "362181f4-0101-4319-96f1-7a8802121645",
+    "itemId": "3b493fca-30ae-4711-9fc5-759e1af86ca0",
+    "sourceTableName": "deliveries",
+    "sourceSchema": "dbo",
+    "sourceType": "LakehouseTable"
+  },
+  "sourceKeyRefBindings": [
+    {
+      "sourceColumnName": "delivery_id",
+      "targetPropertyId": "3715562306305931812"
+    }
+  ],
+  "targetKeyRefBindings": [
+    {
+      "sourceColumnName": "vehicle_id",
+      "targetPropertyId": "5147856290444028722"
+    }
+  ]
+}

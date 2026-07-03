@@ -1,0 +1,40 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/ontology/dataBinding/1.0.0/schema.json",
+  "id": "e7b8b492-5a2d-542d-b8ad-ddeed0f16a1b",
+  "dataBindingConfiguration": {
+    "dataBindingType": "NonTimeSeries",
+    "propertyBindings": [
+      {
+        "sourceColumnName": "review_id",
+        "targetPropertyId": "7740811621299664591"
+      },
+      {
+        "sourceColumnName": "booking_id",
+        "targetPropertyId": "8053496358289218653"
+      },
+      {
+        "sourceColumnName": "property_id",
+        "targetPropertyId": "4904378525197408723"
+      },
+      {
+        "sourceColumnName": "guest_id",
+        "targetPropertyId": "1301858016603912366"
+      },
+      {
+        "sourceColumnName": "sentiment",
+        "targetPropertyId": "7793758698577363389"
+      },
+      {
+        "sourceColumnName": "platform",
+        "targetPropertyId": "7194317741356170470"
+      }
+    ],
+    "sourceTableProperties": {
+      "sourceType": "LakehouseTable",
+      "workspaceId": "7235ab18-0ba4-441e-b633-bc57f9e82ffa",
+      "itemId": "59af920f-869b-4b7b-9a0e-2d30ac271edc",
+      "sourceTableName": "reviews",
+      "sourceSchema": "dbo"
+    }
+  }
+}

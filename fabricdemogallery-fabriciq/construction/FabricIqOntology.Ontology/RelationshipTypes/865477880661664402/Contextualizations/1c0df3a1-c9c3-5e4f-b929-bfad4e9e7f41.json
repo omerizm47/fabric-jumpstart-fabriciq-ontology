@@ -1,0 +1,23 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/ontology/contextualization/1.0.0/schema.json",
+  "id": "1c0df3a1-c9c3-5e4f-b929-bfad4e9e7f41",
+  "dataBindingTable": {
+    "workspaceId": "ee8a5d4d-9d33-4d11-9997-7f91af878bbd",
+    "itemId": "478d485b-e4e9-4024-9700-96bf5abd781b",
+    "sourceTableName": "tasks",
+    "sourceSchema": "dbo",
+    "sourceType": "LakehouseTable"
+  },
+  "sourceKeyRefBindings": [
+    {
+      "sourceColumnName": "task_id",
+      "targetPropertyId": "869137231566344236"
+    }
+  ],
+  "targetKeyRefBindings": [
+    {
+      "sourceColumnName": "project_id",
+      "targetPropertyId": "8028284716679159087"
+    }
+  ]
+}

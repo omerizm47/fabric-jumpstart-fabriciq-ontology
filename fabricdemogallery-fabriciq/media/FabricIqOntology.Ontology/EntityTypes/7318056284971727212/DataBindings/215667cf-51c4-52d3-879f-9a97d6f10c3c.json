@@ -1,0 +1,48 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/ontology/dataBinding/1.0.0/schema.json",
+  "id": "215667cf-51c4-52d3-879f-9a97d6f10c3c",
+  "dataBindingConfiguration": {
+    "dataBindingType": "NonTimeSeries",
+    "propertyBindings": [
+      {
+        "sourceColumnName": "content_id",
+        "targetPropertyId": "3379527867933493363"
+      },
+      {
+        "sourceColumnName": "title",
+        "targetPropertyId": "2065507301999820505"
+      },
+      {
+        "sourceColumnName": "genre",
+        "targetPropertyId": "1324343965706232696"
+      },
+      {
+        "sourceColumnName": "content_type",
+        "targetPropertyId": "5368849192892183523"
+      },
+      {
+        "sourceColumnName": "release_year",
+        "targetPropertyId": "9208812937866689301"
+      },
+      {
+        "sourceColumnName": "duration_mins",
+        "targetPropertyId": "3887938954537202105"
+      },
+      {
+        "sourceColumnName": "production_cost_bucket",
+        "targetPropertyId": "3737402713456597700"
+      },
+      {
+        "sourceColumnName": "language",
+        "targetPropertyId": "4939710083195135276"
+      }
+    ],
+    "sourceTableProperties": {
+      "sourceType": "LakehouseTable",
+      "workspaceId": "ac507877-0899-4e34-be43-9306be4eff66",
+      "itemId": "b851dce6-56dc-442f-81d0-411ca17fcf17",
+      "sourceTableName": "content",
+      "sourceSchema": "dbo"
+    }
+  }
+}

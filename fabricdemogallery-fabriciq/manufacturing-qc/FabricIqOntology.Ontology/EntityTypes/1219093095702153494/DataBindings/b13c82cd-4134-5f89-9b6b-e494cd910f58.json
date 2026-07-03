@@ -1,0 +1,42 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/ontology/dataBinding/1.0.0/schema.json",
+  "id": "b13c82cd-4134-5f89-9b6b-e494cd910f58",
+  "dataBindingConfiguration": {
+    "dataBindingType": "TimeSeries",
+    "timestampColumnName": "timestamp_utc",
+    "propertyBindings": [
+      {
+        "sourceColumnName": "temperature",
+        "targetPropertyId": "4548212161271460256"
+      },
+      {
+        "sourceColumnName": "pressure",
+        "targetPropertyId": "6341270087121229207"
+      },
+      {
+        "sourceColumnName": "vibration",
+        "targetPropertyId": "7876309086684593950"
+      },
+      {
+        "sourceColumnName": "humidity",
+        "targetPropertyId": "5993760173205652186"
+      },
+      {
+        "sourceColumnName": "timestamp_utc",
+        "targetPropertyId": "2550350342615156994"
+      },
+      {
+        "sourceColumnName": "reading_id",
+        "targetPropertyId": "1798778413606986111"
+      }
+    ],
+    "sourceTableProperties": {
+      "sourceType": "KustoTable",
+      "workspaceId": "8b535fae-cd55-4e17-a328-f2628de90cb2",
+      "itemId": "cb90bb47-d406-4d94-a32f-0c4bd24a63a5",
+      "clusterUri": "https://trd-ujnny7ftv7xyabk9gf.z6.kusto.fabric.microsoft.com",
+      "databaseName": "fabriciq_eventhouse",
+      "sourceTableName": "sensor_readings"
+    }
+  }
+}

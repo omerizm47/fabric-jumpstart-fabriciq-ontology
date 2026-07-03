@@ -1,0 +1,13 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/ontology/relationshipType/1.0.0/schema.json",
+  "namespace": "usertypes",
+  "id": "1321027506175391347",
+  "name": "CostForProject",
+  "namespaceType": "Custom",
+  "source": {
+    "entityTypeId": "7706896916291314682"
+  },
+  "target": {
+    "entityTypeId": "4526203560902030490"
+  }
+}

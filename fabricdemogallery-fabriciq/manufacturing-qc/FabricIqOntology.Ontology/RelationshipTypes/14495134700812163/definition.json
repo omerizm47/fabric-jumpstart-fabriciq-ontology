@@ -1,0 +1,13 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/ontology/relationshipType/1.0.0/schema.json",
+  "namespace": "usertypes",
+  "id": "14495134700812163",
+  "name": "SensorReadingFromMachine",
+  "namespaceType": "Custom",
+  "source": {
+    "entityTypeId": "1219093095702153494"
+  },
+  "target": {
+    "entityTypeId": "210441332441472891"
+  }
+}

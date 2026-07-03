@@ -1,0 +1,13 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/ontology/relationshipType/1.0.0/schema.json",
+  "namespace": "usertypes",
+  "id": "6145886152206909379",
+  "name": "DeliveryOnRoute",
+  "namespaceType": "Custom",
+  "source": {
+    "entityTypeId": "2461191526525851996"
+  },
+  "target": {
+    "entityTypeId": "3492101872155024326"
+  }
+}

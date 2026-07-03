@@ -1,0 +1,23 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/ontology/contextualization/1.0.0/schema.json",
+  "id": "0713a21e-ffd5-58b2-ab08-b133e0a646a5",
+  "dataBindingTable": {
+    "workspaceId": "362181f4-0101-4319-96f1-7a8802121645",
+    "itemId": "3b493fca-30ae-4711-9fc5-759e1af86ca0",
+    "sourceTableName": "fuel_logs",
+    "sourceSchema": "dbo",
+    "sourceType": "LakehouseTable"
+  },
+  "sourceKeyRefBindings": [
+    {
+      "sourceColumnName": "log_id",
+      "targetPropertyId": "6007797832858606576"
+    }
+  ],
+  "targetKeyRefBindings": [
+    {
+      "sourceColumnName": "vehicle_id",
+      "targetPropertyId": "5147856290444028722"
+    }
+  ]
+}

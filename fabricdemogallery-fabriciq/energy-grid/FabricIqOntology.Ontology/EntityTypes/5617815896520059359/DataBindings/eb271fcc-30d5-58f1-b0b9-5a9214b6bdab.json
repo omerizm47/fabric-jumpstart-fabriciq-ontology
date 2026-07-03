@@ -1,0 +1,46 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/ontology/dataBinding/1.0.0/schema.json",
+  "id": "eb271fcc-30d5-58f1-b0b9-5a9214b6bdab",
+  "dataBindingConfiguration": {
+    "dataBindingType": "TimeSeries",
+    "timestampColumnName": "timestamp_utc",
+    "propertyBindings": [
+      {
+        "sourceColumnName": "voltage_v",
+        "targetPropertyId": "2448021258115355892"
+      },
+      {
+        "sourceColumnName": "frequency_hz",
+        "targetPropertyId": "9061734067458454913"
+      },
+      {
+        "sourceColumnName": "power_factor",
+        "targetPropertyId": "2733495488212890026"
+      },
+      {
+        "sourceColumnName": "load_mw",
+        "targetPropertyId": "8028999728968043772"
+      },
+      {
+        "sourceColumnName": "temperature_c",
+        "targetPropertyId": "7488178368959785923"
+      },
+      {
+        "sourceColumnName": "timestamp_utc",
+        "targetPropertyId": "2390867733648075152"
+      },
+      {
+        "sourceColumnName": "reading_id",
+        "targetPropertyId": "3659707633701234511"
+      }
+    ],
+    "sourceTableProperties": {
+      "sourceType": "KustoTable",
+      "workspaceId": "74aba7db-7ea5-4bfd-93b3-a01fe3716139",
+      "itemId": "a2e651c6-c038-438e-8dd8-9edcd15b5aba",
+      "clusterUri": "https://trd-ekjnctnen57xxrwvk2.z3.kusto.fabric.microsoft.com",
+      "databaseName": "fabriciq_eventhouse",
+      "sourceTableName": "grid_sensors"
+    }
+  }
+}

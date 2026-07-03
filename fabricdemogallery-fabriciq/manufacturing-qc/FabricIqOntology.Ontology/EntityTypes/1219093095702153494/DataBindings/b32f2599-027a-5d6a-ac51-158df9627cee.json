@@ -1,0 +1,28 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/ontology/dataBinding/1.0.0/schema.json",
+  "id": "b32f2599-027a-5d6a-ac51-158df9627cee",
+  "dataBindingConfiguration": {
+    "dataBindingType": "NonTimeSeries",
+    "propertyBindings": [
+      {
+        "sourceColumnName": "reading_id",
+        "targetPropertyId": "1798778413606986111"
+      },
+      {
+        "sourceColumnName": "machine_id",
+        "targetPropertyId": "6344799544352480188"
+      },
+      {
+        "sourceColumnName": "production_line",
+        "targetPropertyId": "6749560019446731403"
+      }
+    ],
+    "sourceTableProperties": {
+      "sourceType": "LakehouseTable",
+      "workspaceId": "8b535fae-cd55-4e17-a328-f2628de90cb2",
+      "itemId": "163ab9b2-30f4-486a-a443-c93f36347479",
+      "sourceTableName": "sensor_readings",
+      "sourceSchema": "dbo"
+    }
+  }
+}

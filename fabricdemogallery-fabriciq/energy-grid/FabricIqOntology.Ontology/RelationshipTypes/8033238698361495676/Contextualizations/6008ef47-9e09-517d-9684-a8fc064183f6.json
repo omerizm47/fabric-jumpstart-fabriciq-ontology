@@ -1,0 +1,23 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/ontology/contextualization/1.0.0/schema.json",
+  "id": "6008ef47-9e09-517d-9684-a8fc064183f6",
+  "dataBindingTable": {
+    "workspaceId": "74aba7db-7ea5-4bfd-93b3-a01fe3716139",
+    "itemId": "facdb147-cae6-40c3-bb22-c69bc8f73cdf",
+    "sourceTableName": "grid_sensors",
+    "sourceSchema": "dbo",
+    "sourceType": "LakehouseTable"
+  },
+  "sourceKeyRefBindings": [
+    {
+      "sourceColumnName": "reading_id",
+      "targetPropertyId": "3659707633701234511"
+    }
+  ],
+  "targetKeyRefBindings": [
+    {
+      "sourceColumnName": "substation_id",
+      "targetPropertyId": "7578714744104607337"
+    }
+  ]
+}

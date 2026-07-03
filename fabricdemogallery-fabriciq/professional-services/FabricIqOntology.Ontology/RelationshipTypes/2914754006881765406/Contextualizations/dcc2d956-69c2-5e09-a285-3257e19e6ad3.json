@@ -1,0 +1,23 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/ontology/contextualization/1.0.0/schema.json",
+  "id": "dcc2d956-69c2-5e09-a285-3257e19e6ad3",
+  "dataBindingTable": {
+    "workspaceId": "6b759b32-548c-47d3-ac32-f16aeb34eb1e",
+    "itemId": "29192285-2245-4c0f-91b2-7ce059011537",
+    "sourceTableName": "timesheets",
+    "sourceSchema": "dbo",
+    "sourceType": "LakehouseTable"
+  },
+  "sourceKeyRefBindings": [
+    {
+      "sourceColumnName": "timesheet_id",
+      "targetPropertyId": "2845604648662009447"
+    }
+  ],
+  "targetKeyRefBindings": [
+    {
+      "sourceColumnName": "consultant_id",
+      "targetPropertyId": "114972300394401331"
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/ontology/dataBinding/1.0.0/schema.json",
+  "id": "d44b8a65-2ae0-5a30-8d30-5d2f89ba73cf",
+  "dataBindingConfiguration": {
+    "dataBindingType": "TimeSeries",
+    "timestampColumnName": "timestamp_utc",
+    "propertyBindings": [
+      {
+        "sourceColumnName": "hours_logged",
+        "targetPropertyId": "6802082537058089981"
+      },
+      {
+        "sourceColumnName": "cost_gbp",
+        "targetPropertyId": "6210920657695178850"
+      },
+      {
+        "sourceColumnName": "budget_remaining_pct",
+        "targetPropertyId": "7594291438474742197"
+      },
+      {
+        "sourceColumnName": "timestamp_utc",
+        "targetPropertyId": "4312173237069571339"
+      },
+      {
+        "sourceColumnName": "event_id",
+        "targetPropertyId": "7387919577985021900"
+      }
+    ],
+    "sourceTableProperties": {
+      "sourceType": "KustoTable",
+      "workspaceId": "6b759b32-548c-47d3-ac32-f16aeb34eb1e",
+      "itemId": "ea51713b-15d2-46c3-a265-87b5e6f956ef",
+      "clusterUri": "https://trd-kqg46h7uw09v280be8.z9.kusto.fabric.microsoft.com",
+      "databaseName": "fabriciq_eventhouse",
+      "sourceTableName": "project_events"
+    }
+  }
+}

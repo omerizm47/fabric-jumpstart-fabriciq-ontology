@@ -1,0 +1,23 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/ontology/contextualization/1.0.0/schema.json",
+  "id": "d8be0686-58ed-529d-82c2-adb82d0c16bb",
+  "dataBindingTable": {
+    "workspaceId": "61b4d577-724e-4258-bee4-c64f10b0fc93",
+    "itemId": "103791bf-3318-434e-8a3d-a4cde29cfeae",
+    "sourceTableName": "assessments",
+    "sourceSchema": "dbo",
+    "sourceType": "LakehouseTable"
+  },
+  "sourceKeyRefBindings": [
+    {
+      "sourceColumnName": "assessment_id",
+      "targetPropertyId": "2075698275911600369"
+    }
+  ],
+  "targetKeyRefBindings": [
+    {
+      "sourceColumnName": "student_id",
+      "targetPropertyId": "838955603200997310"
+    }
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/ontology/dataBinding/1.0.0/schema.json",
+  "id": "1b0a0a1e-32ff-521a-885a-3c3b099f98b3",
+  "dataBindingConfiguration": {
+    "dataBindingType": "TimeSeries",
+    "timestampColumnName": "timestamp_utc",
+    "propertyBindings": [
+      {
+        "sourceColumnName": "pct_complete",
+        "targetPropertyId": "7347444098250614185"
+      },
+      {
+        "sourceColumnName": "schedule_variance_days",
+        "targetPropertyId": "2405548652643903752"
+      },
+      {
+        "sourceColumnName": "timestamp_utc",
+        "targetPropertyId": "131642971984993094"
+      },
+      {
+        "sourceColumnName": "task_id",
+        "targetPropertyId": "869137231566344236"
+      }
+    ],
+    "sourceTableProperties": {
+      "sourceType": "KustoTable",
+      "workspaceId": "ee8a5d4d-9d33-4d11-9997-7f91af878bbd",
+      "itemId": "2d41e360-96aa-45c1-b18b-6c9bd617abf6",
+      "clusterUri": "https://trd-a55j9f0fpywfuuwcxs.z2.kusto.fabric.microsoft.com",
+      "databaseName": "fabriciq_eventhouse",
+      "sourceTableName": "tasks"
+    }
+  }
+}

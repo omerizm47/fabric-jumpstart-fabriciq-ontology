@@ -1,0 +1,42 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/ontology/dataBinding/1.0.0/schema.json",
+  "id": "dd111c9b-c44d-570c-aee9-c5982aaa999c",
+  "dataBindingConfiguration": {
+    "dataBindingType": "TimeSeries",
+    "timestampColumnName": "timestamp_utc",
+    "propertyBindings": [
+      {
+        "sourceColumnName": "nights",
+        "targetPropertyId": "1828312092588402953"
+      },
+      {
+        "sourceColumnName": "room_rate",
+        "targetPropertyId": "5159930189173545428"
+      },
+      {
+        "sourceColumnName": "total_amount",
+        "targetPropertyId": "5747065699263186634"
+      },
+      {
+        "sourceColumnName": "lead_time_days",
+        "targetPropertyId": "2710421893233063045"
+      },
+      {
+        "sourceColumnName": "timestamp_utc",
+        "targetPropertyId": "4247148478538070724"
+      },
+      {
+        "sourceColumnName": "booking_id",
+        "targetPropertyId": "4544038892445289158"
+      }
+    ],
+    "sourceTableProperties": {
+      "sourceType": "KustoTable",
+      "workspaceId": "7235ab18-0ba4-441e-b633-bc57f9e82ffa",
+      "itemId": "0ca3c808-c693-41b2-bf03-01fc5933ec02",
+      "clusterUri": "https://trd-qvrs9r77zw06mm3cms.z3.kusto.fabric.microsoft.com",
+      "databaseName": "fabriciq_eventhouse",
+      "sourceTableName": "bookings"
+    }
+  }
+}

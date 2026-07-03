@@ -1,0 +1,23 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/ontology/contextualization/1.0.0/schema.json",
+  "id": "ca1625c4-e52e-531f-b445-a385c04e9d38",
+  "dataBindingTable": {
+    "workspaceId": "61b4d577-724e-4258-bee4-c64f10b0fc93",
+    "itemId": "103791bf-3318-434e-8a3d-a4cde29cfeae",
+    "sourceTableName": "enrolments",
+    "sourceSchema": "dbo",
+    "sourceType": "LakehouseTable"
+  },
+  "sourceKeyRefBindings": [
+    {
+      "sourceColumnName": "enrolment_id",
+      "targetPropertyId": "887146541295827608"
+    }
+  ],
+  "targetKeyRefBindings": [
+    {
+      "sourceColumnName": "course_id",
+      "targetPropertyId": "3036719959652324424"
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/ontology/relationshipType/1.0.0/schema.json",
+  "namespace": "usertypes",
+  "id": "5590372514649243403",
+  "name": "AssessmentForEnrolment",
+  "namespaceType": "Custom",
+  "source": {
+    "entityTypeId": "2228648109372085225"
+  },
+  "target": {
+    "entityTypeId": "8069619295661381774"
+  }
+}

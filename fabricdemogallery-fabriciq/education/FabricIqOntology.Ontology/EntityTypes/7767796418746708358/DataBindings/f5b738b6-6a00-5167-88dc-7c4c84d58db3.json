@@ -1,0 +1,52 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/ontology/dataBinding/1.0.0/schema.json",
+  "id": "f5b738b6-6a00-5167-88dc-7c4c84d58db3",
+  "dataBindingConfiguration": {
+    "dataBindingType": "NonTimeSeries",
+    "propertyBindings": [
+      {
+        "sourceColumnName": "student_id",
+        "targetPropertyId": "838955603200997310"
+      },
+      {
+        "sourceColumnName": "programme",
+        "targetPropertyId": "8532968657303514309"
+      },
+      {
+        "sourceColumnName": "department",
+        "targetPropertyId": "7992650474966195457"
+      },
+      {
+        "sourceColumnName": "level",
+        "targetPropertyId": "7389306040477742538"
+      },
+      {
+        "sourceColumnName": "cohort_year",
+        "targetPropertyId": "4494520362826579722"
+      },
+      {
+        "sourceColumnName": "status",
+        "targetPropertyId": "5960257591805762782"
+      },
+      {
+        "sourceColumnName": "gender",
+        "targetPropertyId": "2622823622777768594"
+      },
+      {
+        "sourceColumnName": "region",
+        "targetPropertyId": "6609626766827346853"
+      },
+      {
+        "sourceColumnName": "age_at_enrolment",
+        "targetPropertyId": "8287225758242571239"
+      }
+    ],
+    "sourceTableProperties": {
+      "sourceType": "LakehouseTable",
+      "workspaceId": "61b4d577-724e-4258-bee4-c64f10b0fc93",
+      "itemId": "103791bf-3318-434e-8a3d-a4cde29cfeae",
+      "sourceTableName": "students",
+      "sourceSchema": "dbo"
+    }
+  }
+}

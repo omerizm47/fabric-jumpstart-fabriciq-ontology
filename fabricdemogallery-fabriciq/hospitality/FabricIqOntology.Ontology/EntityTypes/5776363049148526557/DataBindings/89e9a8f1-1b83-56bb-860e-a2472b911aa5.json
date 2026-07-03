@@ -1,0 +1,46 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/ontology/dataBinding/1.0.0/schema.json",
+  "id": "89e9a8f1-1b83-56bb-860e-a2472b911aa5",
+  "dataBindingConfiguration": {
+    "dataBindingType": "TimeSeries",
+    "timestampColumnName": "timestamp_utc",
+    "propertyBindings": [
+      {
+        "sourceColumnName": "overall_score",
+        "targetPropertyId": "820942357152605189"
+      },
+      {
+        "sourceColumnName": "cleanliness_score",
+        "targetPropertyId": "7856080941807823533"
+      },
+      {
+        "sourceColumnName": "service_score",
+        "targetPropertyId": "7674984641312720712"
+      },
+      {
+        "sourceColumnName": "value_score",
+        "targetPropertyId": "1168009457166543542"
+      },
+      {
+        "sourceColumnName": "food_score",
+        "targetPropertyId": "6440052835491406602"
+      },
+      {
+        "sourceColumnName": "timestamp_utc",
+        "targetPropertyId": "2543964168280686966"
+      },
+      {
+        "sourceColumnName": "review_id",
+        "targetPropertyId": "7740811621299664591"
+      }
+    ],
+    "sourceTableProperties": {
+      "sourceType": "KustoTable",
+      "workspaceId": "7235ab18-0ba4-441e-b633-bc57f9e82ffa",
+      "itemId": "0ca3c808-c693-41b2-bf03-01fc5933ec02",
+      "clusterUri": "https://trd-qvrs9r77zw06mm3cms.z3.kusto.fabric.microsoft.com",
+      "databaseName": "fabriciq_eventhouse",
+      "sourceTableName": "reviews"
+    }
+  }
+}

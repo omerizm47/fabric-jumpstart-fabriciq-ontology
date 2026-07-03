@@ -1,0 +1,13 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/ontology/relationshipType/1.0.0/schema.json",
+  "namespace": "usertypes",
+  "id": "8201169925365661119",
+  "name": "PowerEventAtSubstation",
+  "namespaceType": "Custom",
+  "source": {
+    "entityTypeId": "2643629077242175887"
+  },
+  "target": {
+    "entityTypeId": "7999720638090387751"
+  }
+}
