@@ -1,0 +1,15 @@
+# fabric-cicd deployment parameterization.
+# The notebooks carry a default-lakehouse binding in their # META block that was
+# baked in at authoring time (build workspace + its fabriciq_lakehouse GUIDs).
+# These rules rewrite that binding at deploy time to the TARGET workspace and the
+# fabriciq_lakehouse deployed there, so the jumpstart works in any workspace and
+# has no dependency on the authoring workspace existing.
+find_replace:
+  - find_value: "a537bf46-7b26-4ed7-b48d-dbccd64a29cc" # authoring workspace id
+    replace_value:
+      _ALL_: "$workspace.$id"
+    item_type: "Notebook"
+  - find_value: "b5ae6e8b-5726-489e-9cf1-17c3416393d6" # authoring fabriciq_lakehouse id
+    replace_value:
+      _ALL_: "$items.Lakehouse.fabriciq_lakehouse.$id"
+    item_type: "Notebook"
